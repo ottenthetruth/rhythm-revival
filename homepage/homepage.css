@@ -6,6 +6,11 @@
     grid-row-gap: 0px;
     height: 100vh;
 }
+.parent img, .parent2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .parent3 {
   display: block;
   height: 61vh;
@@ -62,11 +67,7 @@
     font-size: 12px;
 }
 .div1 { grid-area: 2 / 2 / 7 / 7; }
-.div1 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
 
 .div2 { grid-area: 7 / 18 / 12 / 23; }
 .div2 img {
