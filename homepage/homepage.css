@@ -1,4 +1,4 @@
-.parent, .parent2 {
+.parent, .parent2 { /* standard grids */
     display: grid;
     grid-template-columns: repeat(24, 1fr);
     grid-template-rows: repeat(12, 1fr);
@@ -6,16 +6,26 @@
     grid-row-gap: 0px;
     height: 100vh;
 }
-.parent img, .parent2 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.parent3 {
+.parent3 { /* rest of page, excluding trailer */
   display: block;
   height: 61vh;
 }
-.container {
+.parent img, .parent2 img { /* scaling images to grid */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-hover { /* image properties */
+    transition: transform 0.75s;
+    user-select: none;
+}
+.image-hover:hover { /* image hovering */
+    transform: scale(1.2);
+}
+.parent h1, .parent h2, .parent2 h1, .parent2 h2 {
+  margin: 0;
+}
+.container { /* trailer */
     background-color: navy;
     height: 30vh;
     width: 100%;
@@ -24,172 +34,94 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}  .container p {
-      color: ivory;
-      font-size: 24px;
 }
-.parent p {
-  font-size: 11px;
-  color: ivory;
-}
-.divexp {
+.divexp { /* area for explore-button */
     grid-area: 11 / 12 / 11 / 14;
-    display: grid; /* Create a new grid within div1 */
-    grid-template-columns: repeat(5, 1fr); /* Four columns with equal width */
-    grid-template-rows: 1fr; /* One row */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
     padding: 10px;
 }
-#explore-button {
+#explore-button { /* round button with arrow */
     width: 40px;
     height: 40px;
     grid-area: 1 / 3 / 1 / 3;
+    display: flex;
     background-color: navy;
-    color: inherit;
+    justify-content: left;
     padding: 0px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
     border-radius: 50%;
-    display: flex;
     user-select: none;
     transition: opacity 0.65s;
 }
-.explore-text {
-    position: absolute; /* Position the text relative to the button */
-    top: 91%; /* Vertically center the text */
-    left: 50%; /* Horizontally center the text */
-    transform: translate(-50%, -50%); /* Center the text perfectly */
+.explore-text { /* text over the explore-button */
+    position: absolute;
+    top: 91.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     justify-content: center;
     align-items: center;
     font-style: italic;
-    font-size: 12px;
+    font-size: 11px;
 }
-.div1 { grid-area: 2 / 2 / 7 / 7; }
 
+.div1 { grid-area: 2 / 2 / 7 / 7; } /* first image grid 1 */
+.div2 { grid-area: 7 / 18 / 12 / 23; } /* second image grid 1 */
 
-.div2 { grid-area: 7 / 18 / 12 / 23; }
+.div21 { grid-area: 3 / 3 / 6 / 6; }  /* first image grid 2 */
+.div22 { grid-area: 5 / 8 / 9 / 12; } /* second image grid 2 */
+.div23 { grid-area: 8 / 2 / 13 / 7; } /* third image grid 2 */
 
-.div3 { grid-area: 4 / 8 / 6 / 24;
-	font-size: 60px;
-	font-family: "Times New Roman", sans-serif;
-	display: flex;
+.parent h1 {
+  display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
-  user-select: none; }
-.div3 h1 {
-	margin: 0;
+  user-select: none;
 }
-
-.div4 { grid-area: 3 / 9 / 4 / 24;
-	font-style: italic;
-	font-size: 17px;
-	font-family: "Times New Roman", serif;
-	display: flex;
-	align-items: flex-end;
-	justify-content: flex-start;
-	margin: 0;
-  user-select: none; }
-.div4 h2 {
-	margin: 0;
-}
-
-.div5 { grid-area: 6 / 8 / 7 / 24; }
-.div6 { grid-area: 7 / 1 / 8 / 16;
+.parent h2 {
   font-style: italic;
-	font-size: 17px;
-	font-family: "Times New Roman", serif;
-	display: flex;
-	align-items: flex-end;
-	justify-content: flex-end;
-	margin: 0;
-  user-select: none; }
-.div6 h2 {
-  margin: 0;
+  font-size: 21px;
+  display: flex;
+  margin: 0px;
+  user-select: none;
 }
-
-.div7 { grid-area: 8 / 1 / 10 / 17;
-  font-size: 60px;
-	font-family: "Times New Roman", sans-serif;
-	display: flex;
-	align-items: flex-start;
-	justify-content: flex-end;
-  user-select: none; }
-.div7 h1 {
-	margin: 0;
-}
-
-.div21 { grid-area: 3 / 3 / 6 / 6; }
-
-.div22 { grid-area: 5 / 8 / 9 / 12; }
-
-.div23 {
-  grid-area: 8 / 2 / 13 / 7;
-}
-
-.div24 {
-  grid-area: 5 / 17 / 7 / 24;
-  font-size: 60px;
-  font-family: "Times New Roman", sans-serif;
+.parent2 h1 {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   user-select: none;
 }
-.div24 h1 {
-  margin: 0;
-}
-
-.div25 {
-  grid-area: 7 / 16 / 8 / 24;
-  font-style: italic;
-  font-size: 17px;
-  font-family: "Times New Roman", serif;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin: 0;
-  user-select: none;
-}
-.div25 h2 {
-  margin: 0;
-}
-
-.div26 {
-  grid-area: 8 / 13 / 10 / 24;
-  font-size: 60px;
-  font-family: "Times New Roman", sans-serif;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  user-select: none;
-  margin: 0;
-}
-.div26 h1 {
-  margin: 0;
-}
-
-.div27 {
-    grid-area: 10 / 14 / 11 / 24;
+.parent2 h2 {
     font-style: italic;
-    font-size: 17px;
-    font-family: "Times New Roman", serif;
-    display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     margin: 0;
     user-select: none;
 }
-.div27 h2 {
-  margin: 0;
-}
 
-.image-hover {
-    transition: transform 0.75s;
-    user-select: none;
-}
+.div3 { grid-area: 4 / 8 / 6 / 24;
+	      font-size: 60px; } /* text: COMPUTER WORLD */
 
-.image-hover:hover {
-    transform: scale(1.2);
-}
+.div4 { grid-area: 4 / 9 / 4 / 24; } /* text: connect through music */
+.div6 { grid-area: 8 / 15 / 8 / 15; } /* text: and */
+
+.div7 { grid-area: 8 / 2 / 10 / 17;
+        font-size: 60px;
+	      display: flex;
+	      justify-content: flex-end; } /* text: COME TOGETHER */
+
+.div24 { grid-area: 5 / 17 / 7 / 24;
+         font-size: 60px; } /* text: RE VIEW */
+
+.div25 { grid-area: 7 / 16 / 8 / 24;
+         font-size: 17px;
+         display: flex; } /* text: your favorite albums and */
+
+.div26 { grid-area: 8 / 13 / 10 / 24;
+         font-size: 60px; } /* text: DISCOVER */
+
+.div27 { grid-area: 10 / 14 / 11 / 24;
+         font-size: 17px;
+         display: flex; } /* text: your future ones */
