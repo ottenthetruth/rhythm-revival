@@ -5,35 +5,41 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     height: 100vh;
+    user-select: none;
 }
 .parent3 { /* rest of page, excluding trailer */
   display: block;
-  height: 61vh;
+  height: 11vh;
 }
 .parent img, .parent2 img { /* scaling images to grid */
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 .image-hover { /* image properties */
     transition: transform 0.75s;
-    user-select: none;
 }
 .image-hover:hover { /* image hovering */
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .parent h1, .parent h2, .parent2 h1, .parent2 h2 {
   margin: 0;
 }
 .container { /* trailer */
-    background-color: navy;
+    display: grid;
+    user-select: none;
+    color: #edf2f7;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    background-color: #4a5568;
     height: 30vh;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+body.dark-mode .container { /* trailer dark mode */
+    background-color: #212121;
+    border-top: 1px solid #BB86FC;
+    color: #BB86FC;
 }
 .divexp { /* area for explore-button */
     grid-area: 11 / 12 / 11 / 14;
@@ -47,13 +53,20 @@
     height: 40px;
     grid-area: 1 / 3 / 1 / 3;
     display: flex;
-    background-color: navy;
+    background-color: inherit;
     justify-content: left;
     padding: 0px;
     cursor: pointer;
     border-radius: 50%;
     user-select: none;
     transition: opacity 0.65s;
+    color: navy;
+    border: 1px solid #2d3748;
+}
+body.dark-mode #explore-button { /* round button with arrow dark mode */
+    background-color: #212121;
+    border: 1px solid #BB86FC;
+    color: #BB86FC;
 }
 .explore-text { /* text over the explore-button */
     position: absolute;
@@ -68,60 +81,28 @@
 }
 
 .div1 { grid-area: 2 / 2 / 7 / 7; } /* first image grid 1 */
-.div2 { grid-area: 7 / 18 / 12 / 23; } /* second image grid 1 */
+.div2 { grid-area: 6 / 18 / 11 / 23; } /* second image grid 1 */
+.div21 { grid-area: 3 / 3 / 7 / 7; }  /* first image grid 2 */
+.div22 { grid-area: 10 / 6 / 13 / 9; } /* second image grid 2 */
+.div23 { grid-area: 8 / 2 / 11 / 5; } /* third image grid 2 */
 
-.div21 { grid-area: 3 / 3 / 6 / 6; }  /* first image grid 2 */
-.div22 { grid-area: 5 / 8 / 9 / 12; } /* second image grid 2 */
-.div23 { grid-area: 8 / 2 / 13 / 7; } /* third image grid 2 */
-
-.parent h1 {
-  display: flex;
-	align-items: flex-start;
-	justify-content: flex-start;
-  user-select: none;
-}
-.parent h2 {
-  font-style: italic;
-  font-size: 21px;
-  display: flex;
-  margin: 0px;
-  user-select: none;
-}
-.parent2 h1 {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  user-select: none;
-}
-.parent2 h2 {
-    font-style: italic;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin: 0;
-    user-select: none;
-}
-
-.div3 { grid-area: 4 / 8 / 6 / 24;
-	      font-size: 60px; } /* text: COMPUTER WORLD */
-
-.div4 { grid-area: 4 / 9 / 4 / 24; } /* text: connect through music */
-.div6 { grid-area: 8 / 15 / 8 / 15; } /* text: and */
-
-.div7 { grid-area: 8 / 2 / 10 / 17;
-        font-size: 60px;
+.div3 { grid-area: 4 / 7 / 6 / 24;
+	      font-size: 3vw; } /* text: OK Computer */
+.div6 { grid-area: 7 / 13 / 7 / 15;
+        font-size: 0.9vw; } /* text: take me to the */
+.div7 { grid-area: 8 / 1 / 10 / 18;
+        font-size: 3vw;
 	      display: flex;
-	      justify-content: flex-end; } /* text: COME TOGETHER */
+	      justify-content: flex-end; } /* text: Dark Side of the Moon */
 
-.div24 { grid-area: 5 / 17 / 7 / 24;
-         font-size: 60px; } /* text: RE VIEW */
+.explore1 { grid-area: 3 / 10 / 13 / 14;
+            background-color: inherit; }
+.explore2 { grid-area: 3 / 15 / 13 / 19;
+            background-color: inherit; }
+.explore3 { grid-area: 3 / 20 / 13 / 24;
+            background-color: inherit; }
 
-.div25 { grid-area: 7 / 16 / 8 / 24;
-         font-size: 17px;
-         display: flex; } /* text: your favorite albums and */
-
-.div26 { grid-area: 8 / 13 / 10 / 24;
-         font-size: 60px; } /* text: DISCOVER */
-
-.div27 { grid-area: 10 / 14 / 11 / 24;
-         font-size: 17px;
-         display: flex; } /* text: your future ones */
+.div41 { grid-area: 2 / 2 / 10 / 2; }
+.div42 { grid-area: 2 / 3 / 10 / 3; }
+.div43 { grid-area: 2 / 4 / 10 / 4; }
+.div44 { grid-area: 2 / 5 / 10 / 5; }
