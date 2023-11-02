@@ -40,6 +40,7 @@ body.dark-mode {
     width: 16%;
     position: relative;
     border-left: 1px solid #2d3748;
+    transition: background-color 0.5s, color 0.5s;
 }
 body.dark-mode .page-button {
     border-left: 1px solid #BB86FC;
