@@ -5,12 +5,10 @@ body {
     background-color: #edf2f7;
     margin: 0;
     padding: 0;
-    user-select: none;
-}
+    user-select: none; }
 body.dark-mode {
   background-color: #121212;
-  color: #BB86FC;
-}
+  color: #BB86FC; }
 
 .myheader {
     display: grid;
@@ -19,18 +17,15 @@ body.dark-mode {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     height: 9vh;
-    user-select: none;
-}
+    user-select: none; }
 .nav-container {
-    font-family: "Baskerville", sans-serif;
-}
+    font-family: "Baskerville", sans-serif; }
 /* Head Banner "Your Website Banner" */
 .banner {
     font-family: "Georgia", serif;
     background-color: inherit;
     color: inherit;
-    text-align: center;
-}
+    text-align: center; }
 /* page buttons */
 .page-button {
     display: inline-block;
@@ -40,21 +35,16 @@ body.dark-mode {
     width: 16%;
     position: relative;
     border-left: 1px solid #2d3748;
-    transition: background-color 0.5s, color 0.5s;
-}
+    transition: background-color 0.5s, color 0.5s; }
 body.dark-mode .page-button {
-    border-left: 1px solid #BB86FC;
-}
+    border-left: 1px solid #BB86FC; }
 /* page button hover coloring */
 .page-button:hover {
   background-color: #2d3748;
-  color: #edf2f7;
-}
+  color: #edf2f7; }
 body.dark-mode .page-button:hover {
   background-color: #BB86FC;
-  color: #121212;
-}
+  color: #121212; }
 /* color of the switch button */
 body:not(.dark-mode) .slider:before {
-    background-color: #2d3748;
-}
+    background-color: #2d3748; }
