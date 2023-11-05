@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homepage</title>
+	<title>Homepage</title>
+  
   <!-- stylesheets-->
   <link rel="stylesheet" href="../general.css">
-  <link rel="stylesheet" href="homepage.css">
-  <link rel="stylesheet" href="darkmodeswitch.css">
+	<link rel="stylesheet" href="homepage.css">
+  <link rel="stylesheet" href="../darkmodeswitch.css">
 </head>
 
 <body>
@@ -19,6 +20,10 @@
       <input type="checkbox" id="darkModeToggle">
       <span class="slider round"></span>
     </label>
+    <div class="moon">
+    </div> <!--end moon-->
+    <div class="moon2">
+    </div>
     <div class="nav-container">
         <a href="page1.html" class="page-button" style="border-left: none;">Search for Albums!</a>
         <a href="page2.html" class="page-button">My Profile</a>
@@ -30,16 +35,11 @@
 </div>
 
 <div class="parent">
-
   <div class="div1">
-    <a href="https://open.spotify.com/album/42hCHiMtfs7mfBTVX3V6k7?si=DROAEsnLR329JEUi0xRdNg" draggable="false" target="_blank">
     <img src="../images/OK Computer.jpg" class="image-hover" draggable="false">
-    </a>
   </div>
   <div class="div2">
-    <a href="https://open.spotify.com/track/2EqlS6tkEnglzr7tkKAAYD?si=354c7fae0bce4497" draggable="false" target="_blank">
     <img src="../images/DSOTM.png" class="image-hover" draggable="false">
-    </a>
   </div>
   <div class="div3">
     <h1>&nbspOK Computer,</h1>
@@ -50,36 +50,57 @@
   <div class="div7">
     <h1>Dark Side of the Moon.&nbsp</h1>
   </div>
- <div class="divexp">
+ <div class="explorebutton">
+   <p id="myexploretext" style="font-size: 10px">explore!</p>
    <div id="explore-button" class="explore-button">
-     <h1 class="explore-text">explore</h1>
-     <p style="font-size: 13px;">&nbsp&nbsp&nbsp&nbsp🡫</p>
+     <p style="font-size: 13px;">🡫</p>
    </div>
  </div>
 
 </div> <!-- end parent -->
 
 <div class="parent2">
-
   <div class="div21">
-    <img src="../images/In Utero.jpg" class="image-hover" draggable="false">
+    <img src="../images/Abbey Road.jpg" class="image-hover displayalbums" draggable="false">
   </div>
-
   <div class="div22">
-    <img src="../images/Led Zeppelin IV.jpg" class="image-hover" draggable="false">
+    <img src="../images/In Utero.jpg" class="image-hover displayalbums" draggable="false">
   </div>
-
   <div class="div23">
-    <img src="../images/OK Computer.jpg" class="image-hover" draggable="false">
+    <img src="../images/Whos Next.jpg" class="image-hover displayalbums" draggable="false">
   </div>
 
   <div class="explore1">
+    <div class="explore11">
+      <img src="../images/Gimmie Shelter.jpg" draggable="false">
+      <h1>Music, Children, is just a click away.</h1>
+      <p>Instantly access Spotify's entire catalog,
+         review music, and discover future favorites.</p>
+      <h2>try it yourself!</h2>
+      <p class="lyrics1">"War, Children, is just a shot away"</p>
+      <p class="lyrics2">-Mick Jagger, on "Gimmie Shelter"</p>
+    </div>
   </div>
   <div class="explore2">
+    <div class="explore21">
+      <img src="../images/Mother.jpg" draggable="false">
+      <h1>AI, do you know another song?</h1>
+      <p>Make sure your next session stays fresh via song recommendations tailored to your taste.</p>
+      <h2>try it yourself!</h2>
+      <p class="lyrics1">"Mother, do you think they'll like the song?"</p>
+      <p class="lyrics2">-Roger Waters, on "Mother"</p>
+    </div>
   </div>
   <div class="explore3">
+    <div class="explore31">
+      <img src="../images/Lets Go Crazy.jpg" draggable="false">
+      <h1>Are we gonna let the music player bring us down?</h1>
+      <p>Of course not! The enhanced music player will give you full control.</p>
+      <h2>try it yourself!</h2>
+      <p class="lyrics1">"Are we gonna let de-elevator break us down?"</p>
+      <p class="lyrics2">-Prince Nelson, on "Let's Go Crazy"</p>
+    </div>
   </div>
-
 </div> <!-- end parent2 -->
 
 <div class="parent3">
@@ -108,8 +129,8 @@
 
   <script src="explorebutton.js">
   </script>
-
   <script src="darkmode.js">
   </script>
+
 </body>
 </html>
