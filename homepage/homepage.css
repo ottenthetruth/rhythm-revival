@@ -1,90 +1,88 @@
-.parent, .parent2 { /* standard grids */
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    height: 100vh;
-    user-select: none;
-}
-.parent3 { /* rest of page, excluding trailer */
+/* hide scrollbar */
+body::-webkit-scrollbar{
+  display: none; }
+
+/* content grids */
+.parent, .parent2 {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  height: 100vh;
+  user-select: none; }
+
+/* spacing */
+.parent3 {
   display: block;
-  height: 11vh;
-}
-.parent img, .parent2 img { /* scaling images to grid */
+  height: 11vh; }
+
+/* image scaling */
+.parent img, .parent2 img {
   width: 100%;
   height: auto;
-  object-fit: cover;
-}
-.image-hover { /* image properties */
-    transition: transform 0.75s;
-}
-.image-hover:hover { /* image hovering */
-    transform: scale(1.1);
-}
+  object-fit: cover; }
+
+/* assisting images */
+.image-hover {
+  transition: transform 0.75s; }
+.image-hover:hover {
+  transform: scale(1.1); }
+.displayalbums {
+  border-radius: 50%; }
+
+/* adjust text position */
 .parent h1, .parent h2, .parent2 h1, .parent2 h2 {
   margin: 0;
-}
-.container { /* trailer */
-    display: grid;
-    user-select: none;
-    color: #edf2f7;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    background-color: #4a5568;
-    height: 30vh;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
-body.dark-mode .container { /* trailer dark mode */
-    background-color: #212121;
-    border-top: 1px solid #BB86FC;
-    color: #BB86FC;
-}
-.divexp { /* area for explore-button */
-    grid-area: 11 / 12 / 11 / 14;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
-    padding: 10px;
-}
-#explore-button { /* round button with arrow */
-    width: 40px;
-    height: 40px;
-    grid-area: 1 / 3 / 1 / 3;
-    display: flex;
-    background-color: inherit;
-    justify-content: left;
-    padding: 0px;
-    cursor: pointer;
-    border-radius: 50%;
-    user-select: none;
-    transition: opacity 0.65s;
-    color: navy;
-    border: 1px solid #2d3748;
-}
-body.dark-mode #explore-button { /* round button with arrow dark mode */
-    background-color: #212121;
-    border: 1px solid #BB86FC;
-    color: #BB86FC;
-}
-.explore-text { /* text over the explore-button */
-    position: absolute;
-    top: 91.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-style: italic;
-    font-size: 11px;
-}
+  padding: 0; }
+
+/* "try it yourself" css */
+.parent2 h2 {
+  cursor: pointer;
+  font-style: italic;
+  text-decoration: underline; }
+
+/* container css */
+.container {
+  height: 30vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  user-select: none;
+  color: #edf2f7;
+  background-color: #2d3748; }
+body.dark-mode .container {
+  background-color: #212121;
+  border-top: 1px solid #BB86FC;
+  color: #BB86FC; }
+
+/* grid area for "explore"-button */
+.explorebutton {
+  grid-area: 10 / 12 / 10 / 14;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+
+/* "explore"-button */
+#myexploretext {
+  transition: opacity 0.65s; }
+#explore-button {
+  transition: opacity 0.65s;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #2d3748;
+  cursor: pointer;
+  user-select: none; }
+body.dark-mode #explore-button {
+  background-color: #212121;
+  border: 1px solid #BB86FC;
+  color: #BB86FC; }
 
 .div1 { grid-area: 2 / 2 / 7 / 7; } /* first image grid 1 */
 .div2 { grid-area: 6 / 18 / 11 / 23; } /* second image grid 1 */
 .div21 { grid-area: 3 / 3 / 7 / 7; }  /* first image grid 2 */
-.div22 { grid-area: 10 / 6 / 13 / 9; } /* second image grid 2 */
-.div23 { grid-area: 8 / 2 / 11 / 5; } /* third image grid 2 */
+.div23 { grid-area: 8 / 2 / 11 / 5; } /* second image grid 2 */
+.div22 { grid-area: 10 / 6 / 13 / 9; } /* third image grid 2 */
 
 .div3 { grid-area: 4 / 7 / 6 / 24;
 	      font-size: 3vw; } /* text: OK Computer */
@@ -95,13 +93,35 @@ body.dark-mode #explore-button { /* round button with arrow dark mode */
 	      display: flex;
 	      justify-content: flex-end; } /* text: Dark Side of the Moon */
 
-.explore1 { grid-area: 3 / 10 / 13 / 14;
-            background-color: inherit; }
-.explore2 { grid-area: 3 / 15 / 13 / 19;
-            background-color: inherit; }
-.explore3 { grid-area: 3 / 20 / 13 / 24;
-            background-color: inherit; }
+.explore1 { grid-area: 3 / 10 / 11 / 14;
+            position: relative;
+            border-right: 1px solid #2d3748; }
+.explore11 { grid-area: 3 / 10 / 7 / 14;
+             padding: 3%; }
+body.dark-mode .explore1 {
+  border-right: 1px solid #BB86FC; }
+.explore2 { grid-area: 3 / 14 / 11 / 18;
+  position: relative;
+  border-right: 1px solid #2d3748; }
+.explore21 { grid-area: 3 / 14 / 7 / 18;
+             padding: 3%; }
+body.dark-mode .explore2 {
+    border-right: 1px solid #BB86FC; }
 
+.explore3 { grid-area: 3 / 18 / 13 / 22;
+            position: relative; }
+.explore31 {
+  grid-area: 3 / 20 / 13 / 24;
+  padding: 3%;
+}
+
+.lyrics1 {
+  color: gray; }
+.lyrics2 {
+  color: gray;
+  text-align: right; }
+
+/* bottom navigation banner */
 .div41 { grid-area: 2 / 2 / 10 / 2; }
 .div42 { grid-area: 2 / 3 / 10 / 3; }
 .div43 { grid-area: 2 / 4 / 10 / 4; }
