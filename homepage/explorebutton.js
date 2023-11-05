@@ -15,11 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function checkScroll() {
         const exploreButton = document.getElementById('explore-button');
+        const exploreText = document.getElementById('myexploretext');
         if (window.scrollY === 0) {
             exploreButton.style.opacity = 1;
+            exploreText.style.opacity = 1;
             exploreButton.style.pointerEvents = 'auto';
         } else {
             exploreButton.style.opacity = 0;
+            exploreText.style.opacity = 0;
             exploreButton.style.pointerEvents = 'none';
         }
     }
