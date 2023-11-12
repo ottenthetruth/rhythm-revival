@@ -48,3 +48,11 @@ body.dark-mode .page-button:hover {
 /* color of the switch button */
 body:not(.dark-mode) .slider:before {
     background-color: #2d3748; }
+.loginbtn {
+  position: absolute;
+  top: 2%;
+  left: 45px;
+  display: flex;
+  width: 60px;
+  height: 34px;
+  border-radius: 50%; }
