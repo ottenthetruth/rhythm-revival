@@ -49,16 +49,18 @@ body.dark-mode .page-button:hover {
 body:not(.dark-mode) .slider:before {
     background-color: #2d3748; }
 .loginbtn {
-      position: absolute;
-      top: 2.2%;
-      left: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 60px;
-      height: 34px;
-      border-radius: 10px;
-      background-color: #2d3748;
-      color: #edf2f7;
-      cursor: pointer; }
-
+    position: absolute;
+    top: 2%;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 34px;
+    border-radius: 10px;
+    background-color: #2d3748;
+    color: #edf2f7;
+    cursor: pointer; }
+body.dark-mode .loginbtn {
+    background-color: #212121;
+    color: #BB86FC; }
