@@ -25,8 +25,7 @@
 .search-input::placeholder {
     color: inherit;
     font-style: italic;
-    user-select: none;
-}
+    user-select: none; }
 
 /* "Album" and "Artist" search-querys here */
 .search-input {
