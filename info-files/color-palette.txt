@@ -1,0 +1,10 @@
+Light Mode:
+
+Background Color: edf2f7 / Bone White
+Text Color: 2d3748 / Dark Gray
+
+Dark Mode:
+
+Background Color: 121212 / Blueish Dark Gray
+Text Color: BB86FC / Violet Pink Blend
+Accent Color: 212121 / Lighter Gray
