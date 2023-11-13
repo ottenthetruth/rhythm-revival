@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Search for Albums!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="darkmodeswitch.css">
+    <link rel="stylesheet" href="searchforalbums.css">
+    <link rel="stylesheet" href="cards.css">
+</head>
+
+<body>
+<div class="myheader">
+  <div class="banner">
+    <h1>YOUR WEBSITE BANNER</h1>
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider round"></span>
+    </label>
+    <div class="moon">
+    </div>
+    <div class="moon2">
+    </div>
+    <div class="nav-container">
+        <a href="page1.html" class="page-button" style="border-left: none;">Search for Albums!</a>
+        <a href="page2.html" class="page-button">My Profile</a>
+        <a href="page3.html" class="page-button">Featured</a>
+        <a href="page4.html" class="page-button">Page 4</a>
+        <a href="page5.html" class="page-button">About RYM</a>
+    </div>
+  </div>
+</div>
+
+<div class="parent">
+    <div class="div1">
+      <div class="search-bar">
+            <input type="text" id="mysearch" class="search-input"  placeholder="Album">
+            <input type="text" id="mysearchartist" class="search-input"  placeholder="Artist">
+            <a onclick="getAlbums()" id="searchButton" class="search-button">Search!</a>
+      </div>
+    </div>
+</div>
+
+<div class="parent2">
+<div class="container" id="container"></div>
+</div>
+
+<script src="../parent-files/darkmode.js"></script>
+<script src="searchwithenter.js"></script>
+
+</body>
+</html>
