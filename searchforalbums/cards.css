@@ -1,0 +1,39 @@
+/* general card structure */
+.card {
+  display: inline-block;
+  border: 1px solid #2d3748;
+  color: inherit;
+  background-color: #edf2f7;
+  padding: 25px;
+  font-family: georgia, serif;
+  height: 300px;
+  width: 200px;
+  margin: 20px; }
+body.dark-mode .card {
+  border: 1px solid #BB86FC;
+  background-color: #212121; }
+
+/* adjust cover size */
+.card img {
+  width: 200px;
+  height: 200px; }
+
+/* album info */
+.card h5 {
+  font-style: italic; }
+
+/* "rate!"-text */
+.card p {
+   color: #6F8FAF;
+   font-style: italic;
+   text-align: right;
+   position: relative;
+   bottom: 10%;
+   right: 3%;
+  text-decoration: underline; }
+
+/* display search-results here */
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0; }
