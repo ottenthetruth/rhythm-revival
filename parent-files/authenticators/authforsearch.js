@@ -1,3 +1,4 @@
+/* reference to the search-function */
 function authforsearch() {
   const clientID = "e9fec6e1cb5241e0a41ab98db146bc3c";
   const redirectURI = "https://ottenthetruth.github.io/rhythm-revival/searchforalbums/searchforalbums.html";
