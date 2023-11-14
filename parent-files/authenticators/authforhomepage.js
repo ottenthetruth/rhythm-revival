@@ -3,6 +3,7 @@ function authorizeSpotify() {
       const redirectURI = "https://ottenthetruth.github.io/rhythm-revival/homepage/homepage.html";
       const spotifyAuthURL = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=code&redirect_uri=${redirectURI}&scope=user-library-read%20playlist-read-private`;
       window.location.href = spotifyAuthURL;
+      await getAccessToken();
 }
 
 /* called after authorization */
@@ -41,5 +42,5 @@ async function getAccessToken() {
               return localStorage.getItem("access_token");
             }
         }/* end if(code) */
-
+ await loginToSpotify();
 } /* end getAccessToken */
