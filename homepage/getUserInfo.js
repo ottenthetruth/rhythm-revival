@@ -6,17 +6,6 @@ async function authorizeSpotify() {
   window.location.href = spotifyAuthURL;
 }
 
-function updateProfileInfo() {
-  document.getElementById('displayName').innerText = userProfile.displayName;
-  document.getElementById('profileImage').src = userProfile.profileImage;
-  document.getElementById('profileInfo').style.display = 'block';
-}
-
-let userProfile = {
-  displayName: '',
-  profileImage: ''
-};
-
 async function getUserProfile() {
         const accessToken = await getAccessToken();
         const response = await fetch('https://api.spotify.com/v1/me', {
