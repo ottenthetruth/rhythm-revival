@@ -14,6 +14,8 @@ const code = urlParams.get("code");
 
 async function getUserProfile() {
         const accessToken = await getAccessToken();
+
+  if(accessToken) {
         const response = await fetch('https://api.spotify.com/v1/me', {
             method: 'GET',
             headers: {
@@ -31,7 +33,8 @@ async function getUserProfile() {
         } else {
             document.getElementById('myusername').textContent = 'Unable to fetch username';
         }
-    }
+  }
+}
     async function getAccessToken() {
         const urlParams = new URLSearchParams(window.location.search);
           const code = urlParams.get("code");
