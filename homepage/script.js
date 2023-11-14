@@ -3,7 +3,7 @@ let userProfile = {
   profileImage: ''
 };
 
-function loginToSpotify() {
+async function loginToSpotify() {
   // Simulating the access token retrieval, replace with your actual method of obtaining the token
   const accessToken = await getAccessToken();
 
