@@ -38,7 +38,7 @@ async function getUserProfile() {
         if (code) {
             const tokenEndpoint = "https://accounts.spotify.com/api/token";
             const client_secret = "2d5a82decbc240e4adadcbd86f342321"; // Replace with your actual client secret
-            const redirect_uri = "https://ottenthetruth.github.io/listeningtothisalbum/myalbumrequest.html"; // Make sure this matches your Spotify App's redirect URI
+            const redirect_uri = "https://ottenthetruth.github.io/rhythm-revival/homepage/homepage.html"; // Make sure this matches your Spotify App's redirect URI
             const basicAuthHeader = btoa(`e9fec6e1cb5241e0a41ab98db146bc3c:${client_secret}`);
 
             const data = {
