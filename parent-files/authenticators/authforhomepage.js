@@ -6,6 +6,7 @@ function authorizeSpotify() {
       getAccessToken();
 }
 
+/* called after authorization */
 async function getAccessToken() {
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get("code");
