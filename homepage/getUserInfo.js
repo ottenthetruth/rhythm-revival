@@ -68,4 +68,5 @@ async function getUserProfile() {
             }
       } /* end if(code) */
   }
-window.onLoad = authorizeSpotify();
+
+window.onload = authorizeSpotify;
