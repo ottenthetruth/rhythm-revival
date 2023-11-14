@@ -61,5 +61,5 @@ async function getUserProfile() {
               return localStorage.getItem("access_token");
             }
       } /* end if(code) */
-
   }
+window.onLoad = authorizeSpotify();
