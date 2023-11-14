@@ -5,7 +5,7 @@ let userProfile = {
 
 function loginToSpotify() {
   // Simulating the access token retrieval, replace with your actual method of obtaining the token
-  const accessToken = 'YOUR_ACCESS_TOKEN';
+  const accessToken = getAccessToken();
 
   fetch('https://api.spotify.com/v1/me', {
     headers: {
