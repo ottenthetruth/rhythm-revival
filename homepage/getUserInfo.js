@@ -51,7 +51,7 @@ async function getUserProfile() {
             };
 
             const response = await fetch(tokenEndpoint, {
-                method: "POST",
+                method: "GET",
                 headers: {
                     "Authorization": `Basic ${basicAuthHeader}`,
                     "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
