@@ -56,7 +56,7 @@ async function getUserProfile() {
                     "Authorization": `Basic ${basicAuthHeader}`,
                     "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
                 },
-              /*  body: new URLSearchParams(data), */
+               body: new URLSearchParams(data),
             });
 
             if (response.status === 200) {
