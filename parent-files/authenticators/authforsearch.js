@@ -3,7 +3,6 @@ function authforsearch() {
   const redirectURI = "https://ottenthetruth.github.io/rhythm-revival/searchforalbums/searchforalbums.html";
   const spotifyAuthURL = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=code&redirect_uri=${redirectURI}&scope=user-library-read%20playlist-read-private`;
   window.location.href = spotifyAuthURL;
-  getAccessToken();
 }
 async function getAccessToken() {
     const urlParams = new URLSearchParams(window.location.search);
