@@ -63,5 +63,3 @@ async function getUserProfile() {
       } /* end if(code) */
 
   }
-
-getUserProfile();
