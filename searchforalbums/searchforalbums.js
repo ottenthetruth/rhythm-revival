@@ -1,6 +1,6 @@
 /* display search results */
 async function getAlbums() {
-    const accessToken = await getAccessToken();
+    const accessToken = await getAccessToken("https://ottenthetruth.github.io/rhythm-revival/searchforalbums/searchforalbums.html");
 
     if (accessToken) {
         const searchQuery = document.getElementById("mysearch").value;
