@@ -37,8 +37,8 @@
     border-radius: 20px;
     margin-left: 10px; }
 body.dark-mode .search-input {
-    border: 1px solid #BB86FC;
-    color: #BB86FC;
+    border: 1px solid #03DAC6;
+    color: #03DAC6;
     background-color: #212121; }
 
 /* button, which executes search, can also be triggered via "Enter" */
@@ -57,5 +57,5 @@ body.dark-mode .search-input {
   user-select: none;
   cursor: pointer; }
 body.dark-mode .search-button {
-    background-color: #BB86FC;
+    background-color: #03DAC6;
     color: #121212; }
