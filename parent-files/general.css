@@ -7,7 +7,7 @@ body {
     padding: 0;
     user-select: none; }
 body.dark-mode {
-  background-color: #121212;
+  background-color: #3E424B;
   color: #03DAC6; }
 
 .myheader {
@@ -44,7 +44,7 @@ body.dark-mode .page-button {
   color: #edf2f7; }
 body.dark-mode .page-button:hover {
   background-color: #03DAC6;
-  color: #121212; }
+  color: #3E424B; }
 /* color of the switch button */
 body:not(.dark-mode) .slider:before {
     background-color: #2d3748; }
