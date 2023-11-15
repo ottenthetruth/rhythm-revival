@@ -5,8 +5,8 @@ async function authforhomepage() {
   /* end check */
   if(code == null) {
   const clientID = "e9fec6e1cb5241e0a41ab98db146bc3c";
-  const redirectURI = "https://ottenthetruth.github.io/rhythm-revival/homepage/homepage.html";
-  const callbackURL = "https://ottenthetruth.github.io/rhythm-revival/searchforalbums/searchforalbums.html";
+  const redirectURI = "https://ottenthetruth.github.io/truthmusic/homepage/homepage.html";
+  const callbackURL = "https://ottenthetruth.github.io/truthmusic/searchforalbums/searchforalbums.html";
   const spotifyAuthURL = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=code&redirect_uri=${redirectURI}&scope=user-library-read%20playlist-read-private%20user-read-currently-playing&state=${callbackURL}`;
   window.location.href = spotifyAuthURL;
   }
@@ -18,7 +18,7 @@ async function authforsearch() {
   const code = urlParams.get("code");
   /* end check */
   const clientID = "e9fec6e1cb5241e0a41ab98db146bc3c";
-  const redirectURI = "https://ottenthetruth.github.io/rhythm-revival/searchforalbums/searchforalbums.html";
+  const redirectURI = "https://ottenthetruth.github.io/truthmusic/searchforalbums/searchforalbums.html";
   const spotifyAuthURL = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=code&redirect_uri=${redirectURI}&scope=user-library-read%20playlist-read-private`;
   window.location.href = spotifyAuthURL;
 }
