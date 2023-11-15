@@ -20,7 +20,7 @@
       <input type="checkbox" id="darkModeToggle">
       <span class="slider round"></span>
     </label>
-    <div class="loginbtn" id="logBtn" onclick="authforhomepage(); getUserProfile()">
+    <div class="loginbtn" id="logBtn" onclick="getUserProfile()">
 	<p>Login</p>
     </div>
     	<img id="profileImage">
@@ -165,9 +165,11 @@
             alert("Not successful");
         }
     }
-
-	/* testing login on btn click */
-/* window.onload = authforhomepage; */
+const urlParams = new URLSearchParams(window.location.search);
+const code = urlParams.get("code");
+if(code == null) {
+ window.onload = authforhomepage;
+}
 </script>
 </body>
 </html>
