@@ -20,7 +20,7 @@
       <input type="checkbox" id="darkModeToggle">
       <span class="slider round"></span>
     </label>
-    <div class="loginbtn" onclick="authforhomepage(); getUserProfile()">
+    <div class="loginbtn" id="logBtn" onclick="authforhomepage(); getUserProfile()">
 	<p>Login</p>
     </div>
     	<img id="profileImage">
@@ -157,6 +157,9 @@
             myUserImage.src = profilePictureUrl;
             var myUserDisplayName = document.getElementById('displayName');
             myUserDisplayName.innerText = myDisplayName;
+	    var logButton = document.getElementById("logBtn");
+	    logButton.style.display = "none";
+	    logButton.disabled = true;
 		alert("successful");
         } else {
             alert("Not successful");
