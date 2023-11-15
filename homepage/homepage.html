@@ -43,7 +43,7 @@
 
 <div class="parent">
   <div class="div1">
-    <img src="../images/OK Computer.jpg" class="image-hover" draggable="false">
+    <img src="../images/OK Computer.jpg" class="image-hover" id="mytestimg" draggable="false">
   </div>
   <div class="div2">
     <img src="../images/DSOTM.png" class="image-hover" draggable="false">
@@ -165,6 +165,10 @@ const code = urlParams.get("code");
         });
 
         if (response.status === 200) {
+		const data = await response.json();
+            	const profilePictureUrl = data.images.length > 0 ? data.images[0].url : '';
+		var myElement = document.getElementById("mytestimg");
+		myElement.src = profilePictureUrl;
 		alert("successful");
         } else {
             alert("Not successful");
