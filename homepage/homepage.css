@@ -98,7 +98,7 @@ body.dark-mode #explore-button {
 .div2 { grid-area: 6 / 18 / 11 / 23; } /* second image grid 1 */
 .div21 { grid-area: 3 / 3 / 7 / 7; }  /* first image grid 2 */
 .div23 { grid-area: 8 / 2 / 11 / 5; } /* second image grid 2 */
-.div22 { grid-area: 10 / 6 / 13 / 9; } /* third image grid 2 */
+.div22 { grid-area: 9 / 5 / 13 / 9; } /* third image grid 2 */
 
 .div3 { grid-area: 4 / 7 / 6 / 24;
 	      font-size: 3vw; } /* text: OK Computer */
