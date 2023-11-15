@@ -5,17 +5,15 @@ body::-webkit-scrollbar{
 /* testing */
 #profileImage {
 	position: absolute;
-	top: 20px;
-	left: 20%;
+	top: 2%;
+	left: 2%;
 }
 #profileImage img {
-	width: 30px;
-	height: 30px;
+	width: 10px;
+	height: 10px;
 }
 #displayName {
-	position: absolute;
-	top: 20px;
-	left: 30%;
+	position: relative;
 }
 
 /* content grids */
