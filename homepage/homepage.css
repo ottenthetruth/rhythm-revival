@@ -2,6 +2,20 @@
 body::-webkit-scrollbar{
   display: none; }
 
+/* testing */
+#profileImage {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 20px;
+	left: 20%;
+}
+#displayName {
+	position: absolute;
+	top: 20px;
+	left: 30%;
+}
+
 /* content grids */
 .parent, .parent2 {
   display: grid;
