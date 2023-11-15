@@ -2,21 +2,18 @@
 body::-webkit-scrollbar{
   display: none; }
 
-/* testing */
+/* spotify user data */
 #profileImage {
 	position: absolute;
-	top: 2%;
+	top: 5px;
 	left: 5px;
 	width: 40px;
 	height: auto;
-	draggable: false;
-}
-
+	draggable: false; }
 #displayName {
 	position: absolute;
-	top: 1.5%;
-	left: 50px;
-}
+	top: 0.5%;
+	left: 50px; }
 
 /* content grids */
 .parent, .parent2 {
@@ -128,8 +125,7 @@ body.dark-mode .explore2 {
             position: relative; }
 .explore31 {
   grid-area: 3 / 20 / 13 / 24;
-  padding: 3%;
-}
+  padding: 3%; }
 
 .lyrics1 {
   color: gray; }
