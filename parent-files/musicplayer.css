@@ -6,6 +6,8 @@
   right: -250px;
   color: white; }
 .menu img {
+  width: 200px;
+  height: 200px;
   padding: 25px;
   padding-bottom: 0px; }
 .menu h1, h2 {
