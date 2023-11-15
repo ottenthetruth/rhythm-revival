@@ -12,7 +12,7 @@ body::-webkit-scrollbar{
 	draggable: false; }
 #displayName {
 	position: absolute;
-	top: 0.5%;
+	top: 5px;
 	left: 50px; }
 
 /* content grids */
