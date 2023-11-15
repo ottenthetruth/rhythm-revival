@@ -9,13 +9,13 @@ body::-webkit-scrollbar{
 	left: 5px;
 	width: 40px;
 	height: auto;
-	user-drag: none;
+	draggable: false;
 }
 
 #displayName {
 	position: absolute;
-	top: 2%;
-	left: 20px;
+	top: 1.5%;
+	left: 50px;
 }
 
 /* content grids */
