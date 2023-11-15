@@ -140,7 +140,7 @@
 </script>
 <script>
    async function getUserProfile() {
-	   const accessToken = await getAccessToken("https://ottenthetruth.github.io/rhythm-revival/searchforalbums/searchforalbums.html");
+	   const accessToken = await getAccessToken("https://ottenthetruth.github.io/rhythm-revival/homepage/homepage.html");
         const response = await fetch('https://api.spotify.com/v1/me', {
             method: 'GET',
             headers: {
