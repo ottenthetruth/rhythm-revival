@@ -24,7 +24,7 @@
 	<p>Login</p>
     </div>
   	<div id="profileInfo" style="display:none;">
-    		<img id="profileImage" width="100" height="100">
+    		<img id="profileImage" width="100" height="100" alt="PFP Image">
     		<p id="displayName"></p>
   	</div>
     <div class="moon">
@@ -165,10 +165,14 @@ const code = urlParams.get("code");
         });
 
         if (response.status === 200) {
-		const data = await response.json();
-            	const profilePictureUrl = data.images.length > 0 ? data.images[0].url : '';
-		var myElement = document.getElementById("mytestimg");
-		myElement.src = profilePictureUrl;
+            const data = await response.json();
+            const displayName = data.display_name;
+            const profilePictureUrl = data.images.length > 0 ? data.images[0].url : '';
+
+            var myUserImage = document.getElementById('profileImage');
+            myUserImage.src = profilePictureUrl;
+            var myUserDisplayName = document.getElementById('displayName');
+            myUserDisplayName = displayName;
 		alert("successful");
         } else {
             alert("Not successful");
