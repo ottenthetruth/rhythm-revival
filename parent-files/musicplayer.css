@@ -1,0 +1,27 @@
+.menu {
+  width: 250px;
+  height: 500px;
+  background-color: cyan;
+  position: absolute;
+  right: -250px;
+  color: white; }
+.menu img {
+  padding: 25px;
+  padding-bottom: 0px; }
+.menu h1, h2 {
+  padding-left: 25px; }
+.extendmenu {
+  width: 30px;
+  height: 100px;
+  background-color: cyan;
+  position: absolute;
+  right: 0px;
+  transition: transform 0.5s ease;
+  color: white; }
+.extendmenu p { /* arrow */
+  font-size: 30px;
+  font-weight: bold; }
+.musicplayer {
+  transition: transform 0.5s ease; }
+.musicplayer:hover {
+  transform: translateX(-250px); }
