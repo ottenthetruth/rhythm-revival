@@ -23,7 +23,7 @@
     <div class="loginbtn" onclick="getUserProfile()">
 	<p>Login</p>
     </div>
-    		<img id="profileImage" alt="PFP Image">
+    		<img id="profileImage">
     		<p id="displayName"></p>
     <div class="moon">
     </div> <!--end moon-->
@@ -150,13 +150,13 @@
 
         if (response.status === 200) {
             const data = await response.json();
-            const displayName = data.display_name;
+            const myDisplayName = data.display_name;
             const profilePictureUrl = data.images.length > 0 ? data.images[0].url : '';
 
             var myUserImage = document.getElementById('profileImage');
             myUserImage.src = profilePictureUrl;
             var myUserDisplayName = document.getElementById('displayName');
-            myUserDisplayName = displayName;
+            myUserDisplayName.innerText = myDisplayName;
 		alert("successful");
         } else {
             alert("Not successful");
