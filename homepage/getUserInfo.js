@@ -13,7 +13,8 @@ const code = urlParams.get("code");
 }
 
 async function getUserProfile() {
-        const accessToken = await getAccessToken();
+        await getAccessToken();
+        const accessToken = localStorage.getItem("access_token");
 
   if(accessToken) {
         const response = await fetch('https://api.spotify.com/v1/me', {
