@@ -13,16 +13,16 @@ const code = urlParams.get("code");
 }
 
 async function getUserProfile() {
-        await getAccessToken();
-        const accessToken = localStorage.getItem("access_token");
+        const accessToken = await getAccessToken();
 
-  if(accessToken) {
-        const response = await fetch('https://api.spotify.com/v1/me', {
-            method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${accessToken}`,
-            },
-        });
+        if (accessToken) {
+            // Fetch currently playing track
+            const response = await fetch('https://api.spotify.com/v1/me', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${accessToken}`,
+                },
+            });
 
         if (response.status === 200) {
             const data = await response.json();
@@ -32,10 +32,10 @@ async function getUserProfile() {
             document.getElementById('displayName').textContent = `My Username: ${displayName}`;
             document.getElementById('profileImage').src = profilePictureUrl;
         } else {
-            document.getElementById('myusername').textContent = 'Unable to fetch username';
+            document.getElementById('displayName').textContent = 'Unable to fetch username';
         }
-  }
 }
+
     async function getAccessToken() {
         const urlParams = new URLSearchParams(window.location.search);
           const code = urlParams.get("code");
