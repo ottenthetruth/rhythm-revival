@@ -4,11 +4,13 @@ body::-webkit-scrollbar{
 
 /* testing */
 #profileImage {
-	width: 30px;
-	height: 30px;
 	position: absolute;
 	top: 20px;
 	left: 20%;
+}
+#profileImage img {
+	width: 30px;
+	height: 30px;
 }
 #displayName {
 	position: absolute;
