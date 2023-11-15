@@ -29,8 +29,11 @@ async function getUserProfile() {
             const displayName = data.display_name;
             const profilePictureUrl = data.images.length > 0 ? data.images[0].url : '';
 
-            document.getElementById('displayName').textContent = `My Username: ${displayName}`;
-            document.getElementById('profileImage').src = profilePictureUrl;
+            var myUserImage = document.getElementById('profileImage');
+            myUserImage = profilePictureUrl;
+            var myUserDisplayName = document.getElementById('displayName');
+            myUserDisplayName = displayName;
+            
         } else {
             document.getElementById('displayName').textContent = 'Unable to fetch username';
         }
