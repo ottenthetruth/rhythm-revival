@@ -31,7 +31,7 @@
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: #BB86FC;
+  background-color: #03DAC6;
   -webkit-transition: .4s;
   transition: .4s; }
 input:checked + .slider {
@@ -55,7 +55,7 @@ input:checked + .slider:before {
   top: 2.4%;
   right: 10px; }
 body.dark-mode .moon {
-  background-color: #BB86FC; }
+  background-color: #03DAC6; }
 .moon2 {
   width: 23px;
   height: 23px;
