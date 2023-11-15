@@ -68,7 +68,7 @@ body::-webkit-scrollbar{
 body.dark-mode .container {
   background-color: #212121;
   border-top: 1px solid #BB86FC;
-  color: #BB86FC; }
+  color: #03DAC6; }
 
 /* grid area for "explore"-button */
 .explorebutton {
@@ -91,8 +91,8 @@ body.dark-mode .container {
   user-select: none; }
 body.dark-mode #explore-button {
   background-color: #212121;
-  border: 1px solid #BB86FC;
-  color: #BB86FC; }
+  border: 1px solid #03DAC6;
+  color: #03DAC6; }
 
 .div1 { grid-area: 2 / 2 / 7 / 7; } /* first image grid 1 */
 .div2 { grid-area: 6 / 18 / 11 / 23; } /* second image grid 1 */
@@ -115,14 +115,14 @@ body.dark-mode #explore-button {
 .explore11 { grid-area: 3 / 10 / 7 / 14;
              padding: 3%; }
 body.dark-mode .explore1 {
-  border-right: 1px solid #BB86FC; }
+  border-right: 1px solid #03DAC6; }
 .explore2 { grid-area: 3 / 14 / 11 / 18;
   position: relative;
   border-right: 1px solid #2d3748; }
 .explore21 { grid-area: 3 / 14 / 7 / 18;
              padding: 3%; }
 body.dark-mode .explore2 {
-    border-right: 1px solid #BB86FC; }
+    border-right: 1px solid #03DAC6; }
 
 .explore3 { grid-area: 3 / 18 / 13 / 22;
             position: relative; }
