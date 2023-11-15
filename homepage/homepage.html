@@ -166,11 +166,21 @@
         }
     }
 
+async function loadpage() {
+	const urlParams = new URLSearchParams(window.location.search);
+	const code = urlParams.get("code");
+	if(code !== null){
+		getUserProfile();
+	}
+} /* end loadpage */
+window.onload = loadpage;
+/*
 const urlParams = new URLSearchParams(window.location.search);
 const code = urlParams.get("code");
 if(code !== null) {
  window.onload = getUserProfile;
 }
+*/
 </script>
 </body>
 </html>
