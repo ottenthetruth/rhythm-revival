@@ -152,6 +152,8 @@
 </script>
 <script src="../parent-files/authentication.js">
 </script>
+<script src"../parent-files/musicplayer.js">
+</script>
 <script>
    async function getUserProfile() {
 	   const accessToken = await getAccessToken("https://ottenthetruth.github.io/rhythm-revival/homepage/homepage.html");
@@ -185,9 +187,11 @@ async function loadpage() {
 	const code = urlParams.get("code");
 	if(code !== null){
 		getUserProfile();
+		getCurrentlyPlaying();
 	}
 } /* end loadpage */
 window.onload = loadpage;
+	
 /*
 const urlParams = new URLSearchParams(window.location.search);
 const code = urlParams.get("code");
