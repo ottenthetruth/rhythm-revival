@@ -1,6 +1,13 @@
+/* Include font file: Varela Round */
+@font-face {
+  font-family: 'Varela Round'; /* Choose a name for your font */
+  src: url('VarelaRound.ttf') format('truetype'); /* Path to your TTF file */
+  /* Optionally, you can include font-weight and font-style properties if needed */
+}
+
 /* body */
 body {
-    font-family: "Times New Roman", sans-serif;
+    font-family: "Varela Round", sans-serif;
     color: #2d3748;
     background-color: #edf2f7;
     margin: 0;
