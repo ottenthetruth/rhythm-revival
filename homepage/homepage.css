@@ -38,7 +38,8 @@ body::-webkit-scrollbar{
 .parent2 h2 {
     font-weight: lighter;
     text-decoration: underline;
-    font-size: 14px; }
+    cursor: pointer;
+    font-size: 19px; }
 
 /* container css */
 .container {
@@ -113,12 +114,6 @@ body.dark-mode .explore2 {
 .explore31 {
   grid-area: 3 / 20 / 13 / 24;
   padding: 3%; }
-
-.lyrics1 {
-  color: gray; }
-.lyrics2 {
-  color: gray;
-  text-align: right; }
 
 /* bottom navigation banner */
 .div41 { grid-area: 2 / 2 / 10 / 2; }
