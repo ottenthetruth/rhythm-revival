@@ -1,5 +1,4 @@
 .menu {
-  padding-right: 25px;
   position: sticky;
   width: 250px;
   height: 500px;
@@ -46,7 +45,8 @@ body.dark-mode .extendmenu {
 
 /* controls */
 .controls {
-  margin-top: 20px; }
+  margin-top: 20px;
+  padding-right: 25px; }
 button {
    background-color: #2d3748;
    color: #edf2f7;
@@ -59,4 +59,5 @@ body.dark-mode button {
    color: #03DAC6; }
 progress {
    width: 100%;
-  margin-top: 20px; }
+  margin-top: 20px;
+  padding-right: 25px; }
