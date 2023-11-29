@@ -2,19 +2,6 @@
 body::-webkit-scrollbar{
   display: none; }
 
-/* spotify user data */
-#profileImage {
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	width: 40px;
-	height: auto;
-	draggable: false; }
-#displayName {
-	position: absolute;
-	top: 5px;
-	left: 50px; }
-
 /* content grids */
 .parent, .parent2 {
   display: grid;
