@@ -1,5 +1,5 @@
 .menu {
-  width: 250px;
+  width: 251px;
   height: 425px;
   background-color: #2d3748;
   position: absolute;
@@ -16,7 +16,7 @@ body.dark-mode .menu {
   height: 75px;
   background-color: #2d3748;
   position: absolute;
-  right: -250px;
+  right: -251px;
   top: 425px;
   color: #edf2f7;
   text-align: center;
@@ -26,8 +26,7 @@ body.dark-mode .menu {
 .controlbuttons {
   display: flex;
   flex-wrap: wrap; 
-  justify-content: center;
-  padding-right: 25px; }
+  justify-content: center; }
 body.dark-mode .controls {
   background-color: #212121;
   color: #03DAC6;
@@ -49,7 +48,7 @@ body.dark-mode .controls {
   height: 100px;
   background-color: #2d3748;
   position: absolute;
-  right: 0px;
+  right: -1px;
   transition: transform 0.5s ease;
   color: #edf2f7; }
 body.dark-mode .extendmenu {
@@ -81,6 +80,8 @@ body.dark-mode button {
    background-color: #212121;
    color: #03DAC6; }
 progress {
-   width: 100%;
+   width: 200px;
    margin-top: 10px;
+   margin-bottom: 25px;
+   margin-left: 25px;
    margin-right: 25px; }
