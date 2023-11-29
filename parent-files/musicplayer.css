@@ -32,6 +32,8 @@ body.dark-mode .controls {
   color: #03DAC6;
   border-left: 1px solid #03DAC6;
   border-bottom: 1px solid #03DAC6; }
+#resumeButton {
+  display: none; }
 .menu img {
   width: 200px;
   height: 200px;
