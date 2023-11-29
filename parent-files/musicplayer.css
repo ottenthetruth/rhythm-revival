@@ -36,7 +36,8 @@ body.dark-mode .controls {
   width: 200px;
   height: 200px;
   padding: 25px;
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+  -webkit-user-drag: none; }
 .menu h1 {
   font-size: 19px;
   padding: 0px;
