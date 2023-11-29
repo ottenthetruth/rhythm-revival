@@ -1,6 +1,6 @@
 .menu {
   width: 250px;
-  height: 500px;
+  height: 375px;
   background-color: #2d3748;
   position: absolute;
   right: -250px;
@@ -10,8 +10,20 @@ body.dark-mode .menu {
   background-color: #212121;
   color: #03DAC6;
   border-top: 1px solid #03DAC6;
-  border-bottom: 1px solid #03DAC6;
   border-left: 1px solid #03DAC6; }
+.controls {
+  width: 250px;
+  height: 125px;
+  background-color: #2d3748;
+  position: absolute;
+  right: -250px;
+  color: #edf2f7;
+  text-align: center; }
+body.dark-mode .controls {
+  background-color: #212121;
+  color: #03DAC6;
+  boder-left: 1px solid #03DAC6;
+  border-bottom: 1px solid #03DAC6; }
 .menu img {
   width: 200px;
   height: 200px;
