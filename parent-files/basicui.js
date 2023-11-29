@@ -19,9 +19,7 @@
 	    var logButton = document.getElementById("logBtn");
 	    logButton.style.display = "none";
 	    logButton.disabled = true;
-		alert("successful");
         } else {
-            alert("Not successful");
         }
     }
     async function getCurrentlyPlaying() {
