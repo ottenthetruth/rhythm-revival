@@ -86,6 +86,6 @@ body.dark-mode .loginbtn {
 
 /* default css for links */
 a:-webkit-any-link {
-  color: initial;
-  cursor: initial;
-  text-decoration: initial; }
+  color: inherit;
+  cursor: inherit;
+  text-decoration: inherit; }
