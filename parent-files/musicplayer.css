@@ -4,7 +4,8 @@
   background-color: #2d3748;
   position: absolute;
   right: -250px;
-  color: #edf2f7; }
+  color: #edf2f7;
+  text-align: center; }
 body.dark-mode .menu {
   background-color: #212121;
   color: #03DAC6;
@@ -39,3 +40,16 @@ body.dark-mode .extendmenu {
   transition: transform 0.5s ease; }
 .musicplayer:hover {
   transform: translateX(-250px); }
+
+/* controls */
+.controls {
+  margin-top: 20px; }
+button {
+   background-color: #fff;
+   border: none;
+   font-size: 20px;
+   margin: 0 10px;
+   cursor: pointer; }
+progress {
+   width: 100%;
+  margin-top: 20px; }
