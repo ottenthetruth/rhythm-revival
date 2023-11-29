@@ -19,7 +19,14 @@ body.dark-mode .menu {
   right: -250px;
   top: 375px;
   color: #edf2f7;
-  text-align: center; }
+  text-align: center;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-end; }
+.controlbuttons {
+  display: flex;
+  flex-wrap: wrap;
+}
 body.dark-mode .controls {
   background-color: #212121;
   color: #03DAC6;
