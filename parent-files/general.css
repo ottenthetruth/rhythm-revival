@@ -18,6 +18,19 @@ body.dark-mode {
   background-color: #252526;
   color: #03DAC6; }
 
+/* spotify user data */
+#profileImage {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 40px;
+	height: auto;
+	draggable: false; }
+#displayName {
+	position: absolute;
+	top: 0px;
+	left: 50px; }
+
 .myheader {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
