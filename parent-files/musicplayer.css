@@ -39,14 +39,15 @@ body.dark-mode .extendmenu {
 .musicplayer {
   transition: transform 0.5s ease;
   position: fixed; 
-  right: 0; }
+  right: 0;
+  z-index: 9999; }
 .musicplayer:hover {
   transform: translateX(-250px); }
 
 /* controls */
 .controls {
-  margin-top: 20px;
-  padding-right: 25px; }
+   margin-top: 20px;
+   padding-right: 25px; }
 button {
    background-color: #2d3748;
    color: #edf2f7;
@@ -59,5 +60,5 @@ body.dark-mode button {
    color: #03DAC6; }
 progress {
    width: 100%;
-  margin-top: 20px;
-  padding-right: 25px; }
+   margin-top: 20px;
+   padding-right: 25px; }
