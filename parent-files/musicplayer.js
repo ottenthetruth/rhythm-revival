@@ -1,7 +1,7 @@
 const pauseButton = document.getElementById('pauseButton');
 let isPlaying = false; // Track current playback state
 
-playPauseButton.addEventListener('click', () => {
+playButton.addEventListener('click', () => {
   if (isPlaying) {
     pausePlayback();
   } else {
@@ -37,8 +37,11 @@ function pausePlayback() {
 } //end pauseplayback
 
 function checkPlaybackState() {
-  const accessToken = 'YOUR_ACCESS_TOKEN'; // Replace with the user's access token after authentication
-
+  const urlParams = new URLSearchParams(window.location.search);
+  const code = urlParams.get("code");
+  
+  if(code) {
+  const accessToken = localStorage.getItem("access_token");
   fetch('https://api.spotify.com/v1/me/player', {
     method: 'GET',
     headers: {
@@ -63,7 +66,8 @@ function checkPlaybackState() {
   .catch(error => {
     console.error('Error checking playback state:', error);
   });
-}
+  } // end if code
+} // end checkPlaybackState
 
 function resumePlayback() {
   const urlParams = new URLSearchParams(window.location.search);
