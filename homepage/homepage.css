@@ -36,9 +36,9 @@ body::-webkit-scrollbar{
 
 /* "try it yourself" css */
 .parent2 h2 {
-  cursor: pointer;
-  font-style: italic;
-  text-decoration: underline; }
+    font-weight: lighter;
+    text-decoration: underline;
+    font-size: 14px; }
 
 /* container css */
 .container {
