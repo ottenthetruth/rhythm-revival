@@ -23,7 +23,7 @@ body.dark-mode {
 	left: 5px;
 	width: 40px;
 	height: auto;
-	draggable: false; }
+	-webkit-user-drag: none; }
 #displayName {
 	position: absolute;
 	top: 0px;
