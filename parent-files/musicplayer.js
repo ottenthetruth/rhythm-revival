@@ -1,13 +1,14 @@
 const pauseButton = document.getElementById('pauseButton');
 
-pauseButton.addEventListener('click' () => {
+pauseButton.addEventListener('click', () => {
   pausePlayback();
 });
 
 function pausePlayback() {
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const code = urlParams.get("code");
+  const urlParams = new URLSearchParams(window.location.search);
+  const code = urlParams.get("code");
+  
   if(code) {
   const accessToken = localStorage.getItem("access_token");
 
