@@ -1,9 +1,7 @@
 /* Include font file: Varela Round */
 @font-face {
-  font-family: 'Varela Round'; /* Choose a name for your font */
-  src: url('VarelaRound.ttf') format('truetype'); /* Path to your TTF file */
-  /* Optionally, you can include font-weight and font-style properties if needed */
-}
+  font-family: 'Varela Round';
+  src: url('VarelaRound.ttf') format('truetype'); }
 
 /* body */
 body {
@@ -85,3 +83,9 @@ body:not(.dark-mode) .slider:before {
 body.dark-mode .loginbtn {
     background-color: #212121;
     color: #03DAC6; }
+
+/* default css for links */
+a:-webkit-any-link {
+  color: initial;
+  cursor: initial;
+  text-decoration: initial; }
