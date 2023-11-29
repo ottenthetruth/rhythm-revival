@@ -23,7 +23,7 @@ body.dark-mode .menu {
 body.dark-mode .controls {
   background-color: #212121;
   color: #03DAC6;
-  boder-left: 1px solid #03DAC6;
+  border-left: 1px solid #03DAC6;
   border-bottom: 1px solid #03DAC6; }
 .menu img {
   width: 200px;
@@ -58,9 +58,6 @@ body.dark-mode .extendmenu {
   transform: translateX(-250px); }
 
 /* controls */
-.controls {
-   margin-top: 20px;
-   padding-right: 25px; }
 button {
    background-color: #2d3748;
    color: #edf2f7;
