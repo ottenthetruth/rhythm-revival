@@ -38,11 +38,13 @@ body.dark-mode .controls {
   padding: 25px;
   padding-bottom: 0px; }
 .menu h1 {
-  font-size: 18px;
-  padding: 10px; }
+  font-size: 19px;
+  padding: 0px;
+  font-weight: lighter; }
 .menu h2 {
   font-size: 14px;
-  padding: 10px; }
+  padding: 0px;
+  font-weight: lighter; }
 .extendmenu {
   width: 30px;
   height: 100px;
