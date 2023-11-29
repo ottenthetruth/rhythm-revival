@@ -1,12 +1,16 @@
 const pauseButton = document.getElementById('pauseButton');
-const resumeButton = document.getElementById('skipForward');
+const resumeButton = document.getElementById('resumeButton');
 
 pauseButton.addEventListener('click', () => {
+    pauseButton.style.display = 'none';
+    resumeButton.style.display = 'block';
     pausePlayback();
 });
 
 resumeButton.addEventListener('click', () => {
-  resumePlayback();
+    pauseButton.style.display = 'block';
+    resumeButton.style.display = 'none';
+    resumePlayback();
 });
 
 function pausePlayback() {
