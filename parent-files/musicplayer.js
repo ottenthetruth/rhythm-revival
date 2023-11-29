@@ -1,7 +1,7 @@
 const pauseButton = document.getElementById('pauseButton');
 let isPlaying = false; // Track current playback state
 
-playButton.addEventListener('click', () => {
+pauseButton.addEventListener('click', () => {
   if (isPlaying) {
     pausePlayback();
   } else {
