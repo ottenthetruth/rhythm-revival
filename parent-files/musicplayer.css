@@ -45,11 +45,15 @@ body.dark-mode .extendmenu {
 .controls {
   margin-top: 20px; }
 button {
-   background-color: #fff;
+   background-color: #2d3748;
+   color: #edf2f7;
    border: none;
    font-size: 20px;
    margin: 0 10px;
    cursor: pointer; }
+body.dark-mode button {
+   background-color: #212121;
+   color: #03DAC6; }
 progress {
    width: 100%;
   margin-top: 20px; }
