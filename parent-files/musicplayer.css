@@ -7,7 +7,10 @@
   color: #edf2f7; }
 body.dark-mode .menu {
   background-color: #212121;
-  color: #03DAC6; }
+  color: #03DAC6;
+  border-right: 1px solid #03DAC6;
+  border-top: 1px solid #03DAC6;
+  border-bottom: 1px solid #03DAC6;}
 .menu img {
   width: 200px;
   height: 200px;
@@ -26,7 +29,9 @@ body.dark-mode .menu {
 body.dark-mode .extendmenu {
   background-color: #212121;
   color: #03DAC6;
-}
+  border-left: 1px solid #03DAC6;
+  border-top: 1px solid #03DAC6;
+  border-bottom: 1px solid #03DAC6; }
 .extendmenu p { /* arrow */
   font-size: 30px;
   font-weight: bold; }
