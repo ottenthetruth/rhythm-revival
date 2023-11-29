@@ -78,7 +78,7 @@ body.dark-mode #explore-button {
   border: 1px solid #03DAC6;
   color: #03DAC6; }
 
-.div1 { grid-area: 2 / 2 / 7 / 7; } /* first image grid 1 */
+.div1 { grid-area: 3 / 2 / 8 / 7; } /* first image grid 1 */
 .div2 { grid-area: 6 / 18 / 11 / 23; } /* second image grid 1 */
 .div21 { grid-area: 3 / 3 / 7 / 7; }  /* first image grid 2 */
 .div23 { grid-area: 8 / 2 / 11 / 5; } /* second image grid 2 */
