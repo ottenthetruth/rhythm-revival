@@ -1,4 +1,5 @@
 .menu {
+  position: sticky;
   width: 250px;
   height: 500px;
   background-color: #2d3748;
@@ -20,6 +21,7 @@ body.dark-mode .menu {
 .menu h1, h2 {
   padding-left: 25px; }
 .extendmenu {
+  position: sticky;
   width: 30px;
   height: 100px;
   background-color: #2d3748;
