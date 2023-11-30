@@ -59,10 +59,6 @@ skipForwardButton.addEventListener('click', () => {
     skipForward();
 });
 
-skipForwardButton.addEventListener('click', () => {
-    myGetCurrentlyPlaying();
-});
-
 function pausePlayback() {
   const accessToken = localStorage.getItem("access_token");
   if(accessToken) {
