@@ -68,6 +68,10 @@ skipToPreviousButton.addEventListener('click', () => {
     skipToPrevious();
 });
 
+skipToPreviousButton.addEventListener('click', () => {
+    getCurrentlyPlaying();
+});
+
 function pausePlayback() {
   const accessToken = localStorage.getItem("access_token");
   if(accessToken) {
