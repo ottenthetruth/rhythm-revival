@@ -43,11 +43,17 @@ body.dark-mode .controls {
 .menu h1 {
   font-size: 19px;
   padding: 0px;
-  font-weight: lighter; }
+  font-weight: lighter;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; }
 .menu h2 {
   font-size: 14px;
   padding: 0px;
-  font-weight: lighter; }
+  font-weight: lighter;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; }
 .extendmenu {
   width: 30px;
   height: 100px;
