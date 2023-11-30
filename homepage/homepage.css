@@ -33,6 +33,8 @@ body::-webkit-scrollbar{
 .parent h1, .parent h2, .parent2 h1, .parent2 h2 {
   margin: 0;
   padding: 0; }
+.parent h1 {
+  font-size: 85px; }
 
 /* "try it yourself" css */
 .parent2 h2 {
