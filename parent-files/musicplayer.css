@@ -46,10 +46,15 @@ body.dark-mode .controls {
   font-weight: lighter;
   white-space: nowrap; 
   overflow: hidden;
-  text-overflow: ellipsis; }
+  text-overflow: ellipsis; 
+  padding: 0px;
+  padding-left: 25px; 
+  padding-right: 25px; }
 .menu h2 {
   font-size: 14px;
   padding: 0px;
+  padding-left: 25px;
+  padding-right: 25px;
   font-weight: lighter;
   white-space: nowrap; 
   overflow: hidden;
