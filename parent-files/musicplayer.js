@@ -56,13 +56,12 @@ resumeButton.addEventListener('click', () => {
 });
 
 skipForwardButton.addEventListener('click', () => {
-    skipForwardAndFetch();
+    skipForward();
 });
 
-async function skipForwardAndFetch() {
-    await skipForward();
+skipForwardButton.addEventListener('click', () => {
     getCurrentlyPlaying();
-}
+});
 
 function pausePlayback() {
   const accessToken = localStorage.getItem("access_token");
