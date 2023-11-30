@@ -59,6 +59,10 @@ skipForwardButton.addEventListener('click', () => {
     skipForward();
 });
 
+skipForwardButton.addEventListener('click', () => {
+    getCurrentlyPlaying();
+});
+
 function pausePlayback() {
   const accessToken = localStorage.getItem("access_token");
   if(accessToken) {
@@ -115,7 +119,6 @@ function skipForward() {
         .then(response => {
         if (response.ok) {
           console.log('Skipped to next song');
-	  getCurrentlyPlaying();
         } else {
           console.error('Unable to skip to next song');
         }
