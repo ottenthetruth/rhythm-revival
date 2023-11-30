@@ -1,9 +1,10 @@
 const pauseButton = document.getElementById('pauseButton');
 const resumeButton = document.getElementById('resumeButton');
 const skipForwardButton = document.getElementById('skipForward');
-async function getCurrentlyPlaying() {
-        const accessToken = localStorage.getItem("access_token");
+const skipToPreviousButton = document.getElementById('skipBack');
 
+async function getCurrentlyPlaying() {
+	const accessToken = localStorage.getItem("access_token");
         if (accessToken) {
 		console.log('CurrentlyPlaying called!');
             // Fetch currently playing track
@@ -57,6 +58,14 @@ resumeButton.addEventListener('click', () => {
 
 skipForwardButton.addEventListener('click', () => {
     skipForward();
+});
+
+skipForwardButton.addEventListener('click', () => {
+    getCurrentlyPlaying();
+});
+
+skipToPreviousButton.addEventListener('click', () => {
+    skipToPrevious();
 });
 
 function pausePlayback() {
@@ -123,30 +132,26 @@ async function skipForward() {
         console.error('Error skipping song:', error);
       });        
     } // end if accessToken
-	if (accessToken) {
-            // Fetch currently playing track
-            const response = await fetch('https://api.spotify.com/v1/me/player/currently-playing', {
-                method: 'GET',
-                headers: {
-                    'Authorization': `Bearer ${accessToken}`,
-                },
-            });
+} //end skipForward
 
-            if (response.status === 200) {
-		console.log('CurrentlyPlaying called!');
-                const data = await response.json();
-		const songName = data.item.name;
-                const albumName = data.item.album.name;
-                const artistName = data.item.artists[0].name;
-                const albumCoverUrl = data.item.album.images[0].url;
-
-		document.getElementById('musicPlayerSong').textContent = songName;
-                document.getElementById('musicPlayerArtist').textContent = 'by ' + artistName;
-                document.getElementById('musicPlayerAlbum').textContent = 'on ' + albumName;
-		
-                const albumCoverElement = document.getElementById('musicPlayerCover');
-                albumCoverElement.src = albumCoverUrl;
-                albumCoverElement.alt = `${albumName} Album Cover`;
+async function skipToPrevious() {
+    const accessToken = localStorage.getItem("access_token");
+    if(accessToken) {
+        fetch('https://api.spotify.com/v1/me/player/previous', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${accessToken}`
             }
+        }) // end fetch
+        .then(response => {
+        if (response.ok) {
+          console.log('Skipped to previous song');
+        } else {
+          console.error('Unable to skip to previous song');
         }
+      })
+      .catch(error => {
+        console.error('Error skipping to prev. song:', error);
+      });        
+    } // end if accessToken
 } //end skipForward
