@@ -30,8 +30,40 @@ async function getCurrentlyPlaying() {
                 albumCoverElement.alt = `${albumName} Album Cover`;
             }
         }
-    }
+    } // end getCurrentlyPlaying
 
+//start new Ftc
+async function myGetCurrentlyPlaying() {
+        const accessToken = localStorage.getItem("access_token");
+
+        if (accessToken) {
+		console.log('CurrentlyPlaying called!');
+            // Fetch currently playing track
+            const response = await fetch('https://api.spotify.com/v1/me/player/currently-playing', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${accessToken}`,
+                },
+            });
+
+            if (response.status === 200) {
+                const data = await response.json();
+		const songName = data.item.name;
+                const albumName = data.item.album.name;
+                const artistName = data.item.artists[0].name;
+                const albumCoverUrl = data.item.album.images[0].url;
+
+		document.getElementById('musicPlayerSong').textContent = songName;
+                document.getElementById('musicPlayerArtist').textContent = 'by ' + artistName;
+                document.getElementById('musicPlayerAlbum').textContent = 'on ' + albumName;
+		
+                const albumCoverElement = document.getElementById('musicPlayerCover');
+                albumCoverElement.src = albumCoverUrl;
+                albumCoverElement.alt = `${albumName} Album Cover`;
+            }
+        }
+    } // end getCurrentlyPlaying
+//end new Ftc
 const musicPlayer = document.getElementById('musicplayer');
 
 musicPlayer.addEventListener('mouseenter', function() {
@@ -60,7 +92,7 @@ skipForwardButton.addEventListener('click', () => {
 });
 
 skipForwardButton.addEventListener('click', () => {
-    getCurrentlyPlaying();
+    MyGetCurrentlyPlaying();
 });
 
 function pausePlayback() {
