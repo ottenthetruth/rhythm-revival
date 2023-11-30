@@ -36,7 +36,7 @@ const musicPlayer = document.getElementById('musicplayer');
 
 musicPlayer.addEventListener('mouseenter', function() {
    getCurrentlyPlaying();
-   this.interval = setInterval(getCurrentlyPlaying, 2000);
+   this.interval = setInterval(getCurrentlyPlaying, 16000);
 });
 
 musicPlayer.addEventListener('mouseleave', function() {
