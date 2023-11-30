@@ -92,7 +92,7 @@ skipForwardButton.addEventListener('click', () => {
 });
 
 skipForwardButton.addEventListener('click', () => {
-    MyGetCurrentlyPlaying();
+    myGetCurrentlyPlaying();
 });
 
 function pausePlayback() {
