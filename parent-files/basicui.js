@@ -21,49 +21,8 @@
 	    logButton.disabled = true;
         } else {
         }
-    }
-    async function getCurrentlyPlaying() {
-        const accessToken = localStorage.getItem("access_token");
-
-        if (accessToken) {
-		console.log('CurrentlyPlaying called!');
-            // Fetch currently playing track
-            const response = await fetch('https://api.spotify.com/v1/me/player/currently-playing', {
-                method: 'GET',
-                headers: {
-                    'Authorization': `Bearer ${accessToken}`,
-                },
-            });
-
-            if (response.status === 200) {
-                const data = await response.json();
-		const songName = data.item.name;
-                const albumName = data.item.album.name;
-                const artistName = data.item.artists[0].name;
-                const albumCoverUrl = data.item.album.images[0].url;
-
-		document.getElementById('musicPlayerSong').textContent = songName;
-                document.getElementById('musicPlayerArtist').textContent = 'by ' + artistName;
-                document.getElementById('musicPlayerAlbum').textContent = 'on ' + albumName;
-		
-                const albumCoverElement = document.getElementById('musicPlayerCover');
-                albumCoverElement.src = albumCoverUrl;
-                albumCoverElement.alt = `${albumName} Album Cover`;
-            }
-        }
-    }
-
-const musicPlayer = document.getElementById('musicplayer');
-
-musicPlayer.addEventListener('mouseover', function() {
-   getCurrentlyPlaying();
-   this.interval = setInterval(getCurrentlyPlaying, 2000);
-});
-
-musicPlayer.addEventListener('mouseout', function() {
-   clearInterval(this.interval);
-});
-
+    } //end getUserProfile
+    
 async function loadpage() {
 	const urlParams = new URLSearchParams(window.location.search);
 	const code = urlParams.get("code");
