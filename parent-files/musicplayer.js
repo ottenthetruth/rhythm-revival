@@ -16,6 +16,7 @@ resumeButton.addEventListener('click', () => {
 
 skipForwardButton.addEventListener('click', () => {
     skipForward();
+    getCurrentlyPlaying();
 });
 
 function pausePlayback() {
