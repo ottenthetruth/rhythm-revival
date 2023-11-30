@@ -56,9 +56,7 @@ resumeButton.addEventListener('click', () => {
 });
 
 skipForwardButton.addEventListener('click', () => {
-    skipForward().then(() => {
-        getCurrentlyPlaying();
-    });
+    skipForward();
 });
 
 function pausePlayback() {
@@ -105,7 +103,7 @@ function resumePlayback() {
   } //end if accessToken
 } //end resumePlayback
 
-async function skipForward() {
+function skipForward() {
     const accessToken = localStorage.getItem("access_token");
     if(accessToken) {
         fetch('https://api.spotify.com/v1/me/player/next', {
@@ -117,6 +115,7 @@ async function skipForward() {
         .then(response => {
         if (response.ok) {
           console.log('Skipped to next song');
+	  getCurrentlyPlaying();
         } else {
           console.error('Unable to skip to next song');
         }
