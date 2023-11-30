@@ -23,16 +23,17 @@ body::-webkit-scrollbar{
 
 .parent img {
   border-radius: 25px; }
-.parent2 img {
+.infoimg {
   border-radius: 8px; }
+.displayalbums {
+  border-radius: 50%; }
 
 /* assisting images */
 .image-hover {
   transition: transform 0.75s; }
 .image-hover:hover {
   transform: scale(1.1); }
-.displayalbums {
-  border-radius: 50%; }
+
 
 /* adjust text position */
 .parent h1, .parent h2, .parent2 h1, .parent2 h2 {
