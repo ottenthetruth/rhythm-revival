@@ -66,7 +66,7 @@ function skipForward() {
     const accessToken = localStorage.getItem("access_token");
     if(accessToken) {
         fetch('https://api.spotify.com/v1/me/player/next', {
-            method: 'PUT',
+            method: 'POST',
             headers: {
                 'Authorization': `Bearer ${accessToken}`
             }
