@@ -16,6 +16,7 @@ resumeButton.addEventListener('click', () => {
 
 skipForwardButton.addEventListener('click', () => {
     skipForward();
+    getCurrentlyPlaying();
 });
 
 function pausePlayback() {
@@ -63,7 +64,7 @@ function resumePlayback() {
 } //end resumePlayback
 
 function skipForward() {
-    cosnt accessToken = localStorage.getItem("access_token");
+    const accessToken = localStorage.getItem("access_token");
     if(accessToken) {
         fetch('https://api.spotify.com/v1/me/player/next', {
             method: 'PUT',
