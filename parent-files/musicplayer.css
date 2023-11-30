@@ -75,7 +75,8 @@ body.dark-mode .extendmenu {
   border-bottom: 1px solid #03DAC6; }
 .extendmenu p { /* arrow */
   font-size: 30px;
-  font-weight: bold; }
+  font-weight: bold;
+  padding-left: 10px; }
 .musicplayer {
   transition: transform 0.5s ease;
   position: fixed; 
