@@ -21,6 +21,11 @@ body::-webkit-scrollbar{
   height: auto;
   object-fit: cover; }
 
+.parent img {
+  border-radius: 25px; }
+.parent2 img {
+  border-radius: 8px; }
+
 /* assisting images */
 .image-hover {
   transition: transform 0.75s; }
