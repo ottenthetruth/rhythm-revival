@@ -34,12 +34,12 @@ async function getCurrentlyPlaying() {
 
 const musicPlayer = document.getElementById('musicplayer');
 
-musicPlayer.addEventListener('mouseover', function() {
+musicPlayer.addEventListener('mouseenter', function() {
    getCurrentlyPlaying();
    this.interval = setInterval(getCurrentlyPlaying, 2000);
 });
 
-musicPlayer.addEventListener('mouseout', function() {
+musicPlayer.addEventListener('mouseleave', function() {
    clearInterval(this.interval);
 });
 
