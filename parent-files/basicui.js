@@ -26,6 +26,7 @@
         const accessToken = localStorage.getItem("access_token");
 
         if (accessToken) {
+		console.log('CurrentlyPlaying called!');
             // Fetch currently playing track
             const response = await fetch('https://api.spotify.com/v1/me/player/currently-playing', {
                 method: 'GET',
@@ -60,4 +61,15 @@ async function loadpage() {
 		getCurrentlyPlaying();
 	}
 } /* end loadpage */
+
+const musicPlayer = document.getElementById('musicplayer');
+
+musicPlayer.addEventListener('mouseover', function() {
+   this.interval = setInterval(getCurrentlyPlaying, 1000);
+});
+
+musicPlayer.addEventListener('mouseout', function() {
+   clearInterval(this.interval);
+});
+
 window.onload = loadpage;
