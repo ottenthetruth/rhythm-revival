@@ -36,13 +36,15 @@
 
             if (response.status === 200) {
                 const data = await response.json();
+		const songName = data.item.name;
                 const albumName = data.item.album.name;
                 const artistName = data.item.artists[0].name;
                 const albumCoverUrl = data.item.album.images[0].url;
 
-                document.getElementById('musicPlayerAlbum').textContent = albumName;
-                document.getElementById('musicPlayerArtist').textContent = artistName;
-
+		document.getElementById('musicPlayerSong').textContent = songName;
+                document.getElementById('musicPlayerArtist').textContent = 'by ' + artistName;
+                document.getElementById('musicPlayerAlbum').textContent = 'on ' + albumName;
+		
                 const albumCoverElement = document.getElementById('musicPlayerCover');
                 albumCoverElement.src = albumCoverUrl;
                 albumCoverElement.alt = `${albumName} Album Cover`;
