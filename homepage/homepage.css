@@ -21,19 +21,14 @@ body::-webkit-scrollbar{
   height: auto;
   object-fit: cover; }
 
-.parent img {
-  border-radius: 25px; }
-.infoimg {
-  border-radius: 8px; }
 .displayalbums {
   border-radius: 50%; }
 
 /* assisting images */
 .image-hover {
-  transition: transform 0.75s; }
+  transition: transform 0.5s; }
 .image-hover:hover {
-  transform: scale(1.1); }
-
+  transform: scale(1.05); }
 
 /* adjust text position */
 .parent h1, .parent h2, .parent2 h1, .parent2 h2 {
