@@ -53,23 +53,22 @@
         }
     }
 
-async function loadpage() {
-	const urlParams = new URLSearchParams(window.location.search);
-	const code = urlParams.get("code");
-	if(code !== null){
-		getUserProfile();
-		getCurrentlyPlaying();
-	}
-} /* end loadpage */
-
 const musicPlayer = document.getElementById('musicplayer');
 
 musicPlayer.addEventListener('mouseover', function() {
-   this.interval = setInterval(getCurrentlyPlaying, 1000);
+   this.interval = setInterval(getCurrentlyPlaying, 2000);
 });
 
 musicPlayer.addEventListener('mouseout', function() {
    clearInterval(this.interval);
 });
+
+async function loadpage() {
+	const urlParams = new URLSearchParams(window.location.search);
+	const code = urlParams.get("code");
+	if(code !== null){
+	  getUserProfile();
+	}
+} /* end loadpage */
 
 window.onload = loadpage;
