@@ -26,10 +26,19 @@ async function getAlbums() {
                     <img src="${album.images[0].url}">
                     <h4>${album.name}</h4>
                     <h5>${album.artists[0].name}</h5>
-                    <p class="playalbumbutton">Play!</p>
+                    <button class="playalbumbutton" data-context-uri="${album.uri}">Play!</button>
                     `;
                     cardContainer.appendChild(card);
                 });
+
+                const playButtons = document.querySelectorAll('.playalbumbutton');
+                playButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const contextUri = button.getAttribute('data-context-uri');
+                        playAlbum('spotify:album:${contextUri}');
+                    });
+                });
+                
             }
         }
     }
