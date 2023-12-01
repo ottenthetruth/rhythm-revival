@@ -23,10 +23,7 @@
     } //end getUserProfile
 
 async function loadpage() {
-   const accessToken = localStorage.getItem("access_token");
-   if(accessToken) {
       getUserProfile();
-   }
 } /* end loadpage */
 
 window.onload = loadpage;
