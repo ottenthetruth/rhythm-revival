@@ -50,10 +50,12 @@ async function getAccessToken(myredirecturi) {
             if (response.status === 200) {
                 const tokenData = await response.json();
                 const accessToken = tokenData.access_token;
+                const refreshToken = tokenData.refresh_token;
 
                 localStorage.setItem("access_token", accessToken);
+                localStorage.setItem("refresh_token", refreshToken);
 
-                return tokenData.access_token;
+                return accessToken;
             } else {
               return localStorage.getItem("access_token");
             }
