@@ -33,12 +33,12 @@ body.dark-mode .card {
 .card button {
   position: relative;
   bottom: 10px;
-  left: -10px; 
+  left: 0px; 
   border-radius: 5px; 
   margin: 0px; }
 body.dark-mode .card button {
   border: 1px solid #03DAC6; }
-.controlbuttons {
+.cardcontrolbuttons {
   display: flex;
   justify-content: space-between; }
 /* display search-results here */
