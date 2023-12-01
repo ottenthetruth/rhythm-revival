@@ -35,7 +35,7 @@ async function getAlbums() {
                 playButtons.forEach(button => {
                     button.addEventListener('click', () => {
                         const contextUri = button.getAttribute('data-context-uri');
-                        playAlbum('spotify:album:${contextUri}');
+                        playAlbum(contextUri);
                     });
                 });
                 
