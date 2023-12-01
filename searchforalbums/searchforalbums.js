@@ -1,7 +1,7 @@
 /* display search results */
 async function getAlbums() {
     const accessToken = await getAccessToken("https://ottenthetruth.github.io/truthmusic/searchforalbums/searchforalbums.html");
-
+    accessToken = localStorage.getItem("access_token");
     if (accessToken) {
         const searchQuery = document.getElementById("mysearch").value;
         const searchQueryArtist = document.getElementById("mysearchartist").value;
