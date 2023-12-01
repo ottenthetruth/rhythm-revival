@@ -1,5 +1,5 @@
    async function getUserProfile() {
-	   const accessToken = await getAccessToken("https://ottenthetruth.github.io/truthmusic/homepage/homepage.html");
+	const accessToken = await getAccessToken("https://ottenthetruth.github.io/truthmusic/homepage/homepage.html");
         const response = await fetch('https://api.spotify.com/v1/me', {
             method: 'GET',
             headers: {
@@ -19,16 +19,14 @@
 	    var logButton = document.getElementById("logBtn");
 	    logButton.style.display = "none";
 	    logButton.disabled = true;
-        } else {
         }
     } //end getUserProfile
-    
+
 async function loadpage() {
-	const urlParams = new URLSearchParams(window.location.search);
-	const code = urlParams.get("code");
-	if(code !== null){
-	  getUserProfile();
-	}
+   const accessToken = localStorage.getItem("access_token");
+   if(accessToken) {
+      getUserProfile();
+   }
 } /* end loadpage */
 
 window.onload = loadpage;
