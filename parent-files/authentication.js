@@ -62,3 +62,39 @@ async function getAccessToken(myredirecturi) {
         }/* end if(code) */
 
 } /* end getAccessToken */
+
+async function refreshAccessToken() {
+const urlParams = new URLSearchParams(window.location.search);
+const code = urlParams.get("code");
+if (code) {
+  const tokenEndpoint = "https://accounts.spotify.com/api/token";
+  const client_secret = "2d5a82decbc240e4adadcbd86f342321"; // Replace with your actual client secret
+  const redirect_uri = myredirecturi; // Make sure this matches your Spotify App's redirect URI
+  const basicAuthHeader = btoa(`e9fec6e1cb5241e0a41ab98db146bc3c:${client_secret}`);
+  const refreshToken = localStorage.getItem("refresh_token");
+  fetch(tokenEndpoint, {
+     method: "POST",
+     headers: {
+       "Authorization": `Basic ${basicAuthHeader}`,
+       "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+    },
+    body: `grant_type=refresh_token&refresh_token=${refreshToken}`,
+  })
+   .then(response => response.json())
+  .then(data => {
+    const newAccessToken = data.access_token;
+    const newRefreshToken = data.refresh_token;
+    
+    localStorage.setItem("access_token", newAccessToken);
+    localStorage.setItem("refresh_token", newRefreshToken);
+    
+    console.log('Refreshed access token & refresh token');
+  })
+  .catch(error => {
+    console.error('Error refreshing access token:', error);
+  });
+ } // end if code
+} //end refreshAccessToken
+
+refreshAccessToken();
+setInterval(refreshAccessToken, 55 * 60 * 1000);
