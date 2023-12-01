@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../parent-files/darkmodeswitch.css">
     <link rel="stylesheet" href="searchforalbums.css">
     <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="../parent-files/musicplayer.css">
 </head>
 
 <body>
@@ -20,6 +21,11 @@
       <input type="checkbox" id="darkModeToggle">
       <span class="slider round"></span>
     </label>
+    <div class="loginbtn" id="logBtn" onclick="authforsearch()">
+	    <p>Login</p>
+    </div>
+    <img id="profileImage">
+    <p id="displayName"></p>
     <div class="moon">
     </div>
     <div class="moon2">
@@ -33,6 +39,27 @@
     </div>
   </div>
 </div>
+
+<div class="musicplayer" id="musicplayer">
+  <div class="menu" id="menu">
+    <img src="../images/No Music.jpg" id="musicPlayerCover" width="200px" height="200px"></img>
+    <h1 id="musicPlayerSong">Looks like someone</h1>
+    <h2 id="musicPlayerArtist">smashed their guitar.<h2>
+    <h2 id="musicPlayerAlbum"></h2>
+  </div>
+  <div class="controls">
+	<div class="controlbuttons">
+	  <button id="skipBack">&#171;</button>
+          <button id="pauseButton">&#10073;&#10073;</button>
+	  <button id="resumeButton">▶</button>
+          <button id="skipForward">&#187;</button>
+	</div>
+	<progress id="progress" max="100" value="0"></progress>
+  </div>
+  <div class="extendmenu" id="extendmenu">
+    <p>‹</p>
+  </div>
+</div> <!-- end music player -->
 
 <div class="parent">
     <div class="div1">
@@ -48,9 +75,11 @@
 <div class="container" id="container"></div>
 </div>
 
-<script src="../parent-files/darkmode.js"></script>
 <script src="searchforalbums.js"></script>
+<script src="../parent-files/darkmode.js"></script>
 <script src="../parent-files/authentication.js"></script>
+<script src="../parent-files/basicui.js"></script>
+<script src="../parent-files/musicplayer.js"></script>
 
 </body>
 </html>
