@@ -35,12 +35,13 @@ body.dark-mode .card {
   bottom: 10px;
   left: 0px; 
   border-radius: 5px; 
-  margin: 0px; }
+  margin: 0px;
+  font-size: 12px; }
 body.dark-mode .card button {
   border: 1px solid #03DAC6; }
 .cardcontrolbuttons {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-evenly; }
 /* display search-results here */
 .container {
   display: flex;
