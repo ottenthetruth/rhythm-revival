@@ -26,10 +26,8 @@ async function getAlbums() {
                     <img src="${album.images[0].url}">
                     <h4>${album.name}</h4>
                     <h5>${album.artists[0].name}</h5>
-                    <p class="save-link">save!</p>
+                    <p class="playalbumbutton">Play!</p>
                     `;
-                    const saveLink = card.querySelector(".save-link");
-                    saveLink.addEventListener("click", () => handleSaveClick(album));
                     cardContainer.appendChild(card);
                 });
             }
