@@ -16,21 +16,21 @@ body.dark-mode .card {
 /* adjust cover size */
 .card img {
   width: 200px;
-  height: 200px; }
+  height: 200px;
+  -webkit-user-drag: none; }
 
-/* album info */
+.card h4 {
+  font-weight: lighter;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 .card h5 {
-  font-style: italic; }
-
-/* "rate!"-text */
+  font-weight: lighter;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 .card p {
-   color: #6F8FAF;
-   font-style: italic;
-   text-align: right;
-   position: relative;
-   bottom: 10%;
-   right: 3%;
-  text-decoration: underline; }
+  color: gray; }
 
 /* display search-results here */
 .container {
