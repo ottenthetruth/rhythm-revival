@@ -69,7 +69,7 @@ const code = urlParams.get("code");
 if (code) {
   const tokenEndpoint = "https://accounts.spotify.com/api/token";
   const client_secret = "2d5a82decbc240e4adadcbd86f342321"; // Replace with your actual client secret
-  const redirect_uri = myredirecturi; // Make sure this matches your Spotify App's redirect URI
+  const redirect_uri = "https://ottenthetruth.github.io/truthmusic/homepage/homepage.html"; // Make sure this matches your Spotify App's redirect URI
   const basicAuthHeader = btoa(`e9fec6e1cb5241e0a41ab98db146bc3c:${client_secret}`);
   const refreshToken = localStorage.getItem("refresh_token");
   fetch(tokenEndpoint, {
@@ -96,5 +96,4 @@ if (code) {
  } // end if code
 } //end refreshAccessToken
 
-refreshAccessToken();
 setInterval(refreshAccessToken, 55 * 60 * 1000);
