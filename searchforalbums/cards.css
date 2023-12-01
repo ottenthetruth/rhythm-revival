@@ -9,6 +9,7 @@
   height: 300px;
   width: 200px;
   margin: 20px; }
+
 body.dark-mode .card {
   border: 1px solid #03DAC6;
   background-color: #212121; }
@@ -29,8 +30,12 @@ body.dark-mode .card {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
-.card p {
-  color: gray; }
+.card button {
+  position: relative;
+  bottom: 10px;
+  left: -10px; 
+  border-radius: 5px; 
+  margin: 0px; }
 
 /* display search-results here */
 .container {
