@@ -47,7 +47,7 @@ async function getAlbums() {
                     button.addEventListener('click', () => {
                         const contextUri = button.getAttribute('data-context-uri');
                         localStorage.setItem("va-contexturi", contextUri);
-                        window.location.href = '../viewalbum/viewalbum.html';
+                        openPopup();
                     });
                 });
                 
@@ -115,3 +115,21 @@ function msToMinutesAndSeconds(ms) {
   const seconds = ((ms % 60000) / 1000).toFixed(0);
   return `${minutes}:${(seconds < 10 ? '0' : '')}${seconds}`;
 }
+  function openPopup() {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("popup").style.display = "block";
+    setTimeout(() => {
+      document.getElementById("overlay").style.opacity = "1";
+      document.getElementById("popup").style.transform = "translate(-50%, -50%) scale(1)";
+    }, 50);
+    fetchAlbumData();
+  }
+
+  function closePopup() {
+    document.getElementById("overlay").style.opacity = "0";
+    document.getElementById("popup").style.transform = "translate(-50%, -50%) scale(0)";
+    setTimeout(() => {
+      document.getElementById("overlay").style.display = "none";
+      document.getElementById("popup").style.display = "none";
+    }, 300);
+  }
