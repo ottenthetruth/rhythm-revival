@@ -47,7 +47,7 @@ async function getAlbums() {
                     button.addEventListener('click', () => {
                         const contextUri = button.getAttribute('data-context-uri');
                         localStorage.setItem("va-contexturi", contextUri);
-                        window.location.href = '../viewalbums/viewalbums.html';
+                        window.location.href = '../viewalbum/viewalbum.html';
                     });
                 });
                 
