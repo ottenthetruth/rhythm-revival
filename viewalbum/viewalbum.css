@@ -20,3 +20,13 @@
 
 .div2 h1, h2 {
     font-weight: lighter; }
+
+.div2 td:last-child {
+    text-align: right;
+    width: 100px; }
+
+.div2 th:last-child {
+    text-align: right; }
+
+.div2 th:first-child {
+    text-align: left; }
