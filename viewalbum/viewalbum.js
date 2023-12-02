@@ -44,4 +44,4 @@ function msToMinutesAndSeconds(ms) {
 }
 
 window.onload = fetchAlbumData;
-setInterval(getCurrentlyPlaying, 2000);
+setInterval(fetchAlbumData, 2000);
