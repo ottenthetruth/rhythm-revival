@@ -28,7 +28,7 @@ async function getAlbums() {
                     <h5>${album.artists[0].name}</h5>
                     <div class="cardcontrolbuttons">
                         <button class="playalbumbutton" data-context-uri="${album.uri}">Play now</button>
-                        <button class="gotoalbumbutton" data-context-uri="${album.uri}">Go to Album</button>
+                        <button class="gotoalbumbutton" data-context-uri="${album.id}">Go to Album</button>
                     </div>
                     `;
                     cardContainer.appendChild(card);
