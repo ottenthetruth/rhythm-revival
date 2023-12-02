@@ -62,11 +62,20 @@
 
 <div class="parent">
   <div class="div1">
-    <img src="../images/OK Computer.jpg" draggable="false"></img>
+    <img src="../images/OK Computer.jpg" draggable="false" id="va-albumImage"></img>
   </div>
   <div class="div2">
-    <h1 class="va-albumname">Album Name</h1>
-    <h2 class="va-artistname">Artist Name</h2>
+    <h1 id="va-albumName">Album Name</h1>
+    <h2 id="va-artistName">Artist Name</h2>
+    <table id="songTable">
+      <thead>
+    	<tr>
+      	  <th>Title</th>
+      	  <th>Duration</th>
+    	</tr>
+       </thead>
+       <tbody id="va-songList"></tbody>
+    </table>
   </div>
 </div>
 
