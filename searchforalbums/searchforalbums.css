@@ -73,6 +73,7 @@ body.dark-mode .search-button {
   z-index: 3;
   transition: opacity 1s ease; }
 .popup {
+  background-color: #edf2f7;
   display: none;
   position: fixed;
   top: 50%;
@@ -87,6 +88,7 @@ body.dark-mode .search-button {
   max-width: 1200px;
   transition: transform 0.5s ease; }
 body.dark-mode .popup {
+    background-color: #121212;
     border: 1px solid #03DAC6; }
 .close {
   position: absolute;
