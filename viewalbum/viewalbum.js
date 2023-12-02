@@ -2,7 +2,6 @@
 function fetchAlbumData() {
   const contextUri = localStorage.getItem("va-contexturi");
   const accessToken = localStorage.getItem("access_token");
-  localStorage.removeItem("va-contexturi");
   // Make a request to Spotify API
   fetch(`https://api.spotify.com/v1/albums/${contextUri}`, {
     method: 'GET',
@@ -44,4 +43,3 @@ function msToMinutesAndSeconds(ms) {
 }
 
 window.onload = fetchAlbumData;
-setInterval(fetchAlbumData, 2000);
