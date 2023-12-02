@@ -46,7 +46,7 @@ async function getAlbums() {
                 vaButtons.forEach(button => {
                     button.addEventListener('click', () => {
                         const contextUri = button.getAttribute('data-context-uri');
-                        localStorage.setItem("va-contexturi");
+                        localStorage.setItem("va-contexturi", contextUri);
                         window.location.href = '../viewalbums/viewalbums.html';
                     });
                 });
