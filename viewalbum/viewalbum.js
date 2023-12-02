@@ -6,7 +6,7 @@ function fetchAlbumData() {
   // Make a request to Spotify API
   fetch(`https://api.spotify.com/v1/albums/${contextUri}`, {
     headers: {
-      'Authorization': 'Bearer ${accessToken}',
+      'Authorization': `Bearer ${accessToken}`,
       'Content-Type': 'application/json'
     }
   })
