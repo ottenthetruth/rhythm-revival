@@ -41,6 +41,15 @@ async function getAlbums() {
                         playAlbum(contextUri);
                     });
                 });
+
+                const vaButtons = document.querySelectorAll('.gotoalbumbutton');
+                vaButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const contextUri = button.getAttribute('data-context-uri');
+                        localStorage.setItem("va-contexturi");
+                        window.location.href = '../viewalbums/viewalbums.html';
+                    });
+                });
                 
             }
         }
