@@ -57,7 +57,7 @@ resumeButton.addEventListener('click', () => {
 });
 
 skipForwardButton.addEventListener('click', () => {
-    skipForwardButton();
+    skipForwardButtonEvent();
 });
 
 skipToPreviousButton.addEventListener('click', () => {
@@ -68,7 +68,7 @@ skipToPreviousButton.addEventListener('click', () => {
     getCurrentlyPlaying();
 });
 
-function skipForwardButton() {
+function skipForwardButtonEvent() {
     skipForward()
         .then(() => {
             getCurrentlyPlaying();
