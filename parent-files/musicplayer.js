@@ -69,9 +69,10 @@ skipForwardButton.addEventListener('click', skipForwardButtonEvent);
 function skipForwardButtonEvent() {
     skipForward()
         .then(() => {
-            return getCurrentlyPlaying();
+            getCurrentlyPlaying();
         })
         .then(() => {
+	    getCurrentlyPlaying();
         })
         .catch((error) => {
             console.error('Error skipping forward or getting currently playing:', error);
