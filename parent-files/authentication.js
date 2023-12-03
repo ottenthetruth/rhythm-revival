@@ -1,8 +1,6 @@
 async function authforhomepage() {
-  /* check if theres already a token */
   const urlParams = new URLSearchParams(window.location.search);
   const code = urlParams.get("code");
-  /* end check */
   if(code == null) {
   const clientID = "e9fec6e1cb5241e0a41ab98db146bc3c";
   const redirectURI = "https://ottenthetruth.github.io/truthmusic/homepage/homepage.html";
@@ -12,13 +10,13 @@ async function authforhomepage() {
   }
 }
 
-async function getAccessToken(myredirecturi) {
+async function getAccessToken() {
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get("code");
         if (code) {
             const tokenEndpoint = "https://accounts.spotify.com/api/token";
-            const client_secret = "2d5a82decbc240e4adadcbd86f342321"; // Replace with your actual client secret
-            const redirect_uri = myredirecturi; // Make sure this matches your Spotify App's redirect URI
+            const client_secret = "2d5a82decbc240e4adadcbd86f342321";
+            const redirect_uri = "https://ottenthetruth.github.io/truthmusic/homepage/homepage.html";
             const basicAuthHeader = btoa(`e9fec6e1cb5241e0a41ab98db146bc3c:${client_secret}`);
 
             const data = {
@@ -79,6 +77,6 @@ async function refreshAccessToken() {
   .catch(error => {
     console.error('Error refreshing access token:', error);
   });
-} //end refreshAccessToken
-
+}
+window.onload = getAccessToken;
 setInterval(refreshAccessToken, 55 * 60 * 1000);
