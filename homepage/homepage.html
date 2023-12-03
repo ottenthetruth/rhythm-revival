@@ -148,7 +148,14 @@
 <script src="../parent-files/musicplayer.js"></script>
 <script>
 function loadhomepage() {
-   getUserProfile(); }
+    getAccessToken()
+        .then(() => {
+            getUserProfile();
+        })
+        .catch((error) => {
+            console.error('Error getting access token:', error);
+        });
+}
 window.onload = loadhomepage;
 </script>
 </body>
