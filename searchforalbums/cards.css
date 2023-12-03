@@ -24,12 +24,16 @@ body.dark-mode .card {
   font-weight: lighter;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; }
+  text-overflow: ellipsis;
+  margin-top: 10px;
+  margin-bottom: 5px; }
 .card h5 {
   font-weight: lighter;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; }
+  text-overflow: ellipsis;
+  margin-top: 10px;
+  margin-bottom: 30px; }
 
 .cardcontrolbuttons {
   display: flex;
