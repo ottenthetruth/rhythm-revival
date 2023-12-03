@@ -148,13 +148,7 @@
 <script src="../parent-files/musicplayer.js"></script>
 <script>
 function loadhomepage() {
-const urlParams = new URLSearchParams(window.location.search);
-const code = urlParams.get("code");
-if(code) {
-   getUserProfile();
-} else {
-   getAccessToken(); }
-}
+   getUserProfile(); }
 window.onload = loadhomepage;
 </script>
 </body>
