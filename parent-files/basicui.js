@@ -29,5 +29,3 @@ async function getUserProfile() {
 	//getUserProfile();
   }
 } /* end loadpage */
-
-window.onload = getUserProfile;
