@@ -98,6 +98,11 @@
 <script src="../parent-files/authentication.js"></script>
 <script src="../parent-files/basicui.js"></script>
 <script src="../parent-files/musicplayer.js"></script>
-
+<script>
+function loadsearchforalbums() {
+	refreshAccessToken();
+	getUserProfile(); }
+window.onload = loadsearchforalbums;
+</script>
 </body>
 </html>
