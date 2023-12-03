@@ -18,15 +18,8 @@ async function getUserProfile() {
             var myUserDisplayName = document.getElementById('displayName');
             myUserDisplayName.innerText = myDisplayName;
 	    var logButton = document.getElementById("logBtn");
-	    if(logButton) {
 	    logButton.style.display = "none";
-	    logButton.disabled = true; }
-        } else { // else status 200
-	  console.log("refreshAccessToken called!");
-	  refreshAccessToken();
-	}
-	  
-  } else { // else accessToken
-	//getUserProfile();
+	    logButton.disabled = true;
+        }  
   }
-} /* end loadpage */
+} /* end getUserProfile */
