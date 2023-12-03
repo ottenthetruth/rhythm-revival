@@ -56,10 +56,6 @@ resumeButton.addEventListener('click', () => {
     resumePlayback();
 });
 
-skipForwardButton.addEventListener('click', () => {
-    skipForwardButtonEvent();
-});
-
 skipToPreviousButton.addEventListener('click', () => {
     skipToPrevious();
 });
@@ -68,13 +64,17 @@ skipToPreviousButton.addEventListener('click', () => {
     getCurrentlyPlaying();
 });
 
+skipForwardButton.addEventListener('click', skipForwardButtonEvent);
+
 function skipForwardButtonEvent() {
     skipForward()
         .then(() => {
-            getCurrentlyPlaying();
+            return getCurrentlyPlaying();
+        })
+        .then(() => {
         })
         .catch((error) => {
-            console.error('Error skipping forward:', error);
+            console.error('Error skipping forward or getting currently playing:', error);
         });
 }
 
