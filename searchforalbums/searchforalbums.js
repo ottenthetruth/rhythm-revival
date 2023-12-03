@@ -37,14 +37,9 @@ async function getAlbums() {
                 const playButtons = document.querySelectorAll('.playalbumbutton');
                 playButtons.forEach(button => {
                     button.addEventListener('click', () => {
+                        getAvailableDevices();
                         const contextUri = button.getAttribute('data-context-uri');
-                            getAvailableDevices()
-                                .then(() => {
-                                    playAlbum(contextUri);
-                                })
-                                .catch((error) => {
-                                    console.error('Error getting access token:', error);
-                                });
+                        playAlbum(contextUri);
                     });
                 });
 
