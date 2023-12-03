@@ -45,11 +45,11 @@ async function loadpage() {
 	    logButton.style.display = "none";
 	    logButton.disabled = true;
         } else { // else status 200
-	  getUserProfile();
+	  refreshAccessToken();
 	}
 	  
   } else { // else accessToken
-	getUserProfile();
+	//getUserProfile();
   }
 } /* end loadpage */
 
