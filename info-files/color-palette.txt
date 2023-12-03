@@ -5,7 +5,6 @@ Text Color: 2d3748 / Dark Gray
 
 Dark Mode:
 
-Background Color: 121212 / Blueish Dark Gray
-Text Color: BB86FC / Violet Pink Blend
+Background Color: 121212 / Dark Gray
 Accent Color: 212121 / Lighter Gray
 Alt Text Color : 03DAC6 / Cyan
