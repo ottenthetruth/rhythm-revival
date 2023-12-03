@@ -90,8 +90,7 @@ function fetchAlbumData() {
     document.getElementById('va-albumName').textContent = data.name;
 
     const artists = data.artists.map(artist => artist.name);
-    document.getElementById('va-artistName').textContent = artists.join(', ');
-
+    document.getElementById('va-artistName').textContent = 'by ' + artists.join(', ');
     // Populate table with songs
     const tableBody = document.getElementById('va-songList');
     tableBody.innerHTML = '';
