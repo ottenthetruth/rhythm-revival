@@ -73,7 +73,7 @@ function skipToPreviousButtonEvent() {
         .then(() => {
             setTimeout(() => {
                 getCurrentlyPlaying();
-            }, 400);
+            }, 500);
         })
         .catch((error) => {
             console.error('Error skipping to previous song or getting currently playing:', error);
