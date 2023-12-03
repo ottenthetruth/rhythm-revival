@@ -2,7 +2,7 @@ function playAlbum(contextUri) {
   const accessToken = localStorage.getItem("access_token");
   const deviceID = localStorage.getItem("device_id");
   if(accessToken && deviceID) {
-  fetch(`https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`, {
+  fetch(`https://api.spotify.com/v1/me/player/play?device_id=${deviceID}`, {
     method: 'PUT',
     headers: {
       'Authorization': `Bearer ${accessToken}`,
