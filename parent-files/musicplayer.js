@@ -31,7 +31,7 @@ async function getCurrentlyPlaying() {
                 albumCoverElement.alt = `${albumName} Album Cover`;
             }
         }
-    } // end getCurrentlyPlaying
+} // end getCurrentlyPlaying
 
 const musicPlayer = document.getElementById('musicplayer');
 
@@ -39,7 +39,6 @@ musicPlayer.addEventListener('mouseenter', function() {
    getCurrentlyPlaying();
    this.interval = setInterval(getCurrentlyPlaying, 16000);
 });
-
 musicPlayer.addEventListener('mouseleave', function() {
    clearInterval(this.interval);
 });
@@ -49,22 +48,14 @@ pauseButton.addEventListener('click', () => {
     resumeButton.style.display = 'block';
     pausePlayback();
 });
-
 resumeButton.addEventListener('click', () => {
     pauseButton.style.display = 'block';
     resumeButton.style.display = 'none';
     resumePlayback();
 });
 
-skipToPreviousButton.addEventListener('click', () => {
-    skipToPrevious();
-});
-
-skipToPreviousButton.addEventListener('click', () => {
-    getCurrentlyPlaying();
-});
-
 skipForwardButton.addEventListener('click', skipForwardButtonEvent);
+skipToPreviousButton.addEventListener('click', skipToPreviousButtonEvent);
 
 function skipForwardButtonEvent() {
     skipForward()
@@ -77,7 +68,17 @@ function skipForwardButtonEvent() {
             console.error('Error skipping forward or getting currently playing:', error);
         });
 }
-
+function skipToPreviousButtonEvent() {
+    skipToPrevious()
+        .then(() => {
+            setTimeout(() => {
+                getCurrentlyPlaying();
+            }, 400);
+        })
+        .catch((error) => {
+            console.error('Error skipping to previous song or getting currently playing:', error);
+        });
+}
 function pausePlayback() {
   const accessToken = localStorage.getItem("access_token");
   if(accessToken) {
