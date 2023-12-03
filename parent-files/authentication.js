@@ -49,7 +49,7 @@ async function getAccessToken() {
         }/* end if(code) */
 
 } /* end getAccessToken */
-
+window.onload = getAccessToken;
 async function refreshAccessToken() {
   const tokenEndpoint = "https://accounts.spotify.com/api/token";
   const client_secret = "2d5a82decbc240e4adadcbd86f342321"; // Replace with your actual client secret
@@ -78,5 +78,4 @@ async function refreshAccessToken() {
     console.error('Error refreshing access token:', error);
   });
 }
-window.onload = getAccessToken;
 setInterval(refreshAccessToken, 55 * 60 * 1000);
