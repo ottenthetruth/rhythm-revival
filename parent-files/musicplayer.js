@@ -71,7 +71,7 @@ function skipForwardButtonEvent() {
         .then(() => {
             setTimeout(() => {
                 getCurrentlyPlaying();
-            }, 3000);
+            }, 300);
         })
         .catch((error) => {
             console.error('Error skipping forward or getting currently playing:', error);
