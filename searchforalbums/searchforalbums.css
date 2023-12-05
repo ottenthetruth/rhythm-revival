@@ -1,3 +1,4 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 /* structure for search-function */
 .parent {
     display: grid;
@@ -149,7 +150,12 @@ body.dark-mode .table-container::-webkit-scrollbar-thumb {
   background-color: #03DAC6; }
 
 /* star rating css */
-@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+.ratedisplay {
+    position: relative;
+    left: 50%;
+    top: 70%;
+    margin-left: 0px;
+    padding-left: 0px; }
 h1 {
     font-size: 2em; 
     margin-bottom: .5rem;}
