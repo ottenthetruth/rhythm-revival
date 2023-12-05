@@ -28,7 +28,7 @@ async function getAlbums() {
                     <h5>${album.artists[0].name}</h5>
                     <div class="cardcontrolbuttons">
                         <button class="playalbumbutton" data-context-uri="${album.uri}">Play now</button>
-                        <button class="gotoalbumbutton" data-context-uri="${album.id}">Go to Album</button>
+                        <button class="gotoalbumbutton" data-album-name="${album.name}" data-context-uri="${album.uri}" data-album-id="${album.id}">Go to Album</button>
                     </div>
                     `;
                     cardContainer.appendChild(card);
@@ -46,7 +46,11 @@ async function getAlbums() {
                 const vaButtons = document.querySelectorAll('.gotoalbumbutton');
                 vaButtons.forEach(button => {
                     button.addEventListener('click', () => {
+                        const albumName = button.getAttribute('data-album-name');
+                        const albumID = button.getAttribute('data-album-id');
                         const contextUri = button.getAttribute('data-context-uri');
+                        localStorage.setItem("va-albumname", albumName);
+                        localStorage.setItem("va-albumid", albumID);
                         localStorage.setItem("va-contexturi", contextUri);
                         openPopup();
                     });
@@ -57,16 +61,13 @@ async function getAlbums() {
     }
 }
 
-/* search with enter */
 var searchbar1 = document.getElementById("mysearch");
 var searchbar2 = document.getElementById("mysearchartist");
-
 searchbar1.addEventListener("keypress", function(event) {
   if(event.key === "Enter") {
     document.getElementById("searchButton").click();
   }
 });
-
 searchbar2.addEventListener("keypress", function(event) {
   if(event.key === "Enter") {
     document.getElementById("searchButton").click();
@@ -75,10 +76,10 @@ searchbar2.addEventListener("keypress", function(event) {
 
 // display single album
 function fetchAlbumData() {
-  const contextUri = localStorage.getItem("va-contexturi");
+  const albumID = localStorage.getItem("va-albumid");
   const accessToken = localStorage.getItem("access_token");
 
-  fetch(`https://api.spotify.com/v1/albums/${contextUri}`, {
+  fetch(`https://api.spotify.com/v1/albums/${albumID}`, {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${accessToken}`,
