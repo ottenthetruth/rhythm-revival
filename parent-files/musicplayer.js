@@ -25,8 +25,8 @@ async function getCurrentlyPlaying() {
 		const progressBar = document.getElementById('progress');
 		const songProgress = data.progress_ms;
 		const songDuration = data.item.duration_ms;
-		progressBar.max = songDuration * 1000;
-		progressBar.value = songProgress * 1000;
+		progressBar.max = songDuration;
+		progressBar.value = songProgress;
 
 		document.getElementById('musicPlayerSong').textContent = songName;
                 document.getElementById('musicPlayerArtist').textContent = 'by ' + artistName;
