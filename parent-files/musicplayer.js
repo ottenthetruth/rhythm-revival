@@ -22,16 +22,16 @@ async function getCurrentlyPlaying() {
                 const artistName = data.item.artists[0].name;
                 const albumCoverUrl = data.item.album.images[0].url;
 
+		const progressBar = document.getElementById('progress');
 		const songProgress = data.progress_ms;
 		const songDuration = data.item.duration_ms;
-		const progressPercentage = (songProgress / songDuration) * 100;
-		localStorage.setItem("song-duration", songDuration);
-		
+		progressBar.max = songDuration * 1000;
+		progressBar.value = songProgress * 1000;
+
 		document.getElementById('musicPlayerSong').textContent = songName;
                 document.getElementById('musicPlayerArtist').textContent = 'by ' + artistName;
                 document.getElementById('musicPlayerAlbum').textContent = 'on ' + albumName;
-		document.getElementById('progress').value = progressPercentage;
-		    
+		
                 const albumCoverElement = document.getElementById('musicPlayerCover');
                 albumCoverElement.src = albumCoverUrl;
                 albumCoverElement.alt = `${albumName} Album Cover`;
@@ -40,12 +40,10 @@ async function getCurrentlyPlaying() {
 } // end getCurrentlyPlaying
 
 async function updateSongProgress() {
-	const songDuration = localStorage.getItem("song-duration");
 	const progressBar = document.getElementById('progress');
-	const updateValue = 100 / (songDuration*1000);
-	const currentWidth = parseInt(progressBar.value);
-	const newWidth = Math.min(currentWidth + updateValue, 100);
-	progressBar.value = newWidth; }
+	const oldValue = progressBar.value;
+	const newValue = oldValue + 1000;
+	progressBar.value = newValue; }
 
 const musicPlayer = document.getElementById('musicplayer');
 
