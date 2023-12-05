@@ -41,18 +41,18 @@ async function getCurrentlyPlaying() {
 
 async function updateSongProgress() {
 	const songDuration = localStorage.getItem("song-duration");
-	const progressBar = document.getElementById('progress').value;
+	const progressBar = document.getElementById('progress');
 	const updateValue = 1 / (songDuration*1000);
-	const currentWidth = parseInt(progressBar);
+	const currentWidth = parseInt(progressBar.value);
 	const newWidth = Math.min(currentWidth + updateValue, 100);
-	progressBar = newWidth; }
+	progressBar.value = newWidth; }
 
 const musicPlayer = document.getElementById('musicplayer');
 
 musicPlayer.addEventListener('mouseenter', function() {
    getCurrentlyPlaying();
-   this.interval = setInterval(getCurrentlyPlaying, 16000);
    this.intervalProgressBar = setInterval(updateSongProgress, 1000);
+   this.interval = setInterval(getCurrentlyPlaying, 16000);
 });
 musicPlayer.addEventListener('mouseleave', function() {
    clearInterval(this.interval);
