@@ -22,7 +22,7 @@ async function getCurrentlyPlaying() {
                 const artistName = data.item.artists[0].name;
                 const albumCoverUrl = data.item.album.images[0].url;
 
-		const progressBar = document.getElementById('progress');
+		const progressBar = document.getElementById('songprogress');
 		const songProgress = data.progress_ms;
 		const songDuration = data.item.duration_ms;
 		progressBar.max = songDuration;
@@ -41,7 +41,7 @@ async function getCurrentlyPlaying() {
 
 async function updateSongProgress() {
 	console.log("Update Song Progress called!");
-	const progressBar = document.getElementById('progress');
+	const progressBar = document.getElementById('songprogress');
 	const oldValue = parseInt(progressBar.value);
 	const newValue = oldValue + 1000;
 	progressBar.value = newValue; }
