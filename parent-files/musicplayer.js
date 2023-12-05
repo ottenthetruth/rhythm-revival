@@ -42,7 +42,7 @@ async function getCurrentlyPlaying() {
 async function updateSongProgress() {
 	const songDuration = localStorage.getItem("song-duration");
 	const progressBar = document.getElementById('progress');
-	const updateValue = 1 / (songDuration*1000);
+	const updateValue = 100 / (songDuration*1000);
 	const currentWidth = parseInt(progressBar.value);
 	const newWidth = Math.min(currentWidth + updateValue, 100);
 	progressBar.value = newWidth; }
