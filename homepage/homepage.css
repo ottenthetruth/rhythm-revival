@@ -16,10 +16,10 @@ body::-webkit-scrollbar{ display: none; }
 .displayalbums { border-radius: 50%; }
 
 .parent h1, .parent h2, .parent2 h1, .parent2 h2 { margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-weight: lighter; }
 .parent h1 { font-size: 80px; }
-.parent2 h2 { font-weight: lighter;
-    text-decoration: underline;
+.parent2 h2 { text-decoration: underline;
     cursor: pointer;
     font-size: 19px; }
 
