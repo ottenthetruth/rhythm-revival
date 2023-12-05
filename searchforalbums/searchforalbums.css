@@ -150,18 +150,16 @@ body.dark-mode .table-container::-webkit-scrollbar-thumb {
 
 /* star rating css */
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-.ratedisplay {
-    display: flex;
-    position: relative;
-    top: 70%;
-    left: 50%; }
+h1 {
+    font-size: 2em; 
+    margin-bottom: .5rem;}
 .rate {
     display: inline-block;
-    border: 0; }
+    border: 0;}
 .rate > input {
-    display: none; }
+    display: none;}
 .rate > label {
-    float: right; }
+    float: right;}
 .rate > label:before {
     display: inline-block;
     font-size: 1.1rem;
@@ -169,15 +167,16 @@ body.dark-mode .table-container::-webkit-scrollbar-thumb {
     margin: 0;
     cursor: pointer;
     font-family: FontAwesome;
-    content: "\f005 "; }
+    content: "\f005 ";}
 .rate > label:last-child:before {
-    content: "\f006 "; }
+    content: "\f006 ";}
 .rate .half:before {
     content: "\f089 ";
     position: absolute;
-    padding-right: 0; }
+    padding-right: 0;}
 input:checked ~ label,
 label:hover, label:hover ~ label { color: #73B100;  }
 input:checked + label:hover, input:checked ~ label:hover,
 input:checked ~ label:hover ~ label,
 label:hover ~ input:checked ~ label { color: #A6E72D;  } 
+
