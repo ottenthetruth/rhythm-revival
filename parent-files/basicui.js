@@ -8,12 +8,10 @@ async function getUserProfile() {
                 'Authorization': `Bearer ${accessToken}`,
             },
         });
-
         if (response.status === 200) {
             const data = await response.json();
             const myDisplayName = data.display_name;
             const profilePictureUrl = data.images.length > 0 ? data.images[0].url : '';
-
             var myUserImage = document.getElementById('profileImage');
             myUserImage.src = profilePictureUrl;
             var myUserDisplayName = document.getElementById('displayName');
@@ -23,4 +21,4 @@ async function getUserProfile() {
 	    logButton.disabled = true;
         }  
   }
-} /* end getUserProfile */
+}
