@@ -42,7 +42,7 @@ async function getCurrentlyPlaying() {
 async function updateSongProgress() {
 	console.log("Update Song Progress called!");
 	const progressBar = document.getElementById('progress');
-	const oldValue = progressBar.value;
+	const oldValue = parseInt(progressBar.value);
 	const newValue = oldValue + 1000;
 	progressBar.value = newValue; }
 
