@@ -1,124 +1,88 @@
-/* hide scrollbar */
-body::-webkit-scrollbar{
-  display: none; }
+body::-webkit-scrollbar{ display: none; }
 
-/* content grids */
-.parent, .parent2 {
-  display: grid;
+.parent, .parent2 { display: grid;
   grid-template-columns: repeat(24, 1fr);
   grid-template-rows: repeat(12, 1fr);
   height: 100vh;
   user-select: none; }
-
-/* spacing */
-.parent3 {
-  display: block;
+.parent3 { display: block;
   height: 11vh; }
 
-/* image scaling */
-.parent img, .parent2 img {
-  width: 100%;
+.parent img, .parent2 img { width: 100%;
   height: auto;
   object-fit: cover; }
+.image-hover { transition: transform 0.5s; }
+.image-hover:hover { transform: scale(1.05); }
+.displayalbums { border-radius: 50%; }
 
-.displayalbums {
-  border-radius: 50%; }
-
-/* assisting images */
-.image-hover {
-  transition: transform 0.5s; }
-.image-hover:hover {
-  transform: scale(1.05); }
-
-/* adjust text position */
-.parent h1, .parent h2, .parent2 h1, .parent2 h2 {
-  margin: 0;
+.parent h1, .parent h2, .parent2 h1, .parent2 h2 { margin: 0;
   padding: 0; }
-.parent h1 {
-  font-size: 85px; }
-
-/* "try it yourself" css */
-.parent2 h2 {
-    font-weight: lighter;
+.parent h1 { font-size: 80px; }
+.parent2 h2 { font-weight: lighter;
     text-decoration: underline;
     cursor: pointer;
     font-size: 19px; }
 
-/* container css */
-.container {
-  height: 30vh;
+.container { height: 30vh;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(10, 1fr);
   user-select: none;
   color: #edf2f7;
   background-color: #2d3748; }
-body.dark-mode .container {
-  background-color: #212121;
+body.dark-mode .container { background-color: #212121;
   border-top: 1px solid #03DAC6;
   color: #03DAC6; }
 
-/* grid area for "explore"-button */
-.explorebutton {
-  grid-area: 10 / 12 / 10 / 14;
+.explorebutton { grid-area: 10 / 12 / 10 / 14;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center; }
-
-/* "explore"-button */
-#myexploretext {
-  transition: opacity 0.65s; }
-#explore-button {
-  transition: opacity 0.65s;
+#myexploretext { transition: opacity 0.65s; }
+#explore-button { transition: opacity 0.65s;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   border: 1px solid #2d3748;
   cursor: pointer;
   user-select: none; }
-body.dark-mode #explore-button {
-  background-color: #212121;
+body.dark-mode #explore-button { background-color: #212121;
   border: 1px solid #03DAC6;
   color: #03DAC6; }
 
-.div1 { grid-area: 2 / 2 / 7 / 7; } /* first image grid 1 */
-.div2 { grid-area: 6 / 18 / 11 / 23; } /* second image grid 1 */
-.div21 { grid-area: 4 / 4 / 8 / 8; }  /* first image grid 2 */
-.div23 { grid-area: 8 / 2 / 11 / 5; } /* second image grid 2 */
-.div22 { grid-area: 9 / 5 / 13 / 9; } /* third image grid 2 */
+.div1 { grid-area: 2 / 2 / 7 / 7; }
+.div2 { grid-area: 6 / 18 / 11 / 23; }
+.div21 { grid-area: 4 / 4 / 8 / 8; }
+.div23 { grid-area: 8 / 2 / 11 / 5; }
+.div22 { grid-area: 9 / 5 / 13 / 9; }
 
 .div3 { grid-area: 4 / 7 / 6 / 24;
-	      font-size: 3vw; } /* text: OK Computer */
+	font-size: 3vw; }
 .div6 { grid-area: 7 / 13 / 7 / 15;
-        font-size: 0.9vw; } /* text: take me to the */
+        font-size: 0.9vw; }
 .div7 { grid-area: 8 / 1 / 10 / 18;
         font-size: 3vw;
-	      display: flex;
-	      justify-content: flex-end; } /* text: Dark Side of the Moon */
+	display: flex;
+	justify-content: flex-end; }
 
 .explore1 { grid-area: 3 / 10 / 11 / 14;
             position: relative;
             border-right: 1px solid #2d3748; }
 .explore11 { grid-area: 3 / 10 / 7 / 14;
              padding: 3%; }
-body.dark-mode .explore1 {
-  border-right: 1px solid #03DAC6; }
+body.dark-mode .explore1 { border-right: 1px solid #03DAC6; }
 .explore2 { grid-area: 3 / 14 / 11 / 18;
-  position: relative;
-  border-right: 1px solid #2d3748; }
+  	    position: relative;
+  	    border-right: 1px solid #2d3748; }
+body.dark-mode .explore2 { border-right: 1px solid #03DAC6; }
 .explore21 { grid-area: 3 / 14 / 7 / 18;
              padding: 3%; }
-body.dark-mode .explore2 {
-    border-right: 1px solid #03DAC6; }
-
 .explore3 { grid-area: 3 / 18 / 13 / 22;
             position: relative; }
-.explore31 {
-  grid-area: 3 / 20 / 13 / 24;
+.explore31 { grid-area: 3 / 20 / 13 / 24;
   padding: 3%; }
 
-/* bottom navigation banner */
 .div41 { grid-area: 2 / 2 / 10 / 2; }
 .div42 { grid-area: 2 / 3 / 10 / 3; }
 .div43 { grid-area: 2 / 4 / 10 / 4; }
