@@ -22,10 +22,16 @@ async function getCurrentlyPlaying() {
                 const artistName = data.item.artists[0].name;
                 const albumCoverUrl = data.item.album.images[0].url;
 
+		const songProgress = data.progress_ms;
+		const songDuration = data.item.duration_ms;
+		const progressPercentage = (songProgress / songDuration) * 100;
+		localStorage.setItem("song-duration", songDuration);
+		
 		document.getElementById('musicPlayerSong').textContent = songName;
                 document.getElementById('musicPlayerArtist').textContent = 'by ' + artistName;
                 document.getElementById('musicPlayerAlbum').textContent = 'on ' + albumName;
-		
+		document.getElementById('progress').value = progressPercentage;
+		    
                 const albumCoverElement = document.getElementById('musicPlayerCover');
                 albumCoverElement.src = albumCoverUrl;
                 albumCoverElement.alt = `${albumName} Album Cover`;
@@ -33,14 +39,24 @@ async function getCurrentlyPlaying() {
         }
 } // end getCurrentlyPlaying
 
+async function updateSongProgress() {
+	const songDuration = localStorage.getItem("song-duration");
+	const progressBar = document.getElementById('progress').value;
+	const updateValue = 1 / (songDuration*1000);
+	const currentWidth = parseInt(progressBar);
+	const newWidth = Math.min(currentWidth + updateValue, 100);
+	progressBar = newWidth; }
+
 const musicPlayer = document.getElementById('musicplayer');
 
 musicPlayer.addEventListener('mouseenter', function() {
    getCurrentlyPlaying();
    this.interval = setInterval(getCurrentlyPlaying, 16000);
+   this.intervalProgressBar = setInterval(updateSongProgress, 1000);
 });
 musicPlayer.addEventListener('mouseleave', function() {
    clearInterval(this.interval);
+   clearInterval(this.intervalProgressBar);
 });
 
 pauseButton.addEventListener('click', () => {
