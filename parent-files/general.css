@@ -1,91 +1,63 @@
-/* Include font file: Varela Round */
-@font-face {
-  font-family: 'Varela Round';
+@font-face { font-family: 'Varela Round';
   src: url('VarelaRound.ttf') format('truetype'); }
-
-/* body */
-body {
-    font-family: "Varela Round", sans-serif;
-    color: #2d3748;
-    background-color: #edf2f7;
-    margin: 0;
-    padding: 0;
-    user-select: none;
-    overflow-x: hidden; }
-body.dark-mode {
-  background-color: #252526;
+body { font-family: "Varela Round", sans-serif;
+  color: #2d3748;
+  background-color: #edf2f7;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  overflow-x: hidden; }
+body.dark-mode { background-color: #252526;
   color: #03DAC6; }
-
-/* spotify user data */
-#profileImage {
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	width: 40px;
-	height: auto;
-	-webkit-user-drag: none; }
-#displayName {
-	position: absolute;
-	top: 0px;
-	left: 50px; }
-
-.myheader {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    height: 9vh;
-    user-select: none; }
-.nav-container {
-    font-family: "Baskerville", sans-serif; }
-/* Head Banner "Your Website Banner" */
-.banner {
-    font-family: "Varela Round", serif;
-    background-color: inherit;
-    color: inherit;
-    text-align: center; }
-/* page buttons */
-.page-button {
-    display: inline-block;
-    background-color: inherit;
-    color: inherit;
-    text-decoration: none;
-    width: 16%;
-    position: relative;
-    border-left: 1px solid #2d3748;
-    transition: background-color 0.5s, color 0.5s; }
-body.dark-mode .page-button {
-    border-left: 1px solid #03DAC6; }
-/* page button hover coloring */
-.page-button:hover {
-  background-color: #2d3748;
-  color: #edf2f7; }
-body.dark-mode .page-button:hover {
-  background-color: #03DAC6;
-  color: #252526; }
-/* color of the switch button */
-body:not(.dark-mode) .slider:before {
-    background-color: #2d3748; }
-.loginbtn {
-    position: absolute;
-    top: 2%;
-    left: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 34px;
-    border-radius: 10px;
-    background-color: #2d3748;
-    color: #edf2f7;
-    cursor: pointer; }
-body.dark-mode .loginbtn {
-    background-color: #212121;
-    color: #03DAC6; }
-
-/* default css for links */
-a:-webkit-any-link {
+#profileImage { position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+  height: auto;
+  -webkit-user-drag: none; }
+#displayName { position: absolute;
+  top: 0px;
+  left: 50px; }
+.myheader { display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 9vh;
+  user-select: none; }
+.nav-container { font-family: "Baskerville", sans-serif; }
+.banner { font-family: "Varela Round", serif;
+  background-color: inherit;
   color: inherit;
+  text-align: center; }
+.page-button { display: inline-block;
+  background-color: inherit;
+  color: inherit;
+  text-decoration: none;
+  width: 16%;
+  position: relative;
+  border-left: 1px solid #2d3748;
+  transition: background-color 0.5s, color 0.5s; }
+body.dark-mode .page-button { border-left: 1px solid #03DAC6; }
+.page-button:hover { background-color: #2d3748;
+  color: #edf2f7; }
+body.dark-mode .page-button:hover { background-color: #03DAC6;
+  color: #252526; }
+body:not(.dark-mode) .slider:before { background-color: #2d3748; }
+.loginbtn { position: absolute;
+  top: 2%;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 34px;
+  border-radius: 10px;
+  background-color: #2d3748;
+  color: #edf2f7;
+  cursor: pointer; }
+body.dark-mode .loginbtn { background-color: #212121;
+    color: #03DAC6; }
+a:-webkit-any-link { color: inherit;
   cursor: pointer;
   text-decoration: inherit; }
