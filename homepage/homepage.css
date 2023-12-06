@@ -89,15 +89,10 @@ body.dark-mode .explore2 { border-right: 1px solid #03DAC6; }
 .div44 { grid-area: 2 / 5 / 10 / 5; }
 
 @media screen and (max-width: 768px) {
-html, body {
-  overflow-x: hidden;
-}
-.image-hover {
-  transition: none;
-}
-.image-hover:hover {
-  transform: none;
-}
+html, body { overflow-x: hidden; }
+.image-hover { transition: none; }
+.image-hover:hover { transform: none; }
+#displayalbums { display: none; }
 .parent { display: block;
 	height: 80vh;
 	text-align: center; }
