@@ -108,7 +108,7 @@ body.dark-mode .popup { background-color: #121212;
   position: absolute;
   left: 55%;
   top: 40%;
-  width: 30%;
+  width: 300px;
   max-height: 200px;
   overflow-y: scroll;
   padding-right: 8px; }
@@ -117,10 +117,9 @@ body.dark-mode .popup { background-color: #121212;
 .popup table td:first-child, th:first-child {
   text-align: left;
   overflow: hidden;
-  max-width: 150px;
+  max-width: 225px;
   text-overflow: ellipsis;
-  white-space: nowrap;
-}
+  white-space: nowrap; }
 .popup table td:last-child, th:last-child {
   text-align: right; }
 .table-container::-webkit-scrollbar {
