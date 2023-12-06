@@ -17,7 +17,6 @@
       <input type="checkbox" id="darkModeToggle">
       <span class="slider round"></span>
     </label>
-    <div class="loginbtn" id="logBtn" onclick="authforhomepage()"><p>Login</p></div>
     	<img id="profileImage"></img>
     	<p id="displayName"></p>
     <div class="moon"></div>
@@ -57,8 +56,9 @@
 <script src="../parent-files/musicplayer.js"></script>
 <script>
 function loadmyprofile() {
+   getUserProfile();
 }
-window.onload = loadhomepage;
+window.onload = loadmyprofile;
 </script>
 </body>
 </html>
