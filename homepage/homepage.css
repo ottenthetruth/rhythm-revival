@@ -90,17 +90,17 @@ body.dark-mode .explore2 { border-right: 1px solid #03DAC6; }
 
 @media screen and (max-width: 768px) {
 .parent { display: block;
-	height: 90vh; }
+	height: 80vh;
+	text-align: center; }
 .div1, .div2 { display: block;
-        padding: 20px;
         width: 100%;
-        height: 30vh; }
-.div1 img, .div2 img { height: 30vh;
+        height: 35vh; }
+.div1 img, .div2 img { height: 35vh;
 		       width: auto; }
 .div3, .div7 { display: block;
                font-size: 4vw;
 	       width: 100%;
-	       height: 15vh; }
+	       height: 5vh; }
 #myexploretext { display: none; }
 .explore-button { display: none; }
 }
