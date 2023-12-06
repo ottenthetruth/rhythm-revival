@@ -25,7 +25,6 @@ body.dark-mode { background-color: #252526;
   grid-row-gap: 0px;
   height: 9vh;
   user-select: none; }
-.nav-container { font-family: "Baskerville", sans-serif; }
 .banner { font-family: "Varela Round", serif;
   background-color: inherit;
   color: inherit;
