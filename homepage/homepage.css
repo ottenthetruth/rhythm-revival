@@ -107,25 +107,12 @@ html, body { overflow-x: hidden; }
 	       height: 5vh; }
 #myexploretext { display: none; }
 .explore-button { display: none; }
-.nextbtn, .prevbtn { display: block; }
 .div3 h1, .div7 h1 { font-size: 4vh; }
-.parent2 {
-	display: block;
+.parent2 { display: block;
 	text-align: center;
 	height: 95vh;
 	width: 100%;
-padding-top: 10vh; }
+	padding-top: 10vh; }
 .parent2 img { width: 70vw;
 	       height: 70vw; }
-.explorecontainer { width: 100%;
-		    display: flex;
-		    overflow: hidden;
-		    position: relative; }
-.explorepage { width: 100%;
-	       height: 100%;
-	       position: relative;
-	       transition: transform 0.3s ease-in-out; }
-.showexplore { transform: translateX(0); }
-.hide-left { transform: translateX(-100%); }
-.hide-right { transform: translateX(100%); }
 }
