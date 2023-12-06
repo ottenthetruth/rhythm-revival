@@ -21,3 +21,37 @@ function checkScroll() { /* update visibility of "explore"-button */
             exploreButton.style.pointerEvents = 'none'; }
     } /* end checkScroll */
 });
+
+    const pages = document.querySelectorAll('.explorepage');
+    let currentPage = 0;
+
+    function showPage(pageIndex) {
+      for (let i = 0; i < pages.length; i++) {
+        if (i === pageIndex) {
+          pages[i].classList.add('show');
+          pages[i].classList.remove('hide-left', 'hide-right');
+        } else if (i < pageIndex) {
+          pages[i].classList.remove('show', 'hide-right');
+          pages[i].classList.add('hide-left');
+        } else {
+          pages[i].classList.remove('show', 'hide-left');
+          pages[i].classList.add('hide-right');
+        }
+      }
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      if (currentPage > 0) {
+        currentPage--;
+        showPage(currentPage);
+      }
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      if (currentPage < pages.length - 1) {
+        currentPage++;
+        showPage(currentPage);
+      }
+    });
+
+    showPage(currentPage);
