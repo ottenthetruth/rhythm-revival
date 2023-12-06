@@ -1,34 +1,17 @@
 async function rateAlbum() {
-    if(document.getElementById("rating10").checked) {
-    console.log("Rating = 10!")
-    } else if(document.getElementById("rating9").checked) {
-    console.log("Rating = 9!")
-    }else if(document.getElementById("rating8").checked) {
-    console.log("Rating = 8!")
-    }else if(document.getElementById("rating7").checked) {
-    console.log("Rating = 7!")
-    }else if(document.getElementById("rating6").checked) {
-    console.log("Rating = 6!")
-    }else if(document.getElementById("rating5").checked) {
-    console.log("Rating = 5!")
-    }else if(document.getElementById("rating4").checked) {
-    console.log("Rating = 4!")
-    }else if(document.getElementById("rating3").checked) {
-    console.log("Rating = 3!")
-    }else if(document.getElementById("rating2").checked) {
-    console.log("Rating = 2!")
-    }else if(document.getElementById("rating1").checked) {
-    console.log("Rating = 1!")
+  for (let i = 1; i <= 10; i++) {
+    if (document.getElementById(`rating${i}`).checked) {
+      console.log(`Rating = ${i}!`);
+      break;
     }
-} /* end ratealbum */
+  }
+}
 
-/* display search results */
 async function getAlbums() {
     const accessToken = localStorage.getItem("access_token");
     if (accessToken) {
         const searchQuery = document.getElementById("mysearch").value;
         const searchQueryArtist = document.getElementById("mysearchartist").value;
-
         const response = await fetch(`https://api.spotify.com/v1/search?q=remaster%2520album%3A${searchQuery}%2520artist%3A${searchQueryArtist}&type=album&limit=6`, {
             method: 'GET',
             headers: {
@@ -41,7 +24,6 @@ async function getAlbums() {
             const albumResult = data.albums.items;
             const cardContainer = document.getElementById("container");
             cardContainer.innerHTML = '';
-
             if (albumResult) {
                 albumResult.forEach(album => {
                     const card = document.createElement("div");
@@ -57,7 +39,6 @@ async function getAlbums() {
                     `;
                     cardContainer.appendChild(card);
                 });
-
                 const playButtons = document.querySelectorAll('.playalbumbutton');
                 playButtons.forEach(button => {
                     button.addEventListener('click', () => {
@@ -66,7 +47,6 @@ async function getAlbums() {
                         playAlbum(contextUri);
                     });
                 });
-
                 const vaButtons = document.querySelectorAll('.gotoalbumbutton');
                 vaButtons.forEach(button => {
                     button.addEventListener('click', () => {
@@ -98,11 +78,9 @@ searchbar2.addEventListener("keypress", function(event) {
   }
 });
 
-// display single album
 function fetchAlbumData() {
   const albumID = localStorage.getItem("va-albumid");
   const accessToken = localStorage.getItem("access_token");
-
   fetch(`https://api.spotify.com/v1/albums/${albumID}`, {
     method: 'GET',
     headers: {
@@ -114,18 +92,14 @@ function fetchAlbumData() {
   .then(data => {
     document.getElementById('va-albumImage').src = data.images[0].url;
     document.getElementById('va-albumName').textContent = data.name;
-
     const artists = data.artists.map(artist => artist.name);
     document.getElementById('va-artistName').textContent = 'by ' + artists.join(', ');
-    // Populate table with songs
     const tableBody = document.getElementById('va-songList');
     tableBody.innerHTML = '';
-
     data.tracks.items.forEach(track => {
       const row = tableBody.insertRow();
       const titleCell = row.insertCell(0);
       const durationCell = row.insertCell(1);
-
       titleCell.textContent = track.name;
       durationCell.textContent = msToMinutesAndSeconds(track.duration_ms);
     });
@@ -140,7 +114,8 @@ function msToMinutesAndSeconds(ms) {
   const seconds = ((ms % 60000) / 1000).toFixed(0);
   return `${minutes}:${(seconds < 10 ? '0' : '')}${seconds}`;
 }
-  function openPopup() {
+
+function openPopup() {
     document.getElementById("overlay").style.display = "block";
     document.getElementById("popup").style.display = "block";
     setTimeout(() => {
@@ -148,13 +123,13 @@ function msToMinutesAndSeconds(ms) {
       document.getElementById("popup").style.transform = "translate(-50%, -50%) scale(1)";
     }, 50);
     fetchAlbumData();
-  }
+}
 
-  function closePopup() {
+function closePopup() {
     document.getElementById("overlay").style.opacity = "0";
     document.getElementById("popup").style.transform = "translate(-50%, -50%) scale(0)";
     setTimeout(() => {
       document.getElementById("overlay").style.display = "none";
       document.getElementById("popup").style.display = "none";
     }, 300);
-  }
+}
