@@ -119,6 +119,6 @@ html, body { overflow-x: hidden; }
 	    position: relative;
 	    top: 0; 
 	    left: 0; }
-.explore2 { left: -100vw; }
-.explore3 { right: -100vw; }
+.explore2 { display: none; }
+.explore3 { display: none; }
 }
