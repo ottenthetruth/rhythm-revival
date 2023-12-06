@@ -18,6 +18,7 @@ body.dark-mode { background-color: #252526;
 #displayName { position: absolute;
   top: 0px;
   left: 50px; }
+#tm-banner { margin-bottom: 0px; }
 .myheader { display: block;
   height: 12vh; }
 .banner { font-family: "Varela Round", serif;
