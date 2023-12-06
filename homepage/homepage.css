@@ -112,7 +112,8 @@ html, body { overflow-x: hidden; }
 	display: block;
 	text-align: center;
 	height: 95vh;
-	width: 100%; }
+	width: 100%;
+padding-top: 10vh; }
 .parent2 img { width: 70vw;
 	       height: 70vw; }
 .explore1, .explore2, .explore3 { width: 100%;
