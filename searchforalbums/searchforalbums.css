@@ -76,11 +76,8 @@ body.dark-mode .search-button { background-color: #03DAC6;
   transform: translate(-50%, -50%) scale(0);
   border: 1px solid #2d3748;
   z-index: 9999;
-  width: 60%;
-  height: 60%;
-  min-width: 800px;
-  min-height: 400px;
-  max-width: 1200px;
+  width: 800px;
+  height: 400px;
   transition: transform 0.5s ease; }
 body.dark-mode .popup { background-color: #121212;
     border: 1px solid #03DAC6; }
