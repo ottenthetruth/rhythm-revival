@@ -138,19 +138,19 @@ background-color: #121212;
 overflow: hidden;
 }
 @media screen and (max-width: 768px) {
-.menu { width: 100vw;
-  height: 40vh;
+.menu { width: 250px;
+  height: 400px;
   position: absolute;
-  right: -100vw; }
+  right: -251px; }
 .controls {
-  width: 100vw;
-  height: 30vh;
+  width: 250px;
+  height: 100px;
   position: absolute;
-  top: 40vh;
-  right: -100vw; }
+  top: 400px;
+  right: -251px; }
 .extendmenu {
-  width: 5vw;
-  height: 10vh;
+  width: 30px;
+  height: 100px;
   background-color: #2d3748;
   position: absolute;
   right: 0;
