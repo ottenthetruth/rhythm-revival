@@ -145,8 +145,6 @@ body.dark-mode .table-container::-webkit-scrollbar-thumb {
     border-radius: 20px;
     font-size: 12px;
     top: 11px; }
-h1 { font-size: 2em; 
-    margin-bottom: .5rem; }
 .rate { display: inline-block;
     border: 0; }
 .rate > input { display: none; }
