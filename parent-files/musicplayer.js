@@ -77,7 +77,7 @@ function skipForwardButtonEvent() {
         .then(() => {
             setTimeout(() => {
                 getCurrentlyPlaying();
-            }, 500);
+            }, 800);
         })
         .catch((error) => {
             console.error('Error skipping forward or getting currently playing:', error);
@@ -88,7 +88,7 @@ function skipToPreviousButtonEvent() {
         .then(() => {
             setTimeout(() => {
                 getCurrentlyPlaying();
-            }, 500);
+            }, 800);
         })
         .catch((error) => {
             console.error('Error skipping to previous song or getting currently playing:', error);
