@@ -89,9 +89,16 @@ body.dark-mode .explore2 { border-right: 1px solid #03DAC6; }
 .div44 { grid-area: 2 / 5 / 10 / 5; }
 
 @media screen and (max-width: 768px) {
-  body {
-    color: yellow;
-  }
-
-
+.parent { display: block;
+	height: 90vh; }
+.div1, .div2 { display: block;
+        padding: 20px;
+        width: 100%;
+        height: 30vh; }
+.div3, .div7 { display: block;
+               font-size: 4vw;
+	       width: 100%;
+	       height: 15vh; }
+#myexploretext { display: none; }
+.explore-button { display: none; }
 }
