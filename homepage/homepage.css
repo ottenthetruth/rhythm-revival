@@ -18,7 +18,7 @@ body::-webkit-scrollbar{ display: none; }
 .parent h1, .parent h2, .parent2 h1, .parent2 h2 { margin: 0;
   padding: 0;
   font-weight: lighter; }
-.parent h1 { font-size: 80px; }
+.parent h1 { font-size: 4vw; }
 .parent2 h2 { text-decoration: underline;
     cursor: pointer;
     font-size: 19px; }
@@ -81,7 +81,7 @@ body.dark-mode .explore2 { border-right: 1px solid #03DAC6; }
 .explore3 { grid-area: 3 / 18 / 13 / 22;
             position: relative; }
 .explore31 { grid-area: 3 / 20 / 13 / 24;
-  padding: 3%; }
+  	     padding: 3%; }
 
 .div41 { grid-area: 2 / 2 / 10 / 2; }
 .div42 { grid-area: 2 / 3 / 10 / 3; }
