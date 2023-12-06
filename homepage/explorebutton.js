@@ -1,14 +1,14 @@
-document.addEventListener('DOMContentLoaded', function () { /* check scroll height upon loading the page */
+document.addEventListener('DOMContentLoaded', function () {
     checkScroll();
-    window.addEventListener('scroll', () => { /* check after scrolling */
+    window.addEventListener('scroll', () => {
     checkScroll(); });
-    document.getElementById('explore-button').addEventListener('click', () => { /* scroll to second part of the page upon clicking the button */
+    document.getElementById('explore-button').addEventListener('click', () => {
         window.scrollTo({
         top: 1.2 * window.innerHeight,
         behavior: 'smooth', });
     });
 
-function checkScroll() { /* update visibility of "explore"-button */
+function checkScroll() {
     const exploreButton = document.getElementById('explore-button');
     const exploreText = document.getElementById('myexploretext');
     if (window.scrollY === 0) {
@@ -19,5 +19,5 @@ function checkScroll() { /* update visibility of "explore"-button */
             exploreButton.style.opacity = 0;
             exploreText.style.opacity = 0;
             exploreButton.style.pointerEvents = 'none'; }
-    } /* end checkScroll */
+    }
 });
