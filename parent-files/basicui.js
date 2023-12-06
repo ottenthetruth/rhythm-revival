@@ -17,8 +17,8 @@ async function getUserProfile() {
             var myUserDisplayName = document.getElementById('displayName');
             myUserDisplayName.innerText = myDisplayName;
 	    var logButton = document.getElementById("logBtn");
-	    logButton.style.display = "none";
-	    logButton.disabled = true;
+	    if(logButton) { logButton.style.display = "none";
+	    	logButton.disabled = true; }
         }  
   }
 }
