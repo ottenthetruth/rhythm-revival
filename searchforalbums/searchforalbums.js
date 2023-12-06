@@ -1,3 +1,27 @@
+async function rateAlbum() {
+    if(document.getElementById("rating10").checked) {
+    console.log("Rating = 10!")
+    } else if(document.getElementById("rating9").checked) {
+    console.log("Rating = 9!")
+    }else if(document.getElementById("rating8").checked) {
+    console.log("Rating = 8!")
+    }else if(document.getElementById("rating7").checked) {
+    console.log("Rating = 7!")
+    }else if(document.getElementById("rating6").checked) {
+    console.log("Rating = 6!")
+    }else if(document.getElementById("rating5").checked) {
+    console.log("Rating = 5!")
+    }else if(document.getElementById("rating4").checked) {
+    console.log("Rating = 4!")
+    }else if(document.getElementById("rating3").checked) {
+    console.log("Rating = 3!")
+    }else if(document.getElementById("rating2").checked) {
+    console.log("Rating = 2!")
+    }else if(document.getElementById("rating1").checked) {
+    console.log("Rating = 1!")
+    }
+} /* end ratealbum */
+
 /* display search results */
 async function getAlbums() {
     const accessToken = localStorage.getItem("access_token");
