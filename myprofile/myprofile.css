@@ -1,3 +1,5 @@
+body::-webkit-scrollbar{ display: none; }
+
 .myprofile { height: 250vh; }
 
 .introduction { height: 40vh;
@@ -8,8 +10,8 @@
 .numberoneartist, .numberonesong { height: 100%;
                    width: 50%;
                    padding: 7.5% }
-.numberoneartist img, .numberonesong img { width: 100%;
-                                           aspect-ratio: 16/9; }
+.numberoneartist img, .numberonesong img { width: 200px;
+                                           height: 200px; }
 .numberoneartist { background-color: yellow; }
 .numberonesong { background-color: purple; }
 
