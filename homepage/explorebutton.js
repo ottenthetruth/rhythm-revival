@@ -22,36 +22,34 @@ function checkScroll() { /* update visibility of "explore"-button */
     } /* end checkScroll */
 });
 
-    const pages = document.querySelectorAll('.explorepage');
-    let currentPage = 0;
+const pages = document.querySelectorAll('.explorepage');
+let currentPage = 1;
 
-    function showPage(pageIndex) {
+function showPage(pageIndex) {
       for (let i = 0; i < pages.length; i++) {
         if (i === pageIndex) {
-          pages[i].classList.add('show');
+          pages[i].classList.add('showexplore');
           pages[i].classList.remove('hide-left', 'hide-right');
         } else if (i < pageIndex) {
-          pages[i].classList.remove('show', 'hide-right');
+          pages[i].classList.remove('showexplore', 'hide-right');
           pages[i].classList.add('hide-left');
         } else {
-          pages[i].classList.remove('show', 'hide-left');
+          pages[i].classList.remove('showexplore', 'hide-left');
           pages[i].classList.add('hide-right');
         }
       }
-    }
+}
 
-    document.getElementById('prevBtn').addEventListener('click', () => {
+document.getElementById('prevBtn').addEventListener('click', () => {
       if (currentPage > 0) {
         currentPage--;
         showPage(currentPage);
       }
-    });
-
-    document.getElementById('nextBtn').addEventListener('click', () => {
+});
+document.getElementById('nextBtn').addEventListener('click', () => {
       if (currentPage < pages.length - 1) {
         currentPage++;
         showPage(currentPage);
       }
-    });
-
-    showPage(currentPage);
+});
+showPage(currentPage);
