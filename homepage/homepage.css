@@ -1,67 +1,63 @@
 body::-webkit-scrollbar{ display: none; }
 
 .parent { display: grid;
-  grid-template-columns: repeat(24, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-  height: 100vh;
-  user-select: none; }
+  	  grid-template-columns: repeat(24, 1fr);
+  	  grid-template-rows: repeat(12, 1fr);
+  	  height: 100vh;
+  	  user-select: none; }
 .parent2 { display: flex;
 	   height: 100vh;
 	   user-select: none; }
 .parent3 { display: block;
-  height: 11vh; }
+  	   height: 11vh; }
 
 .parent img, .parent2 img { width: 100%;
-  height: auto;
-  object-fit: cover; }
+  			    height: auto;
+  			    object-fit: cover; }
 .image-hover { transition: transform 0.5s; }
 .image-hover:hover { transform: scale(1.05); }
 .displayalbums { border-radius: 50%; }
 
 .parent h1, .parent h2, .parent2 h1, .parent2 h2 { margin: 0;
-  padding: 0;
-  font-weight: lighter; }
+  						   padding: 0;
+  						   font-weight: lighter; }
 .parent h1 { font-size: 4vw; }
 .parent2 h2 { text-decoration: underline;
-    cursor: pointer;
-    font-size: 19px; }
+    	      cursor: pointer;
+    	      font-size: 19px; }
 
 .container { height: 30vh;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-  user-select: none;
-  color: #edf2f7;
-  background-color: #2d3748; }
+  	     display: block;
+  	     user-select: none;
+  	     color: #edf2f7;
+  	     background-color: #2d3748; }
 body.dark-mode .container { background-color: #212121;
-  border-top: 1px solid #03DAC6;
-  color: #03DAC6; }
+  			    border-top: 1px solid inherit; }
 
 .explorebutton { grid-area: 10 / 12 / 10 / 14;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center; }
+  		 display: flex;
+  		 flex-direction: column;
+  		 align-items: center;
+  		 text-align: center; }
 #myexploretext { transition: opacity 0.65s; }
 #explore-button { transition: opacity 0.65s;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid #2d3748;
-  cursor: pointer;
-  user-select: none; }
+  		  width: 40px;
+  		  height: 40px;
+  		  border-radius: 50%;
+  		  border: 1px solid #2d3748;
+  		  cursor: pointer;
+  		  user-select: none; }
 body.dark-mode #explore-button { background-color: #212121;
-  border: 1px solid #03DAC6;
-  color: #03DAC6; }
-.prevbtn, .nextbtn { display: none; }
+  				 border: 1px solid #03DAC6;
+  				 color: #03DAC6; }
 .div1 { grid-area: 2 / 2 / 7 / 7; }
 .div2 { grid-area: 6 / 18 / 11 / 23; }
 
 .displayimagescontainer { display: block;
-	         width: 40%;
-	         height: 100%; }
+	         	  width: 40%;
+	         	  height: 100%; }
 .displayimagescontainer img { width: 20vh;
-		    height: auto; }
+		    	      height: auto; }
 .div21 { top: 10%;
          left: 10%; }
 .div23 { top: 40%;
@@ -71,30 +67,17 @@ body.dark-mode #explore-button { background-color: #212121;
 
 .div3 { grid-area: 4 / 7 / 6 / 24;
 	font-size: 3vw; }
-.div6 { grid-area: 7 / 13 / 7 / 15;
-        font-size: 0.9vw; }
 .div7 { grid-area: 8 / 1 / 10 / 18;
         font-size: 3vw;
 	display: flex;
 	justify-content: flex-end; }
 
-.explore1 { position: relative;
-	    height: 100%;
-	    width: 20%;
-            border-right: 1px solid #2d3748;
-	    padding: 10px; }
-body.dark-mode .explore1 { border-right: 1px solid #03DAC6; }
-.explore2 { position: relative;
-	    height: 100%;
-	    width: 20%;
-  	    border-right: 1px solid #2d3748;
-	    padding: 10px; }
-body.dark-mode .explore2 { border-right: 1px solid #03DAC6; }
-.explore3 { grid-area: 3 / 18 / 13 / 22;
-            position: relative;
-	    height: 100%;
-	    width: 20%;
-	    padding: 10px; }
+.explore1, .explore2, .explore3 { position: relative;
+	    			  height: 100%;
+	    			  width: 20%;
+            			  border-right: 1px solid inherit;
+	    			  padding: 10px; }
+.explore3 { border-right: none }
 
 .div41 { grid-area: 2 / 2 / 10 / 2; }
 .div42 { grid-area: 2 / 3 / 10 / 3; }
@@ -107,11 +90,11 @@ html, body { overflow-x: hidden; }
 .image-hover:hover { transform: none; }
 .displayalbums { display: none; }
 .parent { display: block;
-	height: 80vh;
-	text-align: center; }
+	  height: 80vh;
+	  text-align: center; }
 .div1, .div2 { display: block;
-        width: 100%;
-        height: 35vh; }
+               width: 100%;
+               height: 35vh; }
 .div1 img, .div2 img { height: 35vh;
 		       width: 35vh; }
 .div3, .div7 { display: block;
@@ -122,10 +105,10 @@ html, body { overflow-x: hidden; }
 .explore-button { display: none; }
 .div3 h1, .div7 h1 { font-size: 4vh; }
 .parent2 { display: block;
-	text-align: center;
-	height: 95vh;
-	width: 100%;
-	padding-top: 10vh; }
+	   text-align: center;
+	   height: 95vh;
+	   width: 100%;
+	   padding-top: 10vh; }
 .parent2 img { width: 70vw;
 	       height: 70vw; }
 }
