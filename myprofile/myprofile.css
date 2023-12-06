@@ -8,14 +8,13 @@
 .numberoneartist, .numberonesong { height: 100%;
                    width: 50%;
                    padding: 7.5% }
+.numberoneartist { background-color: yellow; }
+.numberonesong { background-color: purple; }
 
 .userstats { height: 160vh;
              display: flex; }
-
 .topartists, .topsongs { height: 100%;
-  width: 50%;
-  padding: 7.5%; }
-
+                         width: 50%;
+                         padding: 7.5%; }
 .topartists { background-color: red; }
-
 .topsongs { background-color: green; }
