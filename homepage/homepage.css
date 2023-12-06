@@ -108,4 +108,13 @@ html, body { overflow-x: hidden; }
 #myexploretext { display: none; }
 .explore-button { display: none; }
 .div3 h1, .div7 h1 { font-size: 4vh; }
+.parent2 {
+	display: block;
+	text-align: center;
+	height: 95vh;
+	width: 100%; }
+.parent2 img { width: 70vw;
+	       height: 70vw; }
+.explore1 { width: 100%; }
+.explore2, .explore3 { display: none; }
 }
