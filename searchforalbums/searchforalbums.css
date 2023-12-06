@@ -93,14 +93,14 @@ body.dark-mode .popup { background-color: #121212;
   -webkit-user-drag: none; }
 .popup h1 { position: relative;
   top: 10%;
-  left: 60%;
+  left: 55%;
   max-width: 40%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: lighter; }
 .popup h2 { position: absolute;
-  left: 60%;
+  left: 55%;
   top: 25%;
   max-width: 40%;
   white-space: nowrap;
@@ -109,7 +109,7 @@ body.dark-mode .popup { background-color: #121212;
   font-weight: lighter; }
 .table-container { border-collapse: collapse;
   position: absolute;
-  left: 60%;
+  left: 55%;
   top: 40%;
   width: 30%;
   max-height: 200px;
@@ -136,7 +136,7 @@ body.dark-mode .table-container::-webkit-scrollbar-thumb {
 
 /* star rating css */
 .ratedisplay { position: relative;
-    left: 60%;
+    left: 55%;
     top: 70%;
     margin-left: 0px;
     padding-left: 0px; }
