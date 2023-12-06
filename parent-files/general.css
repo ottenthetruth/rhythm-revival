@@ -18,13 +18,8 @@ body.dark-mode { background-color: #252526;
 #displayName { position: absolute;
   top: 0px;
   left: 50px; }
-.myheader { display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  height: 9vh;
-  user-select: none; }
+.myheader { display: block;
+  height: 9vh; }
 .banner { font-family: "Varela Round", serif;
   background-color: inherit;
   color: inherit;
