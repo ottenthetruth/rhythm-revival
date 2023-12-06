@@ -1,0 +1,14 @@
+.myprofile { height: 250vh; }
+
+.introduction { height: 60vh;
+  background-color: blue; }
+
+.userstats { height: 190vh;
+  display: flex; }
+
+.left, .right { height: 100%;
+  width: 50%; }
+
+.left { background-color: red; }
+
+.right { background-color: green; }
