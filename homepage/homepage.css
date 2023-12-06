@@ -116,7 +116,7 @@ html, body { overflow-x: hidden; }
 .parent2 img { width: 70vw;
 	       height: 70vw; }
 .explore1, .explore2, .explore3 { width: 100%;
-	    position: absolute;
+	    position: relative;
 	    top: 0; 
 	    left: 0; }
 .explore2 { left: -100vw; }
