@@ -1,14 +1,21 @@
 .myprofile { height: 250vh; }
 
-.introduction { height: 60vh;
+.introduction { height: 40vh;
   background-color: blue; }
 
-.userstats { height: 190vh;
-  display: flex; }
+.numberoneitems { height: 51vh;
+                  display: flex; }
+.numberoneartist, .numberonesong { height: 100%;
+                   width: 50%;
+                   padding: 7.5% }
 
-.left, .right { height: 100%;
-  width: 50%; }
+.userstats { height: 160vh;
+             display: flex; }
 
-.left { background-color: red; }
+.topartists, .topsongs { height: 100%;
+  width: 50%;
+  padding: 7.5%; }
 
-.right { background-color: green; }
+.topartists { background-color: red; }
+
+.topsongs { background-color: green; }
