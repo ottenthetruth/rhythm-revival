@@ -1,5 +1,4 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-/* structure for search-function */
 .parent { display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -7,23 +6,15 @@
     grid-row-gap: 0px;
     height: 10vh; }
 .div1 { grid-area: 1 / 3 / 1 / 5; }
-
-/* displaying search-results here */
 .parent2 { display: block;
     flex-wrap: wrap;
     height: 50vh; }
-
-/* "search-bar" references the entire structure, i. e. both inputs & search button */
 .search-bar { display: flex;
     align-items: center;
     padding: 50px; }
-
-/* placeholders "Album" and "Artist" */
 .search-input::placeholder { color: inherit;
     font-style: italic;
     user-select: none; }
-
-/* "Album" and "Artist" search-querys here */
 .search-input { background-color: inherit;
     width: 100%;
     padding: 10px;
@@ -34,8 +25,6 @@
 body.dark-mode .search-input { border: 1px solid #03DAC6;
     color: #03DAC6;
     background-color: #212121; }
-
-/* button, which executes search, can also be triggered via "Enter" */
 .search-button { background-color: #2d3748;
   color: #edf2f7;
   position: relative;
@@ -50,8 +39,6 @@ body.dark-mode .search-input { border: 1px solid #03DAC6;
   cursor: pointer; }
 body.dark-mode .search-button { background-color: #03DAC6;
     color: #121212; }
-
-/* view album popup */
 .overlay { display: none;
   position: fixed;
   top: 0;
@@ -88,22 +75,18 @@ body.dark-mode .popup { background-color: #121212;
   min-width: 30%;
   transform: translate(5%, 5%);
   -webkit-user-drag: none; }
-.popup h1 { position: relative;
-  top: 10%;
-  left: 55%;
-  max-width: 40%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-weight: lighter; }
-.popup h2 { position: absolute;
-  left: 55%;
-  top: 25%;
-  max-width: 40%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-weight: lighter; }
+.popup h1, .popup h2 {
+    font-weight: lighter; 
+    position: relative;
+    left: 55%;
+    max-width: 40%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.popup h1 { top: 10%; }
+.popup h2 { top: 25%; }
+
 .table-container { border-collapse: collapse;
   position: absolute;
   left: 55%;
@@ -129,8 +112,6 @@ body.dark-mode .popup { background-color: #121212;
   border-radius: 5px; }
 body.dark-mode .table-container::-webkit-scrollbar-thumb {
   background-color: #03DAC6; }
-
-/* star rating css */
 .ratedisplay { position: relative;
     left: 55%;
     top: 70%;
