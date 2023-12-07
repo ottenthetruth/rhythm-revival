@@ -9,15 +9,10 @@ body { font-family: "Varela Round", sans-serif;
   overflow-x: hidden; }
 body.dark-mode { background-color: #252526;
   color: #03DAC6; }
-#profileImage { position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 40px;
+#profileImage { width: 40px;
   height: auto;
   -webkit-user-drag: none; }
-#displayName { position: absolute;
-  top: 0px;
-  left: 50px; }
+#displayName {}
 #tm-banner { margin-bottom: 0px; }
 .myheader { display: block;
   height: 12vh; }
@@ -39,13 +34,7 @@ body.dark-mode .page-button { border-left: 1px solid #03DAC6; }
 body.dark-mode .page-button:hover { background-color: #03DAC6;
   color: #252526; }
 body:not(.dark-mode) .slider:before { background-color: #2d3748; }
-.loginbtn { position: absolute;
-  top: 2%;
-  left: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
+.loginbtn { width: 60px;
   height: 34px;
   border-radius: 10px;
   background-color: #2d3748;
