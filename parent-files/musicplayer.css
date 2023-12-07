@@ -57,17 +57,16 @@ body.dark-mode .controls {
   -webkit-user-drag: none; }
 .menu h1 {
   font-size: 19px;
-  padding: 0px;
+  padding: 10px;
   font-weight: lighter;
   white-space: nowrap; 
   overflow: hidden;
   text-overflow: ellipsis; 
-  padding: 0px;
   padding-left: 25px; 
   padding-right: 25px; }
 .menu h2 {
   font-size: 14px;
-  padding: 0px;
+  padding: 5px;
   padding-left: 25px;
   padding-right: 25px;
   font-weight: lighter;
