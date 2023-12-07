@@ -11,18 +11,20 @@
   <link rel="stylesheet" href="../parent-files/musicplayer.css">
 </head>
 <body>
-<div class="myheader">
+
   <div class="banner">
+    <div class="loginbtn" id="logBtn" onclick="authforhomepage()"><p>Login</p></div>
+    	<img id="profileImage"></img>
+    	<p id="displayName"></p>
     <h1 id="tm-banner">TM.</h1>
     <label class="switch">
       <input type="checkbox" id="darkModeToggle">
       <span class="slider round"></span>
     </label>
-    <div class="loginbtn" id="logBtn" onclick="authforhomepage()"><p>Login</p></div>
-    	<img id="profileImage"></img>
-    	<p id="displayName"></p>
     <div class="moon"></div>
     <div class="moon2"></div>
+  </div>
+
     <div class="nav-container">
         <a href="../searchforalbums/searchforalbums.html" class="page-button" style="border-left: none;">Search for Albums!</a>
         <a href="../myprofile/myprofile.html" class="page-button">My Profile</a>
@@ -30,8 +32,7 @@
         <a href="page4.html" class="page-button">Page 4</a>
         <a href="page5.html" class="page-button">About RYM</a>
     </div>
-  </div>
-</div>
+
 <div class="parent">
 <div class="musicplayer" id="musicplayer">
   <div class="menu" id="menu">
