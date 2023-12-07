@@ -17,7 +17,7 @@ body.dark-mode .menu {
   background-color: #2d3748;
   position: absolute;
   right: -251px;
-  top: 400px;
+  top: 399px;
   color: #edf2f7;
   text-align: center;
   display: flex; 
@@ -88,7 +88,7 @@ body.dark-mode .extendmenu {
   border-left: 1px solid #03DAC6;
   border-top: 1px solid #03DAC6;
   border-bottom: 1px solid #03DAC6; }
-.extendmenu p { /* arrow */
+.extendmenu p {
   font-size: 30px;
   font-weight: bold;
   padding-left: 10px; }
@@ -99,8 +99,6 @@ body.dark-mode .extendmenu {
   z-index: 5; }
 .musicplayer:hover {
   transform: translateX(-250px); }
-
-/* controls */
 button {
    background-color: #2d3748;
    color: #edf2f7;
@@ -118,22 +116,16 @@ progress {
    margin-bottom: 25px;
    margin-left: 25px;
    margin-right: 25px; }
-
-/* test progress bar css */
 progress[value]::-webkit-progress-bar {
 background-color: #121212;
-border-radius: 10px;
-}
+border-radius: 10px; }
 progress[value]::-webkit-progress-value {
 border-radius: 10px;
-background-color: #03DAC6;
-}
+background-color: #03DAC6; }
 progress[value]::-moz-progress-bar {
-background-color: #03DAC6;
-}
+background-color: #03DAC6; }
 progress[value] {
 appearance: none;
 border-radius: 10px;
 background-color: #121212;
-overflow: hidden;
-}
+overflow: hidden; }
