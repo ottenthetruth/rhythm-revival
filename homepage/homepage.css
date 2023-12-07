@@ -75,9 +75,7 @@ body.dark-mode #explore-button { background-color: #212121;
 .explore1, .explore2, .explore3 { position: relative;
 	    			  height: 100%;
 	    			  width: 20%;
-            			  border-right: 1px solid inherit;
 	    			  padding: 10px; }
-.explore3 { border-right: none }
 
 .div41 { grid-area: 2 / 2 / 10 / 2; }
 .div42 { grid-area: 2 / 3 / 10 / 3; }
@@ -88,7 +86,7 @@ body.dark-mode #explore-button { background-color: #212121;
 html, body { overflow-x: hidden; }
 .image-hover { transition: none; }
 .image-hover:hover { transform: none; }
-.displayalbums { display: none; }
+.displayimagescontainer { display: none; }
 .parent { display: block;
 	  height: 80vh;
 	  text-align: center; }
@@ -103,13 +101,17 @@ html, body { overflow-x: hidden; }
 	       height: 5vh; }
 #myexploretext { display: none; }
 .explore-button { display: none; }
+.explore1, .explore2, .explore3 { width: 100vw;
+				  height: auto;
+}
 .div3 h1, .div7 h1 { font-size: 4vh; }
 .parent2 { display: flex;
 	   text-align: center;
 	   height: 95vh;
 	   width: 100%;
 	   padding-top: 10vh;
-	   overflow-x: scroll; }
+	   overflow-x: scroll;
+	   overflow-y: hidden; }
 .parent2 img { width: 70vw;
 	       height: 70vw; }
 }
