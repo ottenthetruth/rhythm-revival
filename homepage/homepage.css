@@ -103,7 +103,7 @@ html, body { overflow-x: hidden; }
 .explore-button { display: none; }
 .explore1, .explore2, .explore3 { width: 100vw;
 				  height: auto;
-}
+				  padding: 5vw; }
 .div3 h1, .div7 h1 { font-size: 4vh; }
 .parent2 { display: flex;
 	   text-align: center;
@@ -112,6 +112,6 @@ html, body { overflow-x: hidden; }
 	   padding-top: 10vh;
 	   overflow-x: scroll;
 	   overflow-y: hidden; }
-.parent2 img { width: 70vw;
-	       height: 70vw; }
+.parent2 img { width: 90vw;
+	       height: 90vw; }
 }
