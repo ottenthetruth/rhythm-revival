@@ -85,7 +85,8 @@ body.dark-mode .popup { background-color: #121212;
     text-overflow: ellipsis;
 }
 .popup h1 { top: 10%; }
-.popup h2 { top: 25%; }
+.popup h2 { top: 25%;
+            position: absolute; }
 
 .table-container { border-collapse: collapse;
   position: absolute;
