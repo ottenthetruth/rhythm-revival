@@ -51,7 +51,7 @@ body.dark-mode #explore-button { background-color: #212121;
   				 border: 1px solid #03DAC6;
   				 color: #03DAC6; }
 .div1 { grid-area: 2 / 2 / 7 / 7; }
-.div2 { grid-area: 6 / 18 / 11 / 23; }
+.div2 { grid-area: 5 / 18 / 10 / 23; }
 
 .displayimagescontainer { display: block;
 	         	  width: 40%;
@@ -67,7 +67,7 @@ body.dark-mode #explore-button { background-color: #212121;
 
 .div3 { grid-area: 4 / 7 / 6 / 24;
 	font-size: 3vw; }
-.div7 { grid-area: 8 / 1 / 10 / 18;
+.div7 { grid-area: 7 / 1 / 9 / 18;
         font-size: 3vw;
 	display: flex;
 	justify-content: flex-end; }
