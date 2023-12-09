@@ -14,8 +14,8 @@ body::-webkit-scrollbar{ display: none; }
 .parent img, .parent2 img { width: 100%;
   			    height: auto;
   			    object-fit: cover; }
-.image-hover { transition: transform 0.5s; }
-.image-hover:hover { transform: scale(1.05); }
+.image-hover { transition: transform 0.2s; }
+.image-hover:hover { transform: scale(1.02); }
 .displayalbums { border-radius: 50%; }
 
 .parent h1, .parent h2, .parent2 h1, .parent2 h2 { margin: 0;
