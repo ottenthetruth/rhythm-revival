@@ -37,19 +37,19 @@ body.dark-mode .page-button { border-left: 1px solid #03DAC6; }
   color: #edf2f7; }
 body.dark-mode .page-button:hover { background-color: #03DAC6;
   color: #252526; }
-.loginbtn { position: absolute;
+.loginbtn { display: flex;
+  position: absolute;
   top: 20px;
   left: 20px;
-  text-align: center;
-  margin: auto;
   width: 60px;
   height: 34px;
   border-radius: 10px;
   background-color: #2d3748;
   color: #edf2f7;
   cursor: pointer; }
-body.dark-mode .loginbtn { background-color: #252526;
-    color: #03DAC6; }
+body.dark-mode .loginbtn { color: #252526;
+    background-color: #03DAC6; }
+.loginbtn p { margin: auto; }
 a:-webkit-any-link { color: inherit;
   cursor: pointer;
   text-decoration: inherit; }
