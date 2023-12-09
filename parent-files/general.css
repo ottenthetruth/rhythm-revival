@@ -21,8 +21,8 @@ body.dark-mode { background-color: #252526;
                top: 0;
                left: 50px; }
 .banner { display: block;
-  height: 7vh;
-  min-height: 50px; }
+          height: 7vh;
+          min-height: 50px; }
 #tm-banner { text-align: center; }
 .nav-container { display: flex;
                  justify-content: center; }
@@ -37,7 +37,12 @@ body.dark-mode .page-button { border-left: 1px solid #03DAC6; }
   color: #edf2f7; }
 body.dark-mode .page-button:hover { background-color: #03DAC6;
   color: #252526; }
-.loginbtn { width: 60px;
+.loginbtn { position: absolute;
+  top: 20px;
+  left: 20px;
+  text-align: center;
+  margin: auto;
+  width: 60px;
   height: 34px;
   border-radius: 10px;
   background-color: #2d3748;
