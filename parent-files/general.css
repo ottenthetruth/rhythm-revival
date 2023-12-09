@@ -10,17 +10,20 @@ body { font-family: "Varela Round", sans-serif;
   overflow-y: scroll; }
 body.dark-mode { background-color: #252526;
   color: #03DAC6; }
-#profileImage { position: relative;
+#profileImage { position: absolute;
   top: 5px;
   left: 5px;
   width: 40px;
   height: 40px;
   display: none;
   -webkit-user-drag: none; }
-#displayName { display: none; }
+#displayName { position: absolute;
+               top: 0;
+               left: 50px; }
 .banner { display: block;
   height: 7vh;
   min-height: 50px; }
+#tm-banner { text-align: center; }
 .nav-container { display: flex;
                  justify-content: center; }
 .page-button { background-color: inherit;
