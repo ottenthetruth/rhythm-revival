@@ -4,9 +4,11 @@ body::-webkit-scrollbar{ display: none; }
   	  grid-template-columns: repeat(24, 1fr);
   	  grid-template-rows: repeat(12, 1fr);
   	  height: 100vh;
+	  min-height: 800px;
   	  user-select: none; }
 .parent2 { display: flex;
 	   height: 100vh;
+	   min-height: 800px;
 	   user-select: none; }
 .parent3 { display: block;
   	   height: 11vh; }
@@ -27,6 +29,7 @@ body::-webkit-scrollbar{ display: none; }
     	      font-size: 19px; }
 
 .container { height: 30vh;
+	     min-height: 250px;
   	     display: block;
   	     user-select: none;
   	     color: #edf2f7;
