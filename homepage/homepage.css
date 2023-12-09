@@ -58,17 +58,22 @@ body.dark-mode #explore-button { background-color: #212121;
         font-size: 3vw;
 	text-align: end; }
 
-.displayimagescontainer { display: block;
+.displayimagescontainer { position: relative;
+			  display: block;
 	         	  width: 40%;
 	         	  height: 100%; }
 .displayimagescontainer img { width: 20vh;
-		    	      height: auto; }
-#da-abbeyroad { top: 10%;
-         left: 10%; }
-#da-motm2 { top: 40%;
+		    	      height: auto;
+			      transform: translate(-50%, -50%); }
+#da-abbeyroad { position: absolute;
+	 top: 20%;
+         left: 20%; }
+#da-motm2 { position: absolute;
+	 top: 50%;
+         left: 50%; }
+#da-dsotm { position: absolute;
+	 top: 70%;
          left: 40%; }
-#da-dsotm { top: 60%;
-         left: 30%; }
 
 .explore1, .explore2, .explore3 { position: relative;
 	    			  height: 100%;
