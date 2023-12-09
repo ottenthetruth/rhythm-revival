@@ -10,13 +10,17 @@ body { font-family: "Varela Round", sans-serif;
   overflow-y: scroll; }
 body.dark-mode { background-color: #252526;
   color: #03DAC6; }
-#profileImage { width: 40px;
-  height: auto;
+#profileImage { position: relative;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  display: none;
   -webkit-user-drag: none; }
-#displayName {}
-#tm-banner { margin-bottom: 0px; }
+#displayName { display: none; }
 .banner { display: flex;
-  font-family: "Varela Round", serif;
+  height: 7vh;
+  min-height: 50px;
   background-color: inherit;
   color: inherit;
   text-align: center; }
