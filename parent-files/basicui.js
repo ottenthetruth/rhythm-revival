@@ -14,6 +14,7 @@ async function getUserProfile() {
             const profilePictureUrl = data.images.length > 0 ? data.images[0].url : '';
             var myUserImage = document.getElementById('profileImage');
             myUserImage.src = profilePictureUrl;
+	    myUserImage.style.display = block;
             var myUserDisplayName = document.getElementById('displayName');
             myUserDisplayName.innerText = myDisplayName;
 	    var logButton = document.getElementById("logBtn");
