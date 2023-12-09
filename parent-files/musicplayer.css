@@ -23,7 +23,7 @@ body.dark-mode .menu {
   display: flex; 
   flex-direction: column; 
   justify-content: flex-end; }
-.controlbuttons {
+.controlbuttons { margin-bottom: 10px;
   display: flex;
   flex-wrap: wrap; 
   justify-content: center; }
@@ -110,7 +110,7 @@ body.dark-mode button {
    color: #03DAC6; }
 progress {
    width: 200px;
-   height: 10px;
+   height: 5px;
    margin-top: 10px;
    margin-bottom: 25px;
    margin-left: 25px;
