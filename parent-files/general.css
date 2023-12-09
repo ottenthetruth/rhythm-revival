@@ -6,7 +6,8 @@ body { font-family: "Varela Round", sans-serif;
   margin: 0;
   padding: 0;
   user-select: none;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  overflow-y: scroll; }
 body.dark-mode { background-color: #252526;
   color: #03DAC6; }
 #profileImage { width: 40px;
@@ -38,7 +39,7 @@ body.dark-mode .page-button:hover { background-color: #03DAC6;
   background-color: #2d3748;
   color: #edf2f7;
   cursor: pointer; }
-body.dark-mode .loginbtn { background-color: #212121;
+body.dark-mode .loginbtn { background-color: #252526;
     color: #03DAC6; }
 a:-webkit-any-link { color: inherit;
   cursor: pointer;
