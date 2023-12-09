@@ -15,6 +15,7 @@ body.dark-mode { background-color: #252526;
   left: 5px;
   width: 40px;
   height: 40px;
+  display: none;
   -webkit-user-drag: none; }
 #displayName { position: absolute;
                top: 0;
