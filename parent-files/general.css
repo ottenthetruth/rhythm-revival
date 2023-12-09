@@ -18,12 +18,9 @@ body.dark-mode { background-color: #252526;
   display: none;
   -webkit-user-drag: none; }
 #displayName { display: none; }
-.banner { display: flex;
+.banner { display: block;
   height: 7vh;
-  min-height: 50px;
-  background-color: inherit;
-  color: inherit;
-  text-align: center; }
+  min-height: 50px; }
 .nav-container { display: flex;
                  justify-content: center; }
 .page-button { background-color: inherit;
