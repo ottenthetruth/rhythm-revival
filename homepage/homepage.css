@@ -65,7 +65,7 @@ body.dark-mode #explore-button { background-color: #212121;
 			  display: block;
 	         	  width: 40%;
 	         	  height: 100%;
-			  margin-top: 20vh; }
+			  margin-top: 10vh; }
 .displayimagescontainer img { width: 15vw;
 		    	      height: auto;
 			      transform: translate(-50%, -50%); }
