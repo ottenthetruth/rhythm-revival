@@ -26,8 +26,9 @@ body.dark-mode { background-color: #252526;
 #tm-banner { text-align: center; }
 .nav-container { display: flex;
                  justify-content: center; }
+.nav-col1, .nav-col2 { display: flex; }
 .page-button { background-color: inherit;
-  width: 16%;
+  width: 16vw;
   position: relative;
   text-align: center;
   border-left: 1px solid #2d3748;
@@ -59,8 +60,7 @@ body:not(.dark-mode) .slider:before { background-color: #2d3748; }
 
 @media screen and (max-width: 768px) {
 .nav-container { flex-direction: column; }
-.nav-col1, .nav-col2 { display: flex;
-	    width: 100vw; 
+.nav-col1, .nav-col2 { width: 100vw; 
 	    text-align: center; }
 #nav-aboutbtn { display: none; }
 .page-button { width: 50%;
