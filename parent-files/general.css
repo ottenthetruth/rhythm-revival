@@ -55,3 +55,14 @@ a:-webkit-any-link { color: inherit;
   text-decoration: inherit; }
 /* move to darkmodeswitch.css */
 body:not(.dark-mode) .slider:before { background-color: #2d3748; }
+
+
+@media screen and (max-width: 768px) {
+.nav-container { flex-direction: column; }
+.nav-col1, .nav-col2 { display: flex;
+	    width: 100vw; 
+	    text-align: center; }
+#nav-aboutbtn { display: none; }
+.page-button { width: 50%;
+               border: none; }
+}
