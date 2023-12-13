@@ -65,4 +65,5 @@ body:not(.dark-mode) .slider:before { background-color: #2d3748; }
 #nav-aboutbtn { display: none; }
 .page-button { width: 50%;
                border: none; }
+body.dark-mode .page-button { border: none; }
 }
