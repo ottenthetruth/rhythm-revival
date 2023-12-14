@@ -7,6 +7,8 @@ async function getTopTracks() {
   });
   const data = await response.json();
   data.items.forEach((track, index) => {
+    const currentTrackElementText = document.getElementById(`topsongname${index+1}`);
+    currentTrackElementText.textContent = track.name;
     console.log(`Track ${index + 1}: ${track.name}`);
   });
 }
