@@ -104,6 +104,16 @@
 <script src="../parent-files/musicplayer.js"></script>
 <script>
 function loadhomepage() {
+const accessToken = localStorage.getItem("access_token");
+    if(accessToken) {
+    refreshAccessToken()
+        .then(() => {
+            getUserProfile();
+        })
+        .catch((error) => {
+            console.error('Error getting access token:', error);
+        });    
+    } else {
     getAccessToken()
         .then(() => {
             getUserProfile();
@@ -111,6 +121,7 @@ function loadhomepage() {
         .catch((error) => {
             console.error('Error getting access token:', error);
         });
+    }
 }
 window.onload = loadhomepage;
 </script>
