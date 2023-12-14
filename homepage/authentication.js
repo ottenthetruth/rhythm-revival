@@ -5,7 +5,7 @@ async function authforhomepage() {
   const clientID = "e9fec6e1cb5241e0a41ab98db146bc3c";
   const redirectURI = "https://ottenthetruth.github.io/truthmusic/homepage/homepage.html";
   const callbackURL = "https://ottenthetruth.github.io/truthmusic/homepage/homepage.html";
-  const spotifyAuthURL = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=code&redirect_uri=${redirectURI}&scope=user-library-read%20user-modify-playback-state%20user-read-playback-state%20user-read-currently-playing&state=${callbackURL}`;
+  const spotifyAuthURL = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=code&redirect_uri=${redirectURI}&scope=user-library-read%20user-modify-playback-state%20user-top-read%20user-read-playback-state%20user-read-currently-playing&state=${callbackURL}`;
   window.location.href = spotifyAuthURL;
   }
 }
