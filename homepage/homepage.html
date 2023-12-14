@@ -104,6 +104,7 @@
 <script src="../parent-files/musicplayer.js"></script>
 <script>
 function loadhomepage() {
+    getRefreshToken();
     getRefreshToken()
         .then(() => {
             getUserProfile();
