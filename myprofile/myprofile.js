@@ -6,7 +6,9 @@ async function getTopTracks() {
     }
   });
   const data = await response.json();
-  console.log('Top Tracks:', data.items);
+  data.items.forEach((track, index) => {
+    console.log(`Track ${index + 1}: ${track.name}`);
+  });
 }
 
 async function getTopArtists() {
@@ -17,5 +19,8 @@ async function getTopArtists() {
     }
   });
   const data = await response.json();
-  console.log('Top Artists:', data.items);
+  data.items.forEach((artist, index) => {
+    console.log(`Artist ${index + 1}: ${artist.name}`);
+  });
+
 }
