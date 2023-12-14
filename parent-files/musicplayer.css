@@ -58,6 +58,7 @@ body.dark-mode .controls {
 .menu h1 {
   font-size: 19px;
   padding: 10px;
+  margin: 0;
   font-weight: lighter;
   white-space: nowrap; 
   overflow: hidden;
@@ -69,6 +70,7 @@ body.dark-mode .controls {
   padding: 5px;
   padding-left: 25px;
   padding-right: 25px;
+  margin: 0;
   font-weight: lighter;
   white-space: nowrap; 
   overflow: hidden;
