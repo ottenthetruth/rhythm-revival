@@ -50,31 +50,30 @@ async function getAccessToken() {
 
 } /* end getAccessToken */
 
-async function refreshAccessToken() {
-  const tokenEndpoint = "https://accounts.spotify.com/api/token";
-  const client_secret = "2d5a82decbc240e4adadcbd86f342321"; // Replace with your actual client secret
-  const redirect_uri = "https://ottenthetruth.github.io/truthmusic/homepage/homepage.html"; // Make sure this matches your Spotify App's redirect URI
-  const basicAuthHeader = btoa(`e9fec6e1cb5241e0a41ab98db146bc3c:${client_secret}`);
-  const refreshToken = localStorage.getItem("refresh_token");
-  fetch(tokenEndpoint, {
-     method: "POST",
-     headers: {
-       "Authorization": `Basic ${basicAuthHeader}`,
-       "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+const getRefreshToken = async () => {
+  const refreshToken = localStorage.getItem('refresh_token');
+  const clientId = 'e9fec6e1cb5241e0a41ab98db146bc3c';
+  const url = "https://accounts.spotify.com/api/token";
+
+  const payload = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
     },
-    body: `grant_type=refresh_token&refresh_token=${refreshToken}`,
-  })
-   .then(response => response.json())
-  .then(data => {
-    const newAccessToken = data.access_token;
-    const newRefreshToken = data.refresh_token;
+    body: new URLSearchParams({
+      grant_type: 'refresh_token',
+      refresh_token: refreshToken,
+      client_id: clientId
+    }),
+  };
 
-    localStorage.setItem("access_token", newAccessToken);
-    localStorage.setItem("refresh_token", newRefreshToken);
+  try {
+    const body = await fetch(url, payload);
+    const response = await body.json();
 
-    console.log('Refreshed access token & refresh token');
-  })
-  .catch(error => {
-    console.error('Error refreshing access token:', error);
-  });
-}
+    localStorage.setItem('access_token', response.access_token);
+    localStorage.setItem('refresh_token', response.refresh_token);
+  } catch (error) {
+    console.error('Error refreshing token:', error);
+  }
+};
