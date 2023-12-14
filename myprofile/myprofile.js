@@ -7,7 +7,7 @@ async function getTopTracks() {
   });
   const data = await response.json();
   data.items.forEach((track, index) => {
-    const currentTrackElementText = document.getElementById(`topsongname${index+1}`);
+    const currentTrackElementText = document.getElementById(`topsongname${index}`);
     if(currentTrackElementText) {
       currentTrackElementText.textContent = track.name;
     }
@@ -24,7 +24,10 @@ async function getTopArtists() {
   });
   const data = await response.json();
   data.items.forEach((artist, index) => {
+    const currentArtistElementText = document.getElementById(`topartistname${index}`);
+    if(currentArtistElementText) {
+      currentArtistElementText.textContent = artist.name;
+    }
     console.log(`Artist ${index + 1}: ${artist.name}`);
   });
-
 }
