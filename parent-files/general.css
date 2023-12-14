@@ -54,9 +54,53 @@ body.dark-mode .loginbtn { color: #252526;
 a:-webkit-any-link { color: inherit;
   cursor: pointer;
   text-decoration: inherit; }
-/* move to darkmodeswitch.css */
 body:not(.dark-mode) .slider:before { background-color: #2d3748; }
-
+.switch { position: absolute;
+  top: 17px;
+  right: 50px;
+  width: 60px;
+  height: 34px; }
+.switch input { opacity: 0;
+  width: 0;
+  height: 0; }
+.slider { position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s; }
+.slider:before { position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #03DAC6;
+  -webkit-transition: .4s;
+  transition: .4s; }
+input:checked + .slider { background-color: #212121; }
+input:checked + .slider:before { transform: translateX(25px); }
+.slider.round { border-radius: 34px; }
+.slider.round:before { border-radius: 50%; }
+.moon { width: 25px;
+  height: 25px;
+  background-color: #2d3748;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.4%;
+  right: 10px; }
+body.dark-mode .moon { background-color: #03DAC6; }
+.moon2 { width: 23px;
+  height: 23px;
+  background-color: #edf2f7;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.2%;
+  right: 5px; }
+body.dark-mode .moon2 { background-color: #252526; }
 
 @media screen and (max-width: 768px) {
 .nav-container { flex-direction: column; }
