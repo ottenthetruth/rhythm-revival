@@ -17,8 +17,20 @@ body::-webkit-scrollbar{ display: none; }
 
 .userstats { height: 160vh;
              display: flex; }
-.topartists, .topsongs { height: 100%;
-                         width: 50%;
-                         padding: 7.5%; }
+.topartists, .topsongs { display: flex;
+                         flex-direction: column;
+                         justify-content: space-between;
+                         height: 100vh;
+                         width: 50vw;
+                         padding: 5vw; }
 .topartists { background-color: red; }
 .topsongs { background-color: green; }
+
+.topitemcontainer {
+  display: flex;
+  position: relative;
+  background-color: cyan;
+  width: 100%;
+  height: 20vh;
+  border: 1px solid;
+}
