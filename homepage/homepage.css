@@ -85,11 +85,6 @@ body.dark-mode #explore-button { background-color: #212121;
 				  margin-top: 20vh;
 	    			  padding: 10px; }
 
-.div41 { grid-area: 2 / 2 / 10 / 2; }
-.div42 { grid-area: 2 / 3 / 10 / 3; }
-.div43 { grid-area: 2 / 4 / 10 / 4; }
-.div44 { grid-area: 2 / 5 / 10 / 5; }
-
 @media screen and (max-width: 768px) {
 html, body { overflow-x: hidden; }
 .image-hover { transition: none; }
