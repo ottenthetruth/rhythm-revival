@@ -44,7 +44,7 @@ async function getAccessToken() {
                 console.log("Successfully obtained access token!");
                 return accessToken;
             } else {
-              return localStorage.getItem("access_token");
+              console.log("Access Token Status Response = " + response.status);
             }
         }/* end if(code) */
 
