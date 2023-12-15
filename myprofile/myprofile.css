@@ -3,6 +3,7 @@ body::-webkit-scrollbar{ display: none; }
 .introduction { display: flex;
                 flex-direction: column;
                 height: 40vh;
+                min-height: 300px;
                 margin: 20px;
                 justify-content: center; }
 .introduction h1 { font-size: 3.8vw;
