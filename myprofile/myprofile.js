@@ -45,7 +45,7 @@ async function getTopArtists() {
 async function updateIntroduction() {
   const displayNameSource = document.getElementById("displayName");
   console.log("DisplayNameSource = " + displayNameSource.textContent);
-  const displayNameDestination = document.getElementById("displayNameIntroduction");
+  var displayNameDestination = document.getElementById("displayNameIntroduction").textContent;
   const updatedText = displayNameSource.textContent + "!";
-  displayNameDestination.textContent = updatedText;
+  displayNameDestination = updatedText;
 }
