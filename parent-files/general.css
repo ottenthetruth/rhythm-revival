@@ -90,7 +90,7 @@ input:checked + .slider:before { transform: translateX(25px); }
   background-color: #2d3748;
   border-radius: 50%;
   position: absolute;
-  top: 2.4%;
+  top: 22px;
   right: 10px; }
 body.dark-mode .moon { background-color: #03DAC6; }
 .moon2 { width: 23px;
@@ -98,7 +98,7 @@ body.dark-mode .moon { background-color: #03DAC6; }
   background-color: #edf2f7;
   border-radius: 50%;
   position: absolute;
-  top: 2.2%;
+  top: 20px;
   right: 5px; }
 body.dark-mode .moon2 { background-color: #252526; }
 
