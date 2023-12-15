@@ -115,8 +115,7 @@ html, body { overflow-x: hidden; }
 	   height: 70vh;
 	   min-height: 70vh;
 	   width: 100%;
-	   overflow-x: scroll;
-	   overflow-y: hidden; }
+	   overflow-x: scroll; }
 .parent2 img { width: 70vw;
 	       height: 70vw; }
 .parent3 { display: none; }
