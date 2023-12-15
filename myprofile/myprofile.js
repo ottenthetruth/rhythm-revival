@@ -11,6 +11,8 @@ async function getTopTracks() {
     const currentTrackElementImage = document.getElementById(`topsongimage${index}`);
     if(currentTrackElementText) {
       currentTrackElementText.textContent = track.name;
+    }
+    if(currentTrackElementImage) {
       currentTrackElementImage.src = track.album.images[0].url;
       currentTrackElementImage.alt = `Track ${index + 1} Cover`;
     }
