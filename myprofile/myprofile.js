@@ -41,3 +41,9 @@ async function getTopArtists() {
     console.log(`Artist ${index + 1}: ${artist.name}`);
   });
 }
+
+async function updateIntroduction() {
+  const displayNameSource = document.getElementById("displayName");
+  const displayNameDestination = document.getElementById("displayNameIntroduction");
+  displayNameDestination.textContent = displayNameSource.textContent;
+}
