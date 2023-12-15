@@ -19,7 +19,7 @@ async function getUserProfile() {
             myUserDisplayName.innerText = myDisplayName;
 
 	    const myProfileIntroduction = document.getElementById('displayNameIntroduction');
-	    if(myProfileIntroduction) { myProfileIntroduction.textContent = myDisplayName; }
+	    if(myProfileIntroduction) { myProfileIntroduction.textContent = myDisplayName + "!"; }
 
 	    var logButton = document.getElementById("logBtn");
 	    if(logButton) { logButton.style.display = "none";
