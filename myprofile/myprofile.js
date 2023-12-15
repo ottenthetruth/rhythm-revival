@@ -31,6 +31,8 @@ async function getTopArtists() {
     const currentArtistElementImage = document.getElementById(`topartistimage${index}`);
     if(currentArtistElementText) {
       currentArtistElementText.textContent = artist.name;
+    }
+    if(currentArtistElementImage) { 
       currentArtistElementImage.src = artist.images[0].url;
       currentArtistElementImage.alt = `Artist ${index + 1} Profile Picture`;
     }
