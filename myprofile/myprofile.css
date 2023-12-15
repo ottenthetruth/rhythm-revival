@@ -6,8 +6,7 @@ body::-webkit-scrollbar{ display: none; }
                 flex-direction: column;
                 height: 40vh;
                 margin: 20px;
-                justify-content: center;
-                background-color: blue; }
+                justify-content: center; }
 .introduction h1 { font-size: 3.8vw;
                    margin: 0; }
 .introduction h2 { font-size: 2.8vw;
@@ -18,8 +17,7 @@ body::-webkit-scrollbar{ display: none; }
 .numberoneitems { height: 45vh;
                   display: flex; }
 .numberoneartist, .numberonesong { height: 100%;
-                                   width: 50%;
-                                   padding: 7.5% }
+                                   width: 50%; }
 .numberoneartist img, .numberonesong img { width: 200px;
                                            height: 200px; }
 .numberoneartist { background-color: yellow; }
@@ -35,6 +33,9 @@ body::-webkit-scrollbar{ display: none; }
                          padding: 5vw; }
 .topartists { background-color: red; }
 .topsongs { background-color: green; }
+.artistinfo, .songinfo {display: flex;flex-direction: column; justify-content: center; }
+.artistinfo h1, .songinfo h1 { margin: 0; }
+.artistinfo h2, .songinfo h2 { font-weight: lighter; }
 
 .topitemcontainer { display: flex;
                     position: relative;
