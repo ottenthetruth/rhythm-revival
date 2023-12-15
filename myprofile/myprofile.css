@@ -1,7 +1,5 @@
 body::-webkit-scrollbar{ display: none; }
 
-.myprofile { height: 250vh; }
-
 .introduction { display: flex;
                 flex-direction: column;
                 height: 40vh;
@@ -23,8 +21,7 @@ body::-webkit-scrollbar{ display: none; }
 .numberoneartist { background-color: yellow; }
 .numberonesong { background-color: purple; }
 
-.userstats { height: 160vh;
-             display: flex; }
+.userstats { display: flex; }
 .topartists, .topsongs { display: flex;
                          flex-direction: column;
                          justify-content: space-between;
