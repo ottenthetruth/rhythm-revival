@@ -17,6 +17,10 @@ async function getUserProfile() {
 	    myUserImage.style.display = 'block';
             var myUserDisplayName = document.getElementById('displayName');
             myUserDisplayName.innerText = myDisplayName;
+
+	    const myProfileIntroduction = document.getElementById('displayNameIntroduction');
+	    if(myProfileIntroduction) { myProfileIntroduction.textContent = myDisplayName; }
+
 	    var logButton = document.getElementById("logBtn");
 	    if(logButton) { logButton.style.display = "none";
 	    	logButton.disabled = true; }
