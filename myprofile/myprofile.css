@@ -11,6 +11,7 @@ body::-webkit-scrollbar{ display: none; }
 .introduction h1 { font-size: 3.8vw;
                    margin: 0; }
 .introduction h2 { font-size: 2.8vw;
+                   margin: 0;
                    font-weight: lighter; }
 .introduction h3 { font-size: 1.4vw;
                    font-weight: lighter; }
