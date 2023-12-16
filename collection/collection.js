@@ -8,7 +8,7 @@ if(myCollectionString) {
   for(let i = 0; i < itemCount; i++) {
       const albumIDIndex = (i * 4) + 2;
       spotifyRequestIDs += myCollection[albumIDIndex];
-        if (i !== idArray.length - 1) { spotifyRequestIDs += ","; }
+        if (i !== itemCount - 1) { spotifyRequestIDs += ","; }
   }
   const accessToken = localStorage.getItem("access_token");
   fetch(`https://api.spotify.com/v1/albums?${spotifyRequestIDs}`, {
