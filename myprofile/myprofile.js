@@ -18,7 +18,6 @@ async function getTopTracks() {
     }
       currentTrackElementImage.src = track.album.images[0].url;
       currentTrackElementImage.alt = `Track ${index + 1} Cover`;
-    }
   });
 }
 
