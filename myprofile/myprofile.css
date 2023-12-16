@@ -71,4 +71,11 @@ html, body { overflow-x: hidden; }
 .numberoneartist h2, .numberonesong h2 { font-size: 15px; }
 .myprofileplaybutton { font-size: 15px;
                        height: 20px; }
+.userstats { flex-direction: column; }
+.topartists, .topsongs { width: 100vw; }
+.topitemcontainer { width: 90vw;
+                    height: 40vw; }
+.topitemcontainer img { width: 30vw;
+                        height: 30vw;
+                        margin: 5vw; }
 }
