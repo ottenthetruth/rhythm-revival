@@ -103,11 +103,13 @@
 <script src="../parent-files/musicplayer.js"></script>
 <script>
 function loadhomepage() {
+const myRefreshToken = localStorage.getItem("refresh_token");
+if(myRefreshToken) {
   getRefreshToken()
   .then(() => {
     getUserProfile();
   });
-
+}
 const myAccessToken = localStorage.getItem("access_token");
 	if(myAccessToken) {} else {
 	  getAccessToken()
