@@ -20,7 +20,7 @@ if(myCollectionString) {
   if (response.status === 200) {
     const data = await response.json();
     const albumContainer = document.getElementById("albumContainer");
-    if(albumsResult) {
+    if(data) {
       data.albums.forEach(album => {
           const card = document.createElement("div");
           card.classList.add("card");
