@@ -70,6 +70,8 @@ async function removeAlbumFromCollection(contextUri) {
   let contextUriPosition = myCollection.indexOf(contextUri);
   myCollection.splice(contextUriPosition - 3, 4);
   localStorage.setItem("mycollection", JSON.stringify(myCollection));
+  const albumContainer = document.getElementById("albumContainer");
+  albumContainer.innerHTML = '';
   displayCollection();
   }/*if mycollectionstring*/
 }
