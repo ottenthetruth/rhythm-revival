@@ -30,9 +30,10 @@ if(myCollectionString) {
           collectionCard.classList.add("collectionCard");
           collectionCard.innerHTML = `
           <img src="${album.images[0].url}" style="width: 200px; height: 200px;">
-          <h4>${album.name}</h4>
-          <h5>${album.artists[0].name}</h5>
-          <h5>${myRating}</h5>
+          <div class="collectionCardInfo">
+            <h4>${album.artists[0].name}'s ${album.name}</h4>
+            <h5>${myRating}</h5>
+          </div>
           `;
           albumContainer.appendChild(collectionCard);
         });
