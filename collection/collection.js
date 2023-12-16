@@ -27,7 +27,7 @@ if(myCollectionString) {
           const collectionCard = document.createElement("div");
           let myRating = myCollection[myRatingIndex];
           myRatingIndex = myRatingIndex + 4;
-          collectionCard.classList.add("card");
+          collectionCard.classList.add("collectionCard");
           collectionCard.innerHTML = `
           <img src="${album.images[0].url}" style="width: 200px; height: 200px;">
           <h4>${album.name}</h4>
