@@ -58,7 +58,8 @@ html, body { overflow-x: hidden; }
                 min-height: 20vh; }
 .introduction h1 { font-size: 40px; }
 .introduction h2 { font-size: 20px; }
-.introduction h3 { font-size: 13px; }
+.introduction h3 { font-size: 13px;
+                   margin-bottom: 0px; }
 .numberoneitems { height: 53vh;
                   min-height: 53vh; }
 .numberoneartist, .numberonesong { flex-direction: column;
