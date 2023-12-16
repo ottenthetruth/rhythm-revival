@@ -35,14 +35,14 @@ if(myCollectionString) {
             <h2>${album.genres[0]}, ${album.genres[1]}</h2>
             <h2>Rating: ${myRating}</h2>
             <div class="collectionCardControls">
-              <button class="collectionCardButton" data-context-uri="${album.uri}">Play!</button>
-              <button class="collectionCardButton">Remove</button>
+              <button class="collectionCardButtonPlay" data-context-uri="${album.uri}">Play!</button>
+              <button class="collectionCardButtonRemove" data-context-uri="${album.uri}">Remove</button>
             </div>
           </div>
           `;
           albumContainer.appendChild(collectionCard);
         });
-        const playButtons = document.querySelectorAll('.collectionCardButton');
+        const playButtons = document.querySelectorAll('.collectionCardButtonPlay');
         playButtons.forEach(button => {
             button.addEventListener('click', () => {
                getAvailableDevices();
@@ -50,7 +50,26 @@ if(myCollectionString) {
                playAlbum(contextUri);
             });
         });
+        const removeButtons = document.querySelectorAll('.collectionCardButtonRemove');
+        removeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+               getAvailableDevices();
+               const contextUri = button.getAttribute('data-context-uri');
+               removeAlbumFromCollection(contextUri);
+            });
+        });
     }
   }
 } /*if mycollectionstring*/
+}
+
+async function removeAlbumFromCollection(contextUri) {
+  let myCollectionString = localStorage.getItem("mycollection");
+  if(myCollectionString) {
+  let myCollection = JSON.parse(myCollectionString);
+  let contextUriPosition = myCollection.indexOf(contextUri);
+  myCollection.splice(contextUriPosition - 3, 4);
+  localStorage.setItem("mycollection", JSON.stringify(myCollection));
+  displayCollection();
+  }/*if mycollectionstring*/
 }
