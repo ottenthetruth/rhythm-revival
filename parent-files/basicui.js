@@ -1,6 +1,5 @@
 async function getUserProfile() {
   const accessToken = localStorage.getItem("access_token");
-  console.log("Obtaining User Profile");
   if(accessToken) {
         const response = await fetch('https://api.spotify.com/v1/me', {
             method: 'GET',
@@ -22,8 +21,10 @@ async function getUserProfile() {
 	    if(myProfileIntroduction) { myProfileIntroduction.textContent = myDisplayName + "!"; }
 
 	    var logButton = document.getElementById("logBtn");
-	    if(logButton) { logButton.style.display = "none";
-	    	logButton.disabled = true; }
-        }  
+	    if(logButton) { 
+	    logButton.style.display = "none";
+	    logButton.disabled = true; }
+	    console.log("Obtained User Profile!");
+        }  else { console.log("Failed to obtain User Profile!"); }
   }
 }
