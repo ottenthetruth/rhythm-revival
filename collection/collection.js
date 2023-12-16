@@ -4,7 +4,7 @@ if(myCollectionString) {
   let myCollection = JSON.parse(myCollectionString);
   let itemCount = myCollection.length / 4;
   const albumContainer = document.getElementById("albumContainer");
-  for(let i = 1; i <= itemCount; i++){
+  for(let i = 0; i <= itemCount; i++){
     const nameIndex = i * 4;
     const ratingIndex = nameIndex + 1;
     const albumIDIndex = nameIndex + 2;
