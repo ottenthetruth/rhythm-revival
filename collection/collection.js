@@ -31,8 +31,8 @@ if(myCollectionString) {
           collectionCard.innerHTML = `
           <img src="${album.images[0].url}" style="width: 200px; height: 200px;">
           <div class="collectionCardInfo">
-            <h4>${album.artists[0].name}'s ${album.name}</h4>
-            <h5>${myRating}</h5>
+            <h1>${album.artists[0].name}'s ${album.name}</h1>
+            <h2>Rating: ${myRating}</h2>
           </div>
           `;
           albumContainer.appendChild(collectionCard);
@@ -40,20 +40,6 @@ if(myCollectionString) {
     }
   }
 
-  for(let i = 0; i < itemCount; i++) {
-    const nameIndex = i * 4;
-    const ratingIndex = nameIndex + 1;
-    const albumIDIndex = nameIndex + 2;
-    const contextUriIndex = nameIndex + 3;
-
-    const albumCard = document.createElement("div");
-    albumCard.classList.add("collection-album-card");
-    albumCard.innerHTML = `
-      <h3>${myCollection[nameIndex]}</h3>
-      <p>Rating: ${myCollection[ratingIndex]}</p>
-  `;
-  albumContainer.appendChild(albumCard);
-  } /*end for*/
 } /*if mycollectionstring*/
 
 }
