@@ -103,17 +103,18 @@
 <script src="../parent-files/musicplayer.js"></script>
 <script>
 function loadhomepage() {
-	getRefreshToken()
-        .then(() => {
-            getUserProfile();
-        })
-        .catch((error) => {
-            console.error('Error refreshing access token, trying to obtain new token', error);
-	    getAccessToken()
-	    .then(() => {
-            	getUserProfile();
-            });
-        });    
+  getRefreshToken()
+  .then(() => {
+    getUserProfile();
+  });
+
+const myAccessToken = localStorage.getItem("access_token");
+	if(myAccessToken) {} else {
+	  getAccessToken()
+	  .then(() => {
+  	    getUserProfile();
+	  });
+	}
 }
 window.onload = loadhomepage;
 </script>
