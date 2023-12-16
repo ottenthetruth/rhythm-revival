@@ -2,8 +2,27 @@ async function rateAlbum() {
   for (let i = 1; i <= 10; i++) {
     if (document.getElementById(`rating${i}`).checked) {
       console.log(`Rating = ${i}!`);
+      localStorage.setItem("newrating", i);
       break;
     }
+  }
+  let prevCollectionString = localStorage.getItem("mycollection");
+  const myContextUri = localStorage.getItem("va-contexturi");
+  const myAlbumID = localStorage.getItem("va-albumid");
+  const myAlbumName = localStorage.getItem("va-albumname");
+  const rating = localStorage.getItem("newrating");
+  if(prevCollection) {
+    let prevCollection = JSON.parse(prevCollectionString);
+    prevCollection.push(myAlbumName, rating, myAlbumID, myContextUri);
+    localStorage.setItem("mycollection", JSON.stringify[prevCollection]));
+  } else {
+    let albumCollection = [
+      myAlbumName,
+      rating,
+      myAlbumID,
+      myContextUri
+    ]
+    localStorage.setItem("mycollection", JSON.stringify[albumCollection]));
   }
 }
 
