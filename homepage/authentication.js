@@ -46,6 +46,7 @@ async function getAccessToken() {
 async function getRefreshToken() {
   const refreshToken = localStorage.getItem('refresh_token');
   if(refreshToken) {
+    const client_secret = "2d5a82decbc240e4adadcbd86f342321";
     const basicAuthHeader = btoa(`e9fec6e1cb5241e0a41ab98db146bc3c:${client_secret}`);
     const response = await fetch('https://accounts.spotify.com/api/token', {
       method: 'POST',
