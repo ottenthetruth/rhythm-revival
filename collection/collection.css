@@ -11,4 +11,8 @@ body::-webkit-scrollbar{ display: none; }
                       -webkit-user-drag: none; }
 
 .collectionCard h1 { font-weight: lighter; }
-.collectionCard h2 { font-weight: lighter; }
+.collectionCard h2 { font-weight: lighter;
+                     margin-bottom: 5px; }
+
+.collectionCardControls button { margin: 0;
+                                 border-radius: 5px; }
