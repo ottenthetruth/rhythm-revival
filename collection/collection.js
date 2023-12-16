@@ -19,10 +19,9 @@ if(myCollectionString) {
   });
   if (response.status === 200) {
     const data = await response.json();
-    const albumsResult = data.albums;
     const albumContainer = document.getElementById("albumContainer");
     if(albumsResult) {
-      albumsResult.forEach(albums => {
+      data.albums.forEach(album => {
           const card = document.createElement("div");
           card.classList.add("card");
           card.innerHTML = `
@@ -30,7 +29,7 @@ if(myCollectionString) {
           <h4>${albums[0].name}</h4>
           <h5>${albums[0].artists[0].name}</h5>
           `;
-          cardContainer.appendChild(card);
+          albumContainer.appendChild(card);
         });
     }
   }
