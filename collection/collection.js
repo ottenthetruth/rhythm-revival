@@ -11,7 +11,7 @@ if(myCollectionString) {
         if (i !== itemCount - 1) { spotifyRequestIDs += ","; }
   }
   const accessToken = localStorage.getItem("access_token");
-  fetch(`https://api.spotify.com/v1/albums?${spotifyRequestIDs}`, {
+  const response = await fetch(`https://api.spotify.com/v1/albums?${spotifyRequestIDs}`, {
   method: 'GET',
   headers: {
     'Authorization': `Bearer ${accessToken}`
