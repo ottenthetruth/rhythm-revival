@@ -25,9 +25,9 @@ if(myCollectionString) {
           const card = document.createElement("div");
           card.classList.add("card");
           card.innerHTML = `
-          <img src="${albums[0].images[0].url}" style="width: 200px; height: 200px;">
-          <h4>${albums[0].name}</h4>
-          <h5>${albums[0].artists[0].name}</h5>
+          <img src="${album.images[0].url}" style="width: 200px; height: 200px;">
+          <h4>${album.name}</h4>
+          <h5>${album.artists[0].name}</h5>
           `;
           albumContainer.appendChild(card);
         });
