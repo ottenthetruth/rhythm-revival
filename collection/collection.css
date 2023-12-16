@@ -1,1 +1,14 @@
 body::-webkit-scrollbar{ display: none; }
+
+.albumContainer {margin-top: 5vh; } /* temp */
+
+.collectionCard { display: flex;
+                  height: 200px;
+                  padding: 10px;
+                  border-bottom: 1px solid; }
+
+.collectionCard img { margin-right: 20px;
+                      -webkit-user-drag: none; }
+
+.collectionCard h1 { font-weight: lighter; }
+.collectionCard h2 { font-weight: lighter; }
