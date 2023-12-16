@@ -35,16 +35,22 @@ if(myCollectionString) {
             <h2>${album.genres[0]}, ${album.genres[1]}</h2>
             <h2>Rating: ${myRating}</h2>
             <div class="collectionCardControls">
-              <button class="collectionCardButton">Play!</button>
+              <button class="collectionCardButton" data-context-uri="${album.uri}">Play!</button>
               <button class="collectionCardButton">Remove</button>
             </div>
           </div>
           `;
           albumContainer.appendChild(collectionCard);
         });
+        const playButtons = document.querySelectorAll('.collectionCardButton');
+        playButtons.forEach(button => {
+            button.addEventListener('click', () => {
+               getAvailableDevices();
+               const contextUri = button.getAttribute('data-context-uri');
+               playAlbum(contextUri);
+            });
+        });
     }
   }
-
 } /*if mycollectionstring*/
-
 }
