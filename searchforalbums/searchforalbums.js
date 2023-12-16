@@ -11,7 +11,7 @@ async function rateAlbum() {
   const myAlbumID = localStorage.getItem("va-albumid");
   const myAlbumName = localStorage.getItem("va-albumname");
   const rating = localStorage.getItem("newrating");
-  if(prevCollection) {
+  if(prevCollectionString) {
     let prevCollection = JSON.parse(prevCollectionString);
     prevCollection.push(myAlbumName, rating, myAlbumID, myContextUri);
     localStorage.setItem("mycollection", JSON.stringify[prevCollection]);
