@@ -55,8 +55,12 @@ body::-webkit-scrollbar{ display: none; }
 
 @media screen and (max-width: 768px) {
 html, body { overflow-x: hidden; }
-.introduction { min-height: 40vh; }
+.introduction { height: 30vh;
+                min-height: 30vh; }
 .introduction h1 { font-size: 40px; }
 .introduction h2 { font-size: 20px; }
 .introduction h3 { font-size: 13px; }
-}
+.numberoneartist, .numberonesong { flex-direction: column;
+                                   text-align: center; }
+.numberoneartist img, .numberonesong img { margin: 0;
+                                           margin-top: 10px; }
