@@ -31,8 +31,8 @@ if(myCollectionString) {
           collectionCard.innerHTML = `
           <img src="${album.images[0].url}" style="width: 200px; height: 200px;">
           <div class="collectionCardInfo">
-            <h1>${album.artists[0].name}'s ${album.name} - ${album.release_date}</h1>
-            <h2>${album.genres[0]}, ${album.genres[1]}</h2>
+            <h1>${album.artists[0].name}'s ${album.name}</h1>
+            <h2>${album.total_tracks} Tracks, ${album.release_date}</h2>
             <h2>Rating: ${myRating}</h2>
             <div class="collectionCardControls">
               <button class="collectionCardButtonPlay" data-context-uri="${album.uri}">Play!</button>
