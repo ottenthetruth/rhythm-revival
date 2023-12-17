@@ -1,20 +1,22 @@
 body::-webkit-scrollbar{ display: none; }
-
+.myprofile { overflow-x: scroll; }
 .introduction { display: flex;
                 flex-direction: column;
-                height: 40vh;
-                min-height: 300px;
-                margin: 20px;
+                height: 300px;
+                margin-left: 20px;
                 justify-content: center; }
-.introduction h1 { font-size: 3.8vw;
+.introduction h1 { font-size: 65px;
                    margin: 0; }
-.introduction h2 { font-size: 2.8vw;
+.introduction h2 { font-size: 35px;
                    margin: 0;
                    font-weight: lighter; }
-.introduction h3 { font-size: 1.4vw;
+.introduction h3 { font-size: 24px;
+                   margin: 0;
                    font-weight: lighter; }
+
 .numberoneitems { height: 45vh;
                   min-height: 300px;
+                  min-width: 800px;
                   display: flex; }
 .numberoneartist, .numberonesong { display: flex;
                                    align-items: center;
