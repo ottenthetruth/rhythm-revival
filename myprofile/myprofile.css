@@ -26,7 +26,6 @@ body::-webkit-scrollbar{ display: none; }
                                            border-radius: 50%;
                                            margin-left: 20px;
                                            margin-right: 30px; }
-
 .userstats { display: flex; }
 .topartists, .topsongs { display: flex;
                          flex-direction: column;
@@ -36,7 +35,9 @@ body::-webkit-scrollbar{ display: none; }
                          padding: 5vw; }
 .topartists { background-color: red; }
 .topsongs { background-color: green; }
-.artistinfo, .songinfo {display: flex;flex-direction: column; justify-content: center; }
+.artistinfo, .songinfo {display: flex;
+                        flex-direction: column;
+                        justify-content: center; }
 .artistinfo h1, .songinfo h1 { margin: 0; }
 .artistinfo h2, .songinfo h2 { font-weight: lighter; }
 .artistinfo h4, .songinfo h4 { font-weight: lighter; }
@@ -63,14 +64,16 @@ html, body { overflow-x: hidden; }
 .numberoneitems { height: 53vh;
                   min-height: 53vh; }
 .numberoneartist, .numberonesong { flex-direction: column;
-                                   text-align: center; }
+                                   text-align: center;
+                                   align-items: center; }
 .numberoneartist img, .numberonesong img { margin: 0;
                                            margin-top: 10px; }
 .numberoneartist h4, .numberonesong h4 { font-size: 14px; }
 .numberoneartist h1, .numberonesong h1 { font-size: 25px; }
 .numberoneartist h2, .numberonesong h2 { font-size: 15px; }
 .myprofileplaybutton { font-size: 15px;
-                       height: 20px; }
+                       height: 20px;
+                       width: 120px; }
 .userstats { flex-direction: column; }
 .topartists, .topsongs { width: 100vw;
                          height: 80vh; }
