@@ -1,11 +1,15 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 body::-webkit-scrollbar{ display: none; }
 body { background-image: url(../images/TheClash.jpg);
-       background-size: cover; }
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-color: #b3b3b3; }
 .moon2 { background-color: #b3b3b3; }
 .parent2 { display: block;
            flex-wrap: wrap;
-           height: 50vh; }
+           height: 50vh;
+           width: 100vw;
+           overflow-x: scroll; }
 .search-bar { display: flex;
               width: 100%;
               height: 15vh;
