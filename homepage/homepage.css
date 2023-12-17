@@ -86,7 +86,7 @@ body.dark-mode #explore-button { background-color: #212121;
 				  margin-top: 20vh;
 	    			  padding: 10px; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-height: 500px) {
 html, body { overflow-x: hidden; }
 .image-hover { transition: none; }
 .image-hover:hover { transform: none; }
