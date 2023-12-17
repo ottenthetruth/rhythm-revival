@@ -33,6 +33,7 @@ async function getTopArtists() {
     const currentArtistElementText = document.getElementById(`topartistname${index}`);
     const currentArtistElementImage = document.getElementById(`topartistimage${index}`);
     const currentArtistElementGenre = document.getElementById(`topartistinfo${index}`);
+    const currentArtistElementPlayButton = document.getElementById(`playtopartist${index}`);
     if(currentArtistElementText) {
       currentArtistElementText.textContent = artist.name;
     }
@@ -42,6 +43,14 @@ async function getTopArtists() {
     if(currentArtistElementImage) { 
       currentArtistElementImage.src = artist.images[0].url;
       currentArtistElementImage.alt = `Artist ${index + 1} Profile Picture`;
+    }
+    if(currentArtistElementPlayButton) {
+      currentArtistElementPlayButton.setAttribute('data-context-uri', artist.uri);
+      currentArtistElementPlayButton.addEventListener('click', () => {
+        getAvailableDevices();
+        const artistContextUri = currentArtistElementPlayButton.getAttribute('data-context-uri');
+        playAlbum(artistContextUri);
+      });
     }
   });
 }
