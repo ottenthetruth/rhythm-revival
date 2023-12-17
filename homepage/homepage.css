@@ -1,8 +1,6 @@
 body::-webkit-scrollbar{ display: none; }
-body {
-    background-image: url(../images/Background1.jpg);
-    background-size: contain;
-}
+body { background-image: url(../images/Background1.jpg);
+       background-size: contain; }
 .parent { display: grid;
   	  grid-template-columns: repeat(24, 1fr);
   	  grid-template-rows: repeat(12, 1fr);
@@ -22,7 +20,7 @@ body {
 .image-hover { transition: transform 0.2s; }
 .image-hover:hover { transform: scale(1.02); }
 .displayalbums { border-radius: 50%; }
-
+.moon2 { background-color: #fefefe; }
 .parent h1, .parent h2, .parent2 h1, .parent2 h2 { margin: 0;
   						   padding: 0;
   						   font-weight: lighter; }
