@@ -1,6 +1,6 @@
 body::-webkit-scrollbar{ display: none; }
 body { background-image: url(../images/Background1.jpg);
-       background-size: cover; }
+       background-size: contain; }
 .parent { display: grid;
   	  grid-template-columns: repeat(24, 1fr);
   	  grid-template-rows: repeat(12, 1fr);
@@ -88,7 +88,6 @@ body.dark-mode #explore-button { background-color: #212121;
 
 @media screen and (max-width: 768px) {
 html, body { overflow-x: hidden; }
-body { background-size: contain; }
 .image-hover { transition: none; }
 .image-hover:hover { transform: none; }
 .displayimagescontainer { display: none; }
