@@ -64,8 +64,8 @@ html, body { overflow-x: hidden; }
 .numberoneitems { height: 53vh;
                   min-height: 53vh; }
 .numberoneartist, .numberonesong { flex-direction: column;
-                                   text-align: center;
-                                   align-items: center; }
+                                   text-align: center; }
+.artistinfo, .songinfo { align-items: center; }
 .numberoneartist img, .numberonesong img { margin: 0;
                                            margin-top: 10px; }
 .numberoneartist h4, .numberonesong h4 { font-size: 14px; }
