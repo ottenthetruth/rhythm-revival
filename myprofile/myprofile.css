@@ -1,4 +1,6 @@
 body::-webkit-scrollbar{ display: none; }
+body{background-image: url(../images/Background2.jpg);
+    background-size: cover;}
 .introduction { display: flex;
                 flex-direction: column;
                 height: 300px;
@@ -36,9 +38,8 @@ body::-webkit-scrollbar{ display: none; }
                          height: 90vh;
                          width: 50vw;
                          padding: 2vw; }
-.topartists { background-color: red; }
-.topsongs { background-color: green; }
 .topitemcontainer { display: flex;
+                    background-color: #edf2f7;
                     width: 100%;
                     height: 20vh;
                     min-height: 150px;
