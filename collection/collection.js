@@ -60,7 +60,7 @@ if(myCollectionString) {
           const parentDiv = collectionCard.querySelector('.rate');
           const radioButtons = parentDiv.querySelectorAll('input[type="radio"]');
             for (let i = 0; i < myRating; i++) {
-              radioButtons[i].checked = true;
+              radioButtons[i].click();
               console.log("Checked Button!");
             }
         });
