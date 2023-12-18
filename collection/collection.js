@@ -137,6 +137,6 @@ function createRatingMix() {
     }
     const ratingPercentage = 100 * (counter / itemCount);
     var currentButton = document.getElementById(`ratingmix${myRatingElement}`);
-    currentButton.style.width = `${ratingpercentage}%`;
+    currentButton.style.width = `${ratingPercentage}%`;
   } /* end myCollectionString */
 }
