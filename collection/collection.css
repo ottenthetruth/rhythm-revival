@@ -19,7 +19,7 @@ body::-webkit-scrollbar{ display: none; }
                      text-overflow: ellipsis;
                      white-space: nowrap; }
 .collectionCard h2 { font-weight: lighter;
-                     margin-bottom: 5px;
+                     margin-bottom: 0px;
                      max-width: 70vw;
                      overflow: hidden;
                      text-overflow: ellipsis;
@@ -30,12 +30,11 @@ body::-webkit-scrollbar{ display: none; }
                                  height: 20px;
                                  font-size: 15px; }
 .ratedisplay { position: relative;
-               left: 55%;
-               top: 70%;
-               margin-left: 0px;
-               padding-left: 0px; }
+               margin: 0px;
+               padding: 0px; }
 .rate { display: inline-block;
-        border: 0; }
+        border: 0;
+        padding: 0; }
 .rate > input { display: none; }
 .rate > label { float: right; }
 .rate > label:before { display: inline-block;
