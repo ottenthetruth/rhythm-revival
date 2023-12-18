@@ -89,7 +89,7 @@ if(myCollectionString) {
   let myRatingIndex = 1;
   let myCollectionCardIndex = 1;
   let albumCount = myCollection.length / 4;
-for(int i = 0; i < albumCount; i++) {
+for(let i = 0; i < albumCount; i++) {
 console.log("For called!");
     const myRating = myCollection[myRatingIndex];
     const myButton = document.getElementById(`rating${myCollectionCardIndex}${myRating}`);
