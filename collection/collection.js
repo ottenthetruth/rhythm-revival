@@ -28,11 +28,12 @@ if(myCollectionString) {
           let myRating = myCollection[myRatingIndex];
           myRatingIndex = myRatingIndex + 4;
           collectionCard.classList.add("collectionCard");
+          const releaseDate = extractYear(album.release_date);
           collectionCard.innerHTML = `
           <img src="${album.images[0].url}">
           <div class="collectionCardInfo">
             <h1>${album.artists[0].name}'s ${album.name}</h1>
-            <h2>${album.total_tracks} Tracks, ${album.release_date}</h2>
+            <h2>${album.total_tracks} Tracks, Released in ${releaseDate}</h2>
             <h2>Rating: ${myRating}</h2>
             <div class="collectionCardControls">
               <button class="collectionCardButtonPlay" data-context-uri="${album.uri}">Play!</button>
@@ -62,6 +63,10 @@ if(myCollectionString) {
   }
 } /*if mycollectionstring*/
 }
+
+function extractYear(releaseDate) {
+    const parts = releaseDate.split('-');
+    return parts[0]; }
 
 async function removeAlbumFromCollection(contextUri) {
   let myCollectionString = localStorage.getItem("mycollection");
