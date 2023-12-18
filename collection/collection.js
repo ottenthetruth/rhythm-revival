@@ -56,15 +56,9 @@ if(myCollectionString) {
           </div>
           `;
           albumContainer.appendChild(collectionCard);
-          const parentDiv = collectionCard.querySelector('.rate');
-          const radioButtons = parentDiv.querySelectorAll('input[type="radio"]');
-  radioButtons.forEach(radioButton => {
-    if (parseInt(radioButton.value) <= myRating) {
-      radioButton.checked = true;
-    }
-  });
-  myCollectionCardIndex = myCollectionCardIndex + 1;
-        });
+          myCollectionCardIndex = myCollectionCardIndex + 1;
+        }); /* end foreach album */
+  
         const playButtons = document.querySelectorAll('.collectionCardButtonPlay');
         playButtons.forEach(button => {
             button.addEventListener('click', () => {
@@ -73,6 +67,7 @@ if(myCollectionString) {
                playAlbum(contextUri);
             });
         });
+      
         const removeButtons = document.querySelectorAll('.collectionCardButtonRemove');
         removeButtons.forEach(button => {
             button.addEventListener('click', () => {
@@ -81,9 +76,17 @@ if(myCollectionString) {
                removeAlbumFromCollection(contextUri);
             });
         });
-    }
-  }
+    getRatings();
+    } /* end if data */
+  } /* end if response 200 */
 } /*if mycollectionstring*/
+} /* end displaycollection  */
+
+function getRatings() {
+  const myButton = document.getElementById("rating15");
+  myButton.click();
+  myButton.checked = true;
+  console.log("Clicked Button rating15");
 }
 
 function extractYear(releaseDate) {
