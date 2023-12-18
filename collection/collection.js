@@ -84,22 +84,24 @@ if(myCollectionString) {
 
 function getRatings() {
   let myCollectionString = localStorage.getItem("mycollection");
-if(myCollectionString) {
-  let myCollection = JSON.parse(myCollectionString);
-  let myRatingIndex = 1;
-  let myCollectionCardIndex = 1;
-  let albumCount = myCollection.length / 4;
-for(let i = 0; i < albumCount; i++) {
-console.log("For called!");
-    const myRating = myCollection[myRatingIndex];
-    const myButton = document.getElementById(`rating${myCollectionCardIndex}${myRating}`);
-console.log(`Trying to click button rating${myCollectionCardIndex}${myRating}`);
-    myButton.click();
-    myButton.checked = true;
-    myRatingIndex = myRatingIndex + 4;
-    myCollectionCardIndex = myCollectionCardIndex + 1;
-}
-  } /* end if myCollectionString */
+  if (myCollectionString) {
+    let myCollection = JSON.parse(myCollectionString);
+    let myRatingIndex = 1;
+    let myCollectionCardIndex = 1;
+    let albumCount = myCollection.length / 4;
+
+    for (let i = 0; i < albumCount; i++) {
+      const myRating = myCollection[myRatingIndex];
+      const myButton = document.getElementById(`rating${myCollectionCardIndex}${myRating}`);
+      
+      console.log(`Trying to click button rating${myCollectionCardIndex}${myRating}`);
+      myButton.checked = true;
+      myButton.dispatchEvent(new Event('change'));
+
+      myRatingIndex = myRatingIndex + 4;
+      myCollectionCardIndex = myCollectionCardIndex + 1;
+    }
+  }
 }
 
 function extractYear(releaseDate) {
