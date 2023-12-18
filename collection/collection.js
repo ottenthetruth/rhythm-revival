@@ -89,15 +89,16 @@ if(myCollectionString) {
   let myRatingIndex = 1;
   let myCollectionCardIndex = 1;
   let albumCount = myCollection.length / 4;
-
+for(int i = 0; i < albumCount; i++) {
+console.log("For called!");
     const myRating = myCollection[myRatingIndex];
     const myButton = document.getElementById(`rating${myCollectionCardIndex}${myRating}`);
+console.log(`Trying to click button rating${myCollectionCardIndex}${myRating}`);
     myButton.click();
     myButton.checked = true;
-    console.log("Clicked Button!");
     myRatingIndex = myRatingIndex + 4;
     myCollectionCardIndex = myCollectionCardIndex + 1;
-
+}
   } /* end if myCollectionString */
 }
 
