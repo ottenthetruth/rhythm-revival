@@ -83,10 +83,22 @@ if(myCollectionString) {
 } /* end displaycollection  */
 
 function getRatings() {
-  const myButton = document.getElementById("rating15");
-  myButton.click();
-  myButton.checked = true;
-  console.log("Clicked Button rating15");
+  let myCollectionString = localStorage.getItem("mycollection");
+if(myCollectionString) {
+  let myCollection = JSON.parse(myCollectionString);
+  let myRatingIndex = 1;
+  let myCollectionCardIndex = 1;
+  let albumCount = myCollection.length / 4;
+  for(let i = 0; i < albumCount) {
+    const myRating = myCollection[myRatingIndex];
+    const myButton = document.getElementById(`rating${myCollectionCardIndex}${myRating}`);
+    myButton.click();
+    myButton.checked = true;
+    console.log("Clicked Button!");
+    myRatingIndex = myRatingIndex + 4;
+    myCollectionCardIndex = myCollectionCardIndex + 1;
+  } /* end for */
+  } /* end if myCollectionString */
 }
 
 function extractYear(releaseDate) {
