@@ -23,6 +23,7 @@ if(myCollectionString) {
     const albumContainer = document.getElementById("albumContainer");
     if(data) {
       let myRatingIndex = 1;
+      let myCollectionCardIndex = 1;
       data.albums.forEach(album => {
           const collectionCard = document.createElement("div");
           let myRating = myCollection[myRatingIndex];
@@ -36,16 +37,17 @@ if(myCollectionString) {
             <h2>${album.total_tracks} Tracks, Released in ${releaseDate}</h2>
             <div class="ratedisplay">
               <fieldset class="rate">
-                <input type="radio" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                <input type="radio" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                <input type="radio" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                <input type="radio" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                <input type="radio" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                <input type="radio" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                <input type="radio" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                <input type="radio" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                <input type="radio" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                <input type="radio" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
+                <input type="radio" name="rating" id="rating${myCollectionCardIndex}10" value="10" /><label for="rating${myCollectionCardIndex}10" title="5 stars"></label>
+                <input type="radio" name="rating" id="rating${myCollectionCardIndex}9" value="9" /><label class="half" for="rating${myCollectionCardIndex}9" title="4 1/2 stars"></label>
+                <input type="radio" name="rating" id="rating${myCollectionCardIndex}8" value="8" /><label for="rating${myCollectionCardIndex}8" title="4 stars"></label>
+                <input type="radio" name="rating" id="rating${myCollectionCardIndex}7" value="7" /><label class="half" for="rating${myCollectionCardIndex}7" title="3 1/2 stars"></label>
+                <input type="radio" name="rating" id="rating${myCollectionCardIndex}6" value="6" /><label for="rating${myCollectionCardIndex}6" title="3 stars"></label>
+                <input type="radio" name="rating" id="rating${myCollectionCardIndex}5" value="5" /><label class="half" for="rating${myCollectionCardIndex}5" title="2 1/2 stars"></label>
+                <input type="radio" name="rating" id="rating${myCollectionCardIndex}4" value="4" /><label for="rating${myCollectionCardIndex}4" title="2 stars"></label>
+                <input type="radio" name="rating" id="rating${myCollectionCardIndex}3" value="3" /><label class="half" for="rating${myCollectionCardIndex}3" title="1 1/2 stars"></label>
+                <input type="radio" name="rating" id="rating${myCollectionCardIndex}2" value="2" /><label for="rating${myCollectionCardIndex}2" title="1 star"></label>
+                <input type="radio" name="rating" id="rating${myCollectionCardIndex}1" value="1" /><label class="half" for="rating${myCollectionCardIndex}1" title="1/2 star"></label>
+                <input type="radio" name="rating" id="rating${myCollectionCardIndex}0" value="0" /><label for="rating${myCollectionCardIndex}0" title="No Star"></label>
               </fieldset>
             </div>
             <div class="collectionCardControls">
@@ -54,8 +56,9 @@ if(myCollectionString) {
             </div>
           </div>
           `;
+          myCollectionCardIndex = myCollectionCardIndex + 1;
           const radioButtons = collectionCard.querySelectorAll('input[type="radio"]');
-            for (let i = 0; i < myRating; i++) {
+            for (let i = 0; i <= myRating; i++) {
               radioButtons[i].checked = true;
             }
           albumContainer.appendChild(collectionCard);
