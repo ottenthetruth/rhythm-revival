@@ -122,12 +122,12 @@ async function removeAlbumFromCollection(contextUri) {
 }
 
 function createRatingMix() {
-  let myCollectionString = localStorage.getItem("mycollection");
+let myCollectionString = localStorage.getItem("mycollection");
   if(myCollectionString) {
     let myCollection = JSON.parse(myCollectionString);
     const itemCount = myCollection.length / 4;
     let myRatingElement = 10;
-    for(let i = 10; i < 0; i--) {
+    for(let i = 10; i > 0; i--) {
     let myRatingIndex = 1;
     let counter = 0;
     for(let j = 0; j < itemCount; j++) {
