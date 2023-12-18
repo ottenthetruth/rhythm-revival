@@ -55,14 +55,15 @@ if(myCollectionString) {
             </div>
           </div>
           `;
-          myCollectionCardIndex = myCollectionCardIndex + 1;
           albumContainer.appendChild(collectionCard);
           const parentDiv = collectionCard.querySelector('.rate');
           const radioButtons = parentDiv.querySelectorAll('input[type="radio"]');
-            for (let i = 0; i < myRating; i++) {
-              radioButtons[i].click();
-              console.log("Checked Button!");
-            }
+  radioButtons.forEach(radioButton => {
+    if (parseInt(radioButton.value) <= myRating) {
+      radioButton.checked = true;
+    }
+  });
+  myCollectionCardIndex = myCollectionCardIndex + 1;
         });
         const playButtons = document.querySelectorAll('.collectionCardButtonPlay');
         playButtons.forEach(button => {
