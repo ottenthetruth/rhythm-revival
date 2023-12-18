@@ -29,7 +29,7 @@ if(myCollectionString) {
           myRatingIndex = myRatingIndex + 4;
           collectionCard.classList.add("collectionCard");
           collectionCard.innerHTML = `
-          <img src="${album.images[0].url}" style="width: 200px; height: 200px;">
+          <img src="${album.images[0].url}">
           <div class="collectionCardInfo">
             <h1>${album.artists[0].name}'s ${album.name}</h1>
             <h2>${album.total_tracks} Tracks, ${album.release_date}</h2>
