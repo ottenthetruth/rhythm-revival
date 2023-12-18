@@ -37,16 +37,16 @@ if(myCollectionString) {
             <h2>${album.total_tracks} Tracks, Released in ${releaseDate}</h2>
             <div class="ratedisplay">
               <fieldset class="rate">
-                <input type="radio" name="rating" id="rating${myCollectionCardIndex}10" value="10" /><label for="rating${myCollectionCardIndex}10" title="5 stars"></label>
-                <input type="radio" name="rating" id="rating${myCollectionCardIndex}9" value="9" /><label class="half" for="rating${myCollectionCardIndex}9" title="4 1/2 stars"></label>
-                <input type="radio" name="rating" id="rating${myCollectionCardIndex}8" value="8" /><label for="rating${myCollectionCardIndex}8" title="4 stars"></label>
-                <input type="radio" name="rating" id="rating${myCollectionCardIndex}7" value="7" /><label class="half" for="rating${myCollectionCardIndex}7" title="3 1/2 stars"></label>
-                <input type="radio" name="rating" id="rating${myCollectionCardIndex}6" value="6" /><label for="rating${myCollectionCardIndex}6" title="3 stars"></label>
-                <input type="radio" name="rating" id="rating${myCollectionCardIndex}5" value="5" /><label class="half" for="rating${myCollectionCardIndex}5" title="2 1/2 stars"></label>
-                <input type="radio" name="rating" id="rating${myCollectionCardIndex}4" value="4" /><label for="rating${myCollectionCardIndex}4" title="2 stars"></label>
-                <input type="radio" name="rating" id="rating${myCollectionCardIndex}3" value="3" /><label class="half" for="rating${myCollectionCardIndex}3" title="1 1/2 stars"></label>
-                <input type="radio" name="rating" id="rating${myCollectionCardIndex}2" value="2" /><label for="rating${myCollectionCardIndex}2" title="1 star"></label>
-                <input type="radio" name="rating" id="rating${myCollectionCardIndex}1" value="1" /><label class="half" for="rating${myCollectionCardIndex}1" title="1/2 star"></label>
+                <input type="radio" name="rating${myCollectionCardIndex}" id="rating${myCollectionCardIndex}10" value="10" /><label for="rating${myCollectionCardIndex}10" title="5 stars"></label>
+                <input type="radio" name="rating${myCollectionCardIndex}" id="rating${myCollectionCardIndex}9" value="9" /><label class="half" for="rating${myCollectionCardIndex}9" title="4 1/2 stars"></label>
+                <input type="radio" name="rating${myCollectionCardIndex}" id="rating${myCollectionCardIndex}8" value="8" /><label for="rating${myCollectionCardIndex}8" title="4 stars"></label>
+                <input type="radio" name="rating${myCollectionCardIndex}" id="rating${myCollectionCardIndex}7" value="7" /><label class="half" for="rating${myCollectionCardIndex}7" title="3 1/2 stars"></label>
+                <input type="radio" name="rating${myCollectionCardIndex}" id="rating${myCollectionCardIndex}6" value="6" /><label for="rating${myCollectionCardIndex}6" title="3 stars"></label>
+                <input type="radio" name="rating${myCollectionCardIndex}" id="rating${myCollectionCardIndex}5" value="5" /><label class="half" for="rating${myCollectionCardIndex}5" title="2 1/2 stars"></label>
+                <input type="radio" name="rating${myCollectionCardIndex}" id="rating${myCollectionCardIndex}4" value="4" /><label for="rating${myCollectionCardIndex}4" title="2 stars"></label>
+                <input type="radio" name="rating${myCollectionCardIndex}" id="rating${myCollectionCardIndex}3" value="3" /><label class="half" for="rating${myCollectionCardIndex}3" title="1 1/2 stars"></label>
+                <input type="radio" name="rating${myCollectionCardIndex}" id="rating${myCollectionCardIndex}2" value="2" /><label for="rating${myCollectionCardIndex}2" title="1 star"></label>
+                <input type="radio" name="rating${myCollectionCardIndex}" id="rating${myCollectionCardIndex}1" value="1" /><label class="half" for="rating${myCollectionCardIndex}1" title="1/2 star"></label>
               </fieldset>
             </div>
             <div class="collectionCardControls">
