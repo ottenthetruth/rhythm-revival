@@ -126,8 +126,9 @@ function createRatingMix() {
   if(myCollectionString) {
     let myCollection = JSON.parse(myCollectionString);
     const itemCount = myCollection.length / 4;
-    let myRatingIndex = 1;
     let myRatingElement = 10;
+    for(let i = 10; i < 0; i--) {
+    let myRatingIndex = 1;
     let counter = 0;
     for(let j = 0; j < itemCount; j++) {
       if(myCollection[myRatingIndex] == myRatingElement) {
@@ -138,5 +139,7 @@ function createRatingMix() {
     const ratingPercentage = 100 * (counter / itemCount);
     var currentButton = document.getElementById(`ratingmix${myRatingElement}`);
     currentButton.style.width = `${ratingPercentage}%`;
+    myRatingElement = myRatingElement - 1;
+    } /* end for */
   } /* end myCollectionString */
 }
