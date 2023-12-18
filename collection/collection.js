@@ -56,12 +56,12 @@ if(myCollectionString) {
           </div>
           `;
           myCollectionCardIndex = myCollectionCardIndex + 1;
-          const parentDiv = document.querySelector('.ratedisplay');
+          albumContainer.appendChild(collectionCard);
+          const parentDiv = collectionCard.querySelector('.ratedisplay');
           const radioButtons = parentDiv.querySelectorAll('input[type="radio"]');
             for (let i = 1; i < myRating; i++) {
               radioButtons[i].checked = true;
             }
-          albumContainer.appendChild(collectionCard);
         });
         const playButtons = document.querySelectorAll('.collectionCardButtonPlay');
         playButtons.forEach(button => {
