@@ -56,7 +56,7 @@ if(myCollectionString) {
           </div>
           `;
           myCollectionCardIndex = myCollectionCardIndex + 1;
-          const radioButtons = document.querySelectorAll('input[name="rating"]');
+          const radioButtons = collectionCard.querySelectorAll('input[name="rating"]');
             for (let i = 0; i < myRating; i++) {
               radioButtons[i].checked = true;
             }
