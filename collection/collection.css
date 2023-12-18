@@ -69,6 +69,17 @@ label:hover ~ input:checked ~ label { color: #A6E72D; }
              height: 25px;
              margin-top: 3vh; }
 
+#ratingmix10 { background-color: #00ff00;}
+#ratingmix9 { background-color: #66ff33; }
+#ratingmix8 { background-color: #ccff66; }
+#ratingmix7 { background-color: #ffff00; }
+#ratingmix6 { background-color: #ffcc00; }
+#ratingmix5 { background-color: #ff9933; }
+#ratingmix4 { background-color: #ff6600; }
+#ratingmix3 { background-color: #ff3300; }
+#ratingmix2 { background-color: #cc0000; }
+#ratingmix1 { background-color: #990000; }
+
 @media screen and (max-width: 768px) {
   .collectionCard {height: 100px; }
   .collectionCard img {
