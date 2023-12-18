@@ -35,7 +35,7 @@ body::-webkit-scrollbar{ display: none; }
 .rate { display: inline-block;
         border: 0;
         padding: 0; }
-.rate > input { display: none; }
+.rate > input { }
 .rate > label { float: right; }
 .rate > label:before { display: inline-block;
                        font-size: 1.1rem;
