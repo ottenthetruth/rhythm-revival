@@ -54,6 +54,19 @@ input:checked + label:hover, input:checked ~ label:hover,
 input:checked ~ label:hover ~ label,
 label:hover ~ input:checked ~ label { color: #A6E72D; }
 
+.filters { display: flex;
+           height: 5vh;
+           justify-content: space-evenly;
+           margin-top: 3vh; }
+.search-input { width: 25%;
+                border-radius: 5px; }
+.filters button { width: 8%; 
+                  border-radius: 5px; }
+.ratingmix { display: flex;
+             width: 100vw;
+             height: 5vw; }
+
+
 @media screen and (max-width: 768px) {
   .collectionCard {height: 100px; }
   .collectionCard img {
