@@ -47,7 +47,6 @@ if(myCollectionString) {
                 <input type="radio" name="rating" id="rating${myCollectionCardIndex}3" value="3" /><label class="half" for="rating${myCollectionCardIndex}3" title="1 1/2 stars"></label>
                 <input type="radio" name="rating" id="rating${myCollectionCardIndex}2" value="2" /><label for="rating${myCollectionCardIndex}2" title="1 star"></label>
                 <input type="radio" name="rating" id="rating${myCollectionCardIndex}1" value="1" /><label class="half" for="rating${myCollectionCardIndex}1" title="1/2 star"></label>
-                <input type="radio" name="rating" id="rating${myCollectionCardIndex}0" value="0" /><label for="rating${myCollectionCardIndex}0" title="No Star"></label>
               </fieldset>
             </div>
             <div class="collectionCardControls">
@@ -58,7 +57,7 @@ if(myCollectionString) {
           `;
           myCollectionCardIndex = myCollectionCardIndex + 1;
           const radioButtons = collectionCard.querySelectorAll('input[type="radio"]');
-            for (let i = 0; i <= myRating; i++) {
+            for (let i = 0; i < myRating; i++) {
               radioButtons[i].checked = true;
             }
           albumContainer.appendChild(collectionCard);
