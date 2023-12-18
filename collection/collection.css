@@ -7,7 +7,9 @@ body::-webkit-scrollbar{ display: none; }
                   padding: 10px;
                   border-bottom: 1px solid; }
 
-.collectionCard img { margin-right: 20px;
+.collectionCard img { width: 200px;
+                      height: 200px;
+                      margin-right: 20px;
                       -webkit-user-drag: none; }
 
 .collectionCard h1 { font-weight: lighter;
@@ -26,3 +28,16 @@ body::-webkit-scrollbar{ display: none; }
                                  border-radius: 5px;
                                  height: 20px;
                                  font-size: 15px; }
+
+@media screen and (max-width: 768px) {
+  .collectionCard {height: 100px; }
+  .collectionCard img {
+    height: 100px;
+    width: 100px;
+    margin-right: 10px;
+  }
+  .collectionCard h1 {font-size: 15px;}
+  .collectionCard h2 {font-size: 12px;}
+  .collectionCardControls button {height: 14px;
+                                  font-size: 10px; }
+}
