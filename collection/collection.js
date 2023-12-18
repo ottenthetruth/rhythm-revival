@@ -101,6 +101,10 @@ function getRatings() {
       myRatingIndex = myRatingIndex + 4;
       myCollectionCardIndex = myCollectionCardIndex + 1;
     }
+    var radios = document.querySelectorAll('input[type=radio][name=options]');
+    radios.forEach(function(radio) {
+        radio.disabled = true;
+    });
   }
 }
 
