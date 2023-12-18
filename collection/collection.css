@@ -1,18 +1,15 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 body::-webkit-scrollbar{ display: none; }
 
-.albumContainer {margin-top: 5vh; } /* temp */
-
+.albumContainer {margin-top: 3vh; }
 .collectionCard { display: flex;
                   height: 200px;
                   padding: 10px;
                   border-bottom: 1px solid; }
-
 .collectionCard img { width: 200px;
                       height: 200px;
                       margin-right: 20px;
                       -webkit-user-drag: none; }
-
 .collectionCard h1 { font-weight: lighter;
                      max-width: 70vw;
                      overflow: hidden;
@@ -24,7 +21,6 @@ body::-webkit-scrollbar{ display: none; }
                      overflow: hidden;
                      text-overflow: ellipsis;
                      white-space: nowrap; }
-
 .collectionCardControls button { margin: 0;
                                  border-radius: 5px;
                                  height: 20px;
@@ -68,7 +64,7 @@ label:hover ~ input:checked ~ label { color: #A6E72D; }
              width: 100vw;
              height: 25px;
              margin-top: 3vh; }
-
+.ratingmix button { margin: 0; }
 #ratingmix10 { background-color: #00ff00;}
 #ratingmix9 { background-color: #66ff33; }
 #ratingmix8 { background-color: #ccff66; }
