@@ -120,3 +120,23 @@ async function removeAlbumFromCollection(contextUri) {
   displayCollection();
   }/*if mycollectionstring*/
 }
+
+function createRatingMix() {
+  let myCollectionString = localStorage.getItem("mycollection");
+  if(myCollectionString) {
+    let myCollection = JSON.parse(myCollectionString);
+    const itemCount = myCollection.length / 4;
+    let myRatingIndex = 1;
+    let myRatingElement = 10;
+    let counter = 0;
+    for(let j = 0; j < itemCount; j++) {
+      if(myCollection[myRatingIndex] == myRatingElement) {
+        counter = counter + 1;
+      }
+      myRatingIndex = myRatingIndex + 4;
+    }
+    const ratingPercentage = 100 * (counter / itemCount);
+    var currentButton = document.getElementById(`ratingmix${myRatingElement}`);
+    currentButton.style.width = `${ratingpercentage}%`;
+  } /* end myCollectionString */
+}
