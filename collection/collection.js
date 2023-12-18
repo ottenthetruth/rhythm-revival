@@ -56,8 +56,9 @@ if(myCollectionString) {
           </div>
           `;
           myCollectionCardIndex = myCollectionCardIndex + 1;
-          const radioButtons = collectionCard.querySelectorAll('input[name="rating"]');
-            for (let i = 0; i < myRating; i++) {
+          const parentDiv = document.querySelector('.ratedisplay');
+          const radioButtons = parentDiv.querySelectorAll('input[type="radio"]');
+            for (let i = 1; i < myRating; i++) {
               radioButtons[i].checked = true;
             }
           albumContainer.appendChild(collectionCard);
