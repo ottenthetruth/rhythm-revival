@@ -114,7 +114,7 @@ html, body { overflow-x: hidden; }
 .parent2 { display: flex;
 	   text-align: center;
 	   height: 70vh;
-	   min-height: 70vh;
+	   min-height: 700px;
 	   width: 100%;
 	   overflow-x: scroll; }
 .parent2 img { width: 70vw;
