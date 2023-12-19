@@ -1,4 +1,6 @@
 async function displayCollection(ratingfilter) {
+const albumContainer = document.getElementById("albumContainer");
+albumContainer.innerHTML = '';
 let myCollectionString = localStorage.getItem("mycollection");
 if(myCollectionString) {
   let myCollection = JSON.parse(myCollectionString);
