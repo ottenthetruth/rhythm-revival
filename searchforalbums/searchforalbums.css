@@ -1,13 +1,13 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 body::-webkit-scrollbar{ display: none; }
 body { background-image: url(../images/Background2.jpg);
-       background-size: cover; }
+       background-size: cover;
+       background-position-y: 70%; }
 .moon2 { background-color: #fefefe; }
 .parent2 { display: block;
            flex-wrap: wrap;
            height: 50vh;
-           width: 100vw;
-           overflow-x: scroll; }
+           width: 100vw; }
 .search-bar { display: flex;
               width: 100%;
               height: 15vh;
@@ -135,3 +135,7 @@ label:hover, label:hover ~ label { color: #73B100; }
 input:checked + label:hover, input:checked ~ label:hover,
 input:checked ~ label:hover ~ label,
 label:hover ~ input:checked ~ label { color: #A6E72D; }
+
+@media screen and (max-width: 768px) {
+       .parent2 { overflow-x: scroll; }
+}
