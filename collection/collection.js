@@ -98,11 +98,11 @@ function getRatings() {
     for (let i = 0; i < albumCount; i++) {
       const myRating = myCollection[myRatingIndex];
       const myButton = document.getElementById(`rating${myCollectionCardIndex}${myRating}`);
-      
+if(myButton) {
       console.log(`Trying to click button rating${myCollectionCardIndex}${myRating}`);
       myButton.checked = true;
       myButton.dispatchEvent(new Event('change'));
-
+}
       myRatingIndex = myRatingIndex + 4;
       myCollectionCardIndex = myCollectionCardIndex + 1;
     }
