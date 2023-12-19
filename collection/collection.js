@@ -1,4 +1,4 @@
-async function displayCollection() {
+async function displayCollection(ratingfilter) {
 let myCollectionString = localStorage.getItem("mycollection");
 if(myCollectionString) {
   let myCollection = JSON.parse(myCollectionString);
@@ -24,10 +24,12 @@ if(myCollectionString) {
     if(data) {
       let myRatingIndex = 1;
       let myCollectionCardIndex = 1;
+      console.log(`Rating Filter = ${ratingfilter}`);
       data.albums.forEach(album => {
-          const collectionCard = document.createElement("div");
           let myRating = myCollection[myRatingIndex];
           myRatingIndex = myRatingIndex + 4;
+        if(myRating == ratingfilter || ratingfilter === undefined) {
+          const collectionCard = document.createElement("div");
           collectionCard.classList.add("collectionCard");
           const releaseDate = extractYear(album.release_date);
           collectionCard.innerHTML = `
@@ -56,6 +58,7 @@ if(myCollectionString) {
           </div>
           `;
           albumContainer.appendChild(collectionCard);
+        } /* end filter */
           myCollectionCardIndex = myCollectionCardIndex + 1;
         }); /* end foreach album */
   
