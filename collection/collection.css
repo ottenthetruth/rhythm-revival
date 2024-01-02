@@ -1,7 +1,7 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 body::-webkit-scrollbar{ display: none; }
 
-.albumContainer {margin-top: 3vh; }
+.albumContainer {margin-top: 20px; }
 .collectionCard { display: flex;
                   height: 200px;
                   padding: 10px;
@@ -53,7 +53,7 @@ label:hover ~ input:checked ~ label { color: #A6E72D; }
 #filters { display: flex;
            height: 25px;
            justify-content: space-evenly;
-           margin-top: 3vh; }
+           margin-top: 20px; }
 .search-input { width: 25%;
                 border-radius: 5px;
                 border: none; 
@@ -63,7 +63,7 @@ label:hover ~ input:checked ~ label { color: #A6E72D; }
 .ratingmix { display: flex;
              width: 100vw;
              height: 25px;
-             margin-top: 3vh; }
+             margin-top: 20px; }
 .ratingmix button { margin: 0; }
 #ratingmix10 { background-color: #00ff00;}
 #ratingmix9 { background-color: #66ff33; }
