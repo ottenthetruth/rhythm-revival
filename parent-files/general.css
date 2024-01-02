@@ -32,7 +32,10 @@ body.dark-mode { background-color: #252526;
   position: relative;
   text-align: center;
   border-left: 1px solid #2d3748;
-  transition: background-color 0.5s, color 0.5s; }
+  transition: background-color 0.5s, color 0.5s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
 body.dark-mode .page-button { border-left: 1px solid #03DAC6; }
 .page-button:hover { background-color: #2d3748;
   color: #edf2f7; }
