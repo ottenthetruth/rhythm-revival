@@ -130,3 +130,16 @@ appearance: none;
 border-radius: 10px;
 background-color: #121212;
 overflow: hidden; }
+
+@media screen and (max-height: 500px) {
+
+.menu {
+  width: 400px;
+  height: 250px;
+  right: -401px;
+}
+.musicplayer {
+  display: flex;
+}
+
+}
