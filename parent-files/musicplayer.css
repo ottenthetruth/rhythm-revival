@@ -141,5 +141,8 @@ overflow: hidden; }
 .musicplayer {
   display: flex;
 }
+.musicplayer:hover {
+  transform: translateX(-400px);
+}
 
 }
