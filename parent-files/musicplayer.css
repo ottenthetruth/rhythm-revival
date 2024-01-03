@@ -134,10 +134,12 @@ overflow: hidden; }
 @media screen and (max-height: 500px) {
 
 .menu {
+  display: flex;
   width: 400px;
   height: 250px;
   right: -401px;
 }
+.menu img { padding-bottom: 25px; }
 .musicplayer {
   display: flex;
 }
