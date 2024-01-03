@@ -124,7 +124,15 @@ html, body { overflow-x: hidden; }
 	   min-height: 700px;
 	   width: 100%;
 	   overflow-x: scroll; }
-.parent2 img { width: 70vw;
-	       height: 70vw; }
+.parent2 img { width: 35vh;
+	       height: 35vh; }
 .parent3 { display: none; }
+.explore1 p, .explore2 p, .explore3 p {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.explore1 h1, .explore2 h1, .explore3 h1 {
+	margin-left: 5%;
+	margin-right: 5%;
+}
 }
