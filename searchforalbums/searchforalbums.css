@@ -1,11 +1,11 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 body::-webkit-scrollbar{ display: none; }
 ::-webkit-scrollbar {
-    height: 10px;
+    height: 5px;
     width: 0px;
 }
 ::-webkit-scrollbar-track {
-    background: pink;
+    background: inherit;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
