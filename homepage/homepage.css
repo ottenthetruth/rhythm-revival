@@ -55,12 +55,12 @@ body.dark-mode .container { background-color: #212121;
 body.dark-mode #explore-button { background-color: #212121;
   				 border: 1px solid #03DAC6;
   				 color: #03DAC6; }
-.div1 { grid-area: 2 / 2 / 7 / 7; }
-.div2 { grid-area: 5 / 18 / 10 / 23; }
-.div3 { grid-area: 4 / 7 / 6 / 24;
-	font-size: 3vw; }
+.div1 { grid-area: 2 / 2 / 7 / 7;
+        min-width: 300px; }
+.div2 { grid-area: 5 / 18 / 10 / 23;
+        min-width: 300px; }
+.div3 { grid-area: 4 / 7 / 6 / 24; }
 .div7 { grid-area: 7 / 1 / 9 / 18;
-        font-size: 3vw;
 	text-align: end; }
 
 .displayimagescontainer { position: relative;
