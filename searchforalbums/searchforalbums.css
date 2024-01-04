@@ -1,10 +1,22 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 body::-webkit-scrollbar{ display: none; }
+::-webkit-scrollbar {
+    height: 10px;
+    width: 0px;
+}
+::-webkit-scrollbar-track {
+    background: pink;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #2d3748;
+}
 body { background-image: url(../images/Background2.jpg);
        background-size: cover;
        background-position-y: 70%; }
 .moon2 { background-color: #fefefe; }
 .parent2 { display: block;
+           overflow-x: scroll;
            flex-wrap: wrap;
            height: 50vh;
            min-height: 420px;
