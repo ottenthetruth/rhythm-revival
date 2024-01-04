@@ -7,7 +7,7 @@ body { background-image: url(../images/Background2.jpg);
 .parent2 { display: block;
            flex-wrap: wrap;
            height: 50vh;
-           min-height: 350px;
+           min-height: 420px;
            width: 100vw; }
 .search-bar { display: flex;
               width: 100%;
