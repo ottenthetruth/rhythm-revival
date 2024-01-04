@@ -3,11 +3,11 @@ body::-webkit-scrollbar{ display: none; }
 
 .albumContainer {margin-top: 20px; }
 .collectionCard { display: flex;
-                  height: 200px;
+                  height: 175px;
                   padding: 10px;
                   border-bottom: 1px solid; }
-.collectionCard img { width: 200px;
-                      height: 200px;
+.collectionCard img { width: 175px;
+                      height: 175px;
                       margin-right: 20px;
                       -webkit-user-drag: none; }
 .collectionCard h1 { font-weight: lighter;
