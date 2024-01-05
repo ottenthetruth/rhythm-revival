@@ -135,16 +135,24 @@ overflow: hidden; }
 
 .menu {
   display: flex;
-  width: 400px;
+  width: 500px;
   height: 250px;
-  right: -401px;
+  right: -501px;
 }
 .menu img { padding-bottom: 25px; }
 .musicplayer {
   display: flex;
 }
 .musicplayer:hover {
-  transform: translateX(-400px);
+  transform: translateX(-500px);
 }
-
+.controls {
+    width: 350px;
+    height: 100px;
+    background-color: #2d3748;
+    position: absolute;
+    right: -601px;
+    top: 150px;
+}
+  
 }
