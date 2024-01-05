@@ -46,9 +46,11 @@ body.dark-mode .controls {
     height: 25px;
     border-radius: 50%;
     text-align: center;
-    background-color: #03DAC6;
+    background-color: #edf2f7;
     color: #212121;
     margin-top: 7px; }
+body.dark-mode #pauseButton, body.dark-mode #resumeButton { background-color: #03DAC6; }
+body.dark-mode #skipBack, body.dark-mode #skipForward { background-color: #03DAC6; }
 .menu img {
   width: 200px;
   height: 200px;
@@ -125,6 +127,10 @@ border-radius: 10px;
 background-color: #edf2f7; }
 progress[value]::-moz-progress-bar {
 background-color: #edf2f7; }
+body.dark-mode progress[value]::-moz-progress-bar {
+background-color: #03DAC6; }
+body.dark-mode progress[value]::-moz-progress-bar {
+background-color: #03DAC6; }
 progress[value] {
 appearance: none;
 border-radius: 10px;
