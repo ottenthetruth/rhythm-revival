@@ -8,7 +8,8 @@ body { font-family: "Varela Round", sans-serif;
   user-select: none;
   overflow-x: hidden;
   overflow-y: scroll; }
-body.dark-mode { background-color: #252526;
+body.dark-mode { background-image: none;
+  background-color: #252526;
   color: #03DAC6; }
 #profileImage { position: absolute;
   top: 5px;
