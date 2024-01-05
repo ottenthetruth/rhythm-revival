@@ -1,6 +1,20 @@
 body::-webkit-scrollbar{ display: none; }
 body { background-image: url(../images/Background1.jpg);
        background-size: contain; }
+::-webkit-scrollbar {
+    height: 5px;
+    width: 0px;
+}
+::-webkit-scrollbar-track {
+    background: inherit;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #2d3748;
+}
+body.dark-mode::-webkit-scrollbar-thumb {
+  background-color: #03DAC6;
+}
 .parent { display: grid;
   	  grid-template-columns: repeat(24, 1fr);
   	  grid-template-rows: repeat(12, 1fr);
