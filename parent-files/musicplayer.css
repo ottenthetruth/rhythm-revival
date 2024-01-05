@@ -24,9 +24,9 @@ body.dark-mode .menu {
   flex-direction: column; 
   justify-content: flex-end; }
 .controlbuttons { margin-bottom: 10px;
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: center; }
+    display: flex;
+    width: 250px;
+    justify-content: center; }
 body.dark-mode .controls {
   background-color: #212121;
   color: #03DAC6;
@@ -37,7 +37,7 @@ body.dark-mode .controls {
     height: 40px;
     border-radius: 50%;
     text-align: center;
-    background-color: #03DAC6;
+    background-color: #edf2f7;
     color: #212121; }
 #resumeButton {
   display: none; }
@@ -122,9 +122,9 @@ background-color: #121212;
 border-radius: 10px; }
 progress[value]::-webkit-progress-value {
 border-radius: 10px;
-background-color: #03DAC6; }
+background-color: #edf2f7; }
 progress[value]::-moz-progress-bar {
-background-color: #03DAC6; }
+background-color: #edf2f7; }
 progress[value] {
 appearance: none;
 border-radius: 10px;
@@ -146,13 +146,13 @@ overflow: hidden; }
 .musicplayer:hover {
   transform: translateX(-500px);
 }
-.controls {
-    width: 350px;
-    height: 100px;
-    background-color: #2d3748;
-    position: absolute;
+.controls { width: 350px;
     right: -601px;
     top: 150px;
 }
-  
+.musicdesc {
+    margin-top: 25px;
+    width: 250px;
+} 
+
 }
