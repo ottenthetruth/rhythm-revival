@@ -64,7 +64,9 @@
   <h3>Info: To correctly display your Files, use "ARTIST-SONG.pdf" as your File Name.</h3>
 </div>
 <div class="uploadplatform">
-  <button id="fileUpload">Upload</button>
+    <input type="file" id="fileInput" accept=".pdf">
+    <button onclick="uploadPDF()">Upload</button>
+    <div id="pdfList"></div>
 </div>
 <div class="mytabs"></div>
 <div class="tabcontrols"></div>
@@ -73,11 +75,13 @@
 <script src="../parent-files/darkmode.js"></script>
 <script src="../parent-files/basicui.js"></script>
 <script src="../parent-files/musicplayer.js"></script>
+<script src="musichub.js"></script>
 <script>
 function loadmusichub() {
 
 }
 window.onload = loadmusichub;
+
 </script>
 </body>
 </html>
