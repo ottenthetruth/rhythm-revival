@@ -158,10 +158,16 @@ label:hover ~ input:checked ~ label { color: #A6E72D; }
              width: 350px;
              padding: 25px;
              transform: none;
-             -webkit-user-drag: none; }
+             -webkit-user-drag: none;
+             max-width: none;
+             min-width: unset; }
 .popup h1 { margin-top: 0px;
-            margin-left: 25px; }
-.popup h2 { position: revert; }
+            margin-left: 25px;
+            position: revert;
+            max-width: 350px; }
+.popup h2 { position: revert;
+            margin-left: 25px;
+            max-width: 350px; }
 .table-container { position: revert;
                    margin-left: 25px;
                    width: 350px; }
