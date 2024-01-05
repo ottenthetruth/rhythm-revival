@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>TM - Exploring the Homepage!</title>
+  <link rel="stylesheet" href="../parent-files/general.css">
+  <link rel="stylesheet" href="../parent-files/musicplayer.css">
+</head>
+<body>
+
+  <div class="banner">
+    <div class="loginbtn" id="logBtn" onclick="authforhomepage()"><p>Login</p></div>
+    	<img id="profileImage"></img>
+    	<p id="displayName"></p>
+    <h1 id="tm-banner">TM.</h1>
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider round"></span>
+    </label>
+    <div class="moon"></div>
+    <div class="moon2"></div>
+  </div>
+
+    <div class="nav-container">
+      <div class="nav-col1">
+        <a href="../searchforalbums/searchforalbums.html" class="page-button" style="border-left: none;">Search for Albums!</a>
+        <a href="../myprofile/myprofile.html" class="page-button">My Profile</a>
+      </div>
+      <div class="nav-col2">
+        <a href="../musichub/musichub.html" class="page-button">Music Hub</a>
+        <a href="../collection/collection.html" class="page-button">Collection</a>
+      </div>
+        <a href="page5.html" id="nav-aboutbtn" class="page-button">About TM.</a>
+    </div>
+
+<div class="musicplayer" id="musicplayer">
+  <div class="menu" id="menu">
+    <img src="../images/No Music.jpg" id="musicPlayerCover" width="200px" height="200px"></img>
+    <div class="musicdesc">
+      <h1 id="musicPlayerSong">Looks like someone</h1>
+      <h2 id="musicPlayerArtist">smashed their guitar.</h2>
+      <h2 id="musicPlayerAlbum"></h2>
+    </div>
+  </div>
+  <div class="controls">
+	<div class="controlbuttons">
+	  <button id="skipBack">&#171;</button>
+    <button id="pauseButton">&#10073;&#10073;</button>
+	  <button id="resumeButton">▶</button>
+    <button id="skipForward">&#187;</button>
+	</div>
+	<progress id="songprogress" max="100" value="0"></progress>
+  </div>
+  <div class="extendmenu" id="extendmenu">
+    <p>‹</p>
+  </div>
+</div>
+
+<script src="../parent-files/darkmode.js"></script>
+<script src="../parent-files/basicui.js"></script>
+<script src="../parent-files/musicplayer.js"></script>
+<script>
+function loadmusichub() {
+
+}
+window.onload = loadmusichub;
+</script>
+</body>
+</html>
