@@ -171,7 +171,8 @@ label:hover ~ input:checked ~ label { color: #A6E72D; }
 .table-container { position: revert;
                    margin-left: 25px;
                    width: 350px; }
-.ratedisplay { position: revert;
+.ratedisplay { display: flex;
+               position: revert;
                margin-left: 25px; }
 .ratebutton { position: revert;
               height: 20px;
