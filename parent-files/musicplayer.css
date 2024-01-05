@@ -137,8 +137,10 @@ border-radius: 10px;
 background-color: #121212;
 overflow: hidden; }
 
-@media screen and (max-height: 500px) {
-
+@media screen and (max-height: 700px) {
+body.dark-mode .menu {
+  border-bottom: 1px solid #03DAC6; }
+body.dark-mode .extendmenu { border: none; }
 .menu {
   display: flex;
   width: 500px;
