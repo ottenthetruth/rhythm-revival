@@ -11,12 +11,15 @@ body::-webkit-scrollbar{ display: none; }
                       margin-right: 20px;
                       -webkit-user-drag: none; }
 .collectionCard h1 { font-weight: lighter;
+                     font-size: 30px;
+                     margin: 5px;
                      max-width: 70vw;
                      overflow: hidden;
                      text-overflow: ellipsis;
                      white-space: nowrap; }
 .collectionCard h2 { font-weight: lighter;
-                     margin-bottom: 0px;
+                     font-size: 20px;
+                     margin: 5px;
                      max-width: 70vw;
                      overflow: hidden;
                      text-overflow: ellipsis;
