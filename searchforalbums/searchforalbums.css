@@ -150,6 +150,24 @@ input:checked + label:hover, input:checked ~ label:hover,
 input:checked ~ label:hover ~ label,
 label:hover ~ input:checked ~ label { color: #A6E72D; }
 
-@media screen and (max-width: 768px) {
-       .parent2 { overflow-x: scroll; }
+@media screen and (max-width: 768px) and (min-height: 500px) {
+.popup { width: 400px;
+         height: 800px; } 
+.popup img { position: revert;
+             height: 350px;
+             width: 350px;
+             padding: 25px;
+             transform: none;
+             -webkit-user-drag: none; }
+.popup h1 { margin-top: 0px;
+            margin-left: 25px; }
+.popup h2 { position: revert; }
+.table-container { position: revert;
+                   margin-left: 25px;
+                   width: 350px; }
+.ratedisplay { position: revert;
+               margin-left: 25px; }
+.ratebutton { position: revert;
+              height: 20px;
+              margin-top: 8px; }
 }
