@@ -28,16 +28,25 @@ function uploadPDF() {
         };
         reader.readAsDataURL(file);
     }
+    displayPDF();
 }
 
+function displayPDF() {
+  let myFileString = localStorage.getItem("myfiles");
+  let myFileNamesString = localStorage.getItem("myfilenames");
+  let myFiles = JSON.parse(myFileString);
+  let myFileNames = JSON.parse(myFileNamesString);
+  const myFileCount = myFiles.length;
+  const myTabs = document.getElementById(mytabs);
+  for (let i = 0; i < myFileCount; i++) {
+      const fileCard = document.createElement("div");
+      fileCard.classList.add("tabcard");
+      collectionCard.innerHTML = `
+      <h1>Hello ${i}</h1>
+      `;
+      fileCard.appendChild(myTabs);
+  }
 
-function displayPDF(pdfData) {
-    const pdfList = document.getElementById('pdfList');
-    const embed = document.createElement('embed');
-    embed.setAttribute('src', pdfData);
-    embed.setAttribute('type', 'application/pdf');
-    embed.setAttribute('width', '100%');
-    embed.setAttribute('height', '500px');
-    pdfList.innerHTML = '';
-    pdfList.appendChild(embed);
+
+
 }
