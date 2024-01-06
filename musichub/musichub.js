@@ -41,7 +41,7 @@ function displayPDF() {
   for (let i = 0; i < myFileCount; i++) {
       const fileCard = document.createElement("div");
       fileCard.classList.add("tabcard");
-      collectionCard.innerHTML = `
+      fileCard.innerHTML = `
       <h1>Hello ${i}</h1>
       `;
       fileCard.appendChild(myTabs);
