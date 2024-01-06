@@ -5,28 +5,19 @@ function uploadPDF() {
         const file = files[0];
         const reader = new FileReader();
         reader.onload = function(event) {
-            const pdfData = event.target.result;
-            const fileName = file.name;
-
-            let currentPDFCount = localStorage.getItem("currentPDFCount");
-            if(currentPDFCount) {} else { localStorage.setItem('currentPDFCount', 1);
-                                          currentPDFCount = 1; }
-            localStorage.setItem(`myFile${currentPDFCount}`, pdfData);
-            localStorage.setItem('currentPDFCount', currentPDFCount + 1);
-            displayUserFiles();
+          const pdfData = event.target.result;
+          const fileName = file.name;
+          localStorage.setItem("myTab", pdfData);
         };
         reader.readAsDataURL(file);
     }
 }
 
 function displayUserFiles() {
-  const fileCount = localStorage.getItem("currentPDFCount");
   const filesContainer = document.getElementById("mytabs");
   filesContainer.innerHTML = '';
-  for (let i = 0; i < fileCount; i++) {
-    const currentFile = localStorage.getItem(`myFile${i}`);
+    const currentFile = localStorage.getItem(`myTab`);
     displayPDF(currentFile);
-  }
 }
 
 function displayPDF(pdfData) {
