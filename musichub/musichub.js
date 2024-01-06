@@ -51,13 +51,21 @@ function displayPDF() {
       fileCard.classList.add("tabcard");
       
       // Extract song name and artist name from the file name
-      const [songName, artistName] = myFileNames[i].split(' - ');
+      const nameParts = myFileNames[i].replace(/^"(.+(?="$))"$/, '$1').split(' - ');
 
-      fileCard.innerHTML = `
-        <h1>${songName}</h1>
-        <h2>by ${artistName.replace('.pdf', '')}</h2>
-      `;
-      myTabs.appendChild(fileCard); // Append fileCard to myTabs
+      if (nameParts.length >= 2) {
+        const songName = nameParts[0];
+        const artistName = nameParts.slice(1).join(' - ').replace('.pdf', '');
+
+        fileCard.innerHTML = `
+          <h1>${songName}</h1>
+          <h2>by ${artistName}</h2>
+        `;
+        myTabs.appendChild(fileCard); // Append fileCard to myTabs
+      } else {
+        console.error(`File name "${myFileNames[i]}" doesn't match expected pattern`);
+        // Optionally handle this scenario or display an error message
+      }
     }
   } else {
     // Handle the case when localStorage values are null or not set
