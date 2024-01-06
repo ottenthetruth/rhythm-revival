@@ -1,10 +1,9 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 body::-webkit-scrollbar{ display: none; }
-
 .albumContainer {margin-top: 20px; }
 .collectionCard { display: flex;
                   height: 175px;
-                  padding: 10px;
+                  padding: 5px;
                   border-bottom: 1px solid; }
 .collectionCard img { width: 175px;
                       height: 175px;
@@ -52,7 +51,6 @@ label:hover, label:hover ~ label { color: #73B100; }
 input:checked + label:hover, input:checked ~ label:hover,
 input:checked ~ label:hover ~ label,
 label:hover ~ input:checked ~ label { color: #A6E72D; }
-
 #filters { display: flex;
            height: 25px;
            justify-content: space-evenly;
@@ -61,7 +59,7 @@ label:hover ~ input:checked ~ label { color: #A6E72D; }
                 border-radius: 5px;
                 border: none; 
                 background-color: #fefefe; }
-.filters button { width: 8%; 
+#filters button { width: 8%; 
                   border-radius: 5px; }
 .ratingmix { display: flex;
              width: 100vw;
@@ -80,14 +78,12 @@ label:hover ~ input:checked ~ label { color: #A6E72D; }
 #ratingmix1 { background-color: #990000; }
 
 @media screen and (max-width: 768px) {
-  .collectionCard {height: 100px; }
-  .collectionCard img {
-    height: 100px;
-    width: 100px;
-    margin-right: 10px;
-  }
-  .collectionCard h1 {font-size: 15px;}
-  .collectionCard h2 {font-size: 12px;}
-  .collectionCardControls button {height: 14px;
-                                  font-size: 10px; }
+  .collectionCard { height: 100px; }
+  .collectionCard img { height: 100px;
+                        width: 100px;
+                        margin-right: 10px; }
+  .collectionCard h1 { font-size: 15px;}
+  .collectionCard h2 { font-size: 12px;}
+  .collectionCardControls button { height: 14px;
+                                   font-size: 10px; }
 }
