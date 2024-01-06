@@ -44,9 +44,7 @@ function displayPDF() {
       fileCard.innerHTML = `
       <h1>Hello ${i}</h1>
       `;
-      fileCard.appendChild(myTabs);
+      myTabs.appendChild(fileCard);
   }
-
-
 
 }
