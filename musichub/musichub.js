@@ -8,7 +8,7 @@ function uploadPDF() {
             const pdfData = event.target.result;
             const fileName = file.name;
 
-            const currentPDFCount = localStorage.getItem("currentPDFCount");
+            let currentPDFCount = localStorage.getItem("currentPDFCount");
             if(currentPDFCount) {} else { localStorage.setItem('currentPDFCount', 1);
                                           currentPDFCount = 1; }
             localStorage.setItem(`myFile${currentPDFCount}`, pdfData);
