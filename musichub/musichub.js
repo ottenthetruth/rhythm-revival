@@ -37,14 +37,11 @@ function displayPDF() {
   let myFiles = JSON.parse(myFileString);
   let myFileNames = JSON.parse(myFileNamesString);
   const myFileCount = myFiles.length;
-  const myTabs = document.getElementById(mytabs);
+  const myTabs = document.getElementById("mytabs"); // Make sure "mytabs" is the correct ID
   for (let i = 0; i < myFileCount; i++) {
-      const fileCard = document.createElement("div");
-      fileCard.classList.add("tabcard");
-      fileCard.innerHTML = `
-      <h1>Hello ${i}</h1>
-      `;
-      myTabs.appendChild(fileCard);
+    const fileCard = document.createElement("div");
+    fileCard.classList.add("tabcard");
+    fileCard.innerHTML = `<h1>Hello ${i}</h1>`;
+    myTabs.appendChild(fileCard); // Append fileCard to myTabs, not the other way around
   }
-
 }
