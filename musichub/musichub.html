@@ -15,7 +15,7 @@
     <div class="loginbtn" id="logBtn" onclick="authforhomepage()"><p>Login</p></div>
     	<img id="profileImage"></img>
     	<p id="displayName"></p>
-    <h1 id="tm-banner">TM.</h1>
+    <h1 id="tm-banner"><a href="../homepage/homepage.html">TM.</a></h1>
     <label class="switch">
       <input type="checkbox" id="darkModeToggle">
       <span class="slider round"></span>
@@ -65,7 +65,8 @@
 </div>
 <div class="uploadplatform">
     <input type="file" id="fileInput" accept=".pdf">
-    <button onclick="uploadPDF()">Upload</button>
+    <button class="onclickctrl" onclick="uploadPDF()">Upload</button>
+    <button class="onclickctrl" onclick="displayPDF()">Refresh</button>
     <div id="pdfList"></div>
 </div>
 <div class="mytabs" id="mytabs"></div>
