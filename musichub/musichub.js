@@ -23,7 +23,7 @@ function displayUserFiles() {
   const fileCount = localStorage.getItem("currentPDFCount");
   const filesContainer = document.getElementById("mytabs");
   filesContainer.innerHTML = '';
-  for (int i = 0; i < fileCount; i++) {
+  for (let i = 0; i < fileCount; i++) {
     const currentFile = localStorage.getItem(`myFile${i}`);
     displayPDF(currentFile);
   }
