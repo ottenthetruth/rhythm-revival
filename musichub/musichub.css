@@ -1,0 +1,16 @@
+.mytabs { display: flex; 
+          flex-wrap: wrap;
+          height: 400px;
+          width: 100%; }
+
+.tabcard {
+  height: 100px;
+  width: 250px;
+  background-color: #edf2f7;
+  border: 1px solid;
+  border-radius: 5px;
+  font-weight: lighter;
+  margin: 10px;
+}
+.tabcard h1 { text-size: 20px; }
+.tabcard h2 { text-size: 10px; }
