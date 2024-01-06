@@ -5,19 +5,12 @@ function uploadPDF() {
         const file = files[0];
         const reader = new FileReader();
         reader.onload = function(event) {
-          const pdfData = event.target.result;
-          const fileName = file.name;
-          localStorage.setItem("myTab", pdfData);
+            const pdfData = event.target.result;
+            localStorage.setItem('uploadedPDF', pdfData);
+            displayPDF(pdfData);
         };
         reader.readAsDataURL(file);
     }
-}
-
-function displayUserFiles() {
-  const filesContainer = document.getElementById("mytabs");
-  filesContainer.innerHTML = '';
-    const currentFile = localStorage.getItem(`myTab`);
-    displayPDF(currentFile);
 }
 
 function displayPDF(pdfData) {
