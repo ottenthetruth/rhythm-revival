@@ -28,48 +28,36 @@ function uploadPDF() {
         };
         reader.readAsDataURL(file);
     }
-    displayPDF();
 }
 
 function displayPDF() {
   let myFileString = localStorage.getItem("myfiles");
   let myFileNamesString = localStorage.getItem("myfilenames");
-  
-  // Check if retrieved values are not null
+
   if (myFileString && myFileNamesString) {
     let myFiles = JSON.parse(myFileString);
     let myFileNames = JSON.parse(myFileNamesString);
-    
     const myFileCount = myFiles.length;
-    const myTabs = document.getElementById("mytabs"); // Make sure "mytabs" is the correct ID
-
-    // Clear previous file cards from myTabs
+    const myTabs = document.getElementById("mytabs");
     myTabs.innerHTML = '';
 
     for (let i = 0; i < myFileCount; i++) {
       const fileCard = document.createElement("div");
       fileCard.classList.add("tabcard");
-      
-      // Extract song name and artist name from the file name
       const nameParts = myFileNames[i].replace(/^"(.+(?="$))"$/, '$1').split(' - ');
-
       if (nameParts.length >= 2) {
         const songName = nameParts[0];
         const artistName = nameParts.slice(1).join(' - ').replace('.pdf', '');
-
         fileCard.innerHTML = `
           <h1>${songName}</h1>
           <h2>by ${artistName}</h2>
         `;
-        myTabs.appendChild(fileCard); // Append fileCard to myTabs
+        myTabs.appendChild(fileCard);
       } else {
         console.error(`File name "${myFileNames[i]}" doesn't match expected pattern`);
-        // Optionally handle this scenario or display an error message
       }
     }
   } else {
-    // Handle the case when localStorage values are null or not set
     console.error("Values not found in localStorage");
-    // You may want to implement a fallback or display a message to the user
   }
 }
