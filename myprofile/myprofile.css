@@ -54,8 +54,10 @@ body{background-image: url(../images/Background2.jpg);
 
 @media screen and (max-width: 768px) {
 html, body { overflow-x: hidden; }
+body { background-size: contain; }
 .introduction { height: 20vh;
-                min-height: 20vh; }
+                margin-left: 25px;
+                min-height: 400px; }
 .introduction h1 { font-size: 40px; }
 .introduction h2 { font-size: 20px; }
 .introduction h3 { font-size: 13px;
@@ -63,8 +65,8 @@ html, body { overflow-x: hidden; }
 .numberoneitems { height: 53vh;
                   min-height: 53vh; }
 .numberoneartist, .numberonesong { flex-direction: column;
+                                   align-items: center;
                                    text-align: center; }
-.artistinfo, .songinfo { align-items: center; }
 .numberoneartist img, .numberonesong img { margin: 0;
                                            margin-top: 10px; }
 .numberoneartist h4, .numberonesong h4 { font-size: 14px; }
@@ -75,11 +77,11 @@ html, body { overflow-x: hidden; }
                        width: 120px; }
 .userstats { flex-direction: column; }
 .topartists, .topsongs { width: 100vw;
-                         height: 80vh; }
+                         height: 500px; }
 .topitemcontainer { width: 90vw;
-                    height: 40vw; }
-.topitemcontainer img { width: 30vw;
-                        height: 30vw; }
+                    height: 120px; }
+.topitemcontainer img { width: 100px;
+                        height: 100px; }
 .artistinfo h1, .songinfo h1 { font-size: 20px; }
 .artistinfo h2, .songinfo h2 { font-size: 15px; }
 }
