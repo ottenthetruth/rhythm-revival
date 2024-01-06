@@ -1,5 +1,5 @@
 function uploadPDF() {
-    const fileInput = document.getElementById('fileinput');
+    const fileInput = document.getElementById('fileInput');
     const files = fileInput.files;
 
     if (files.length > 0) {
