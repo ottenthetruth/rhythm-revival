@@ -34,14 +34,27 @@ function uploadPDF() {
 function displayPDF() {
   let myFileString = localStorage.getItem("myfiles");
   let myFileNamesString = localStorage.getItem("myfilenames");
-  let myFiles = JSON.parse(myFileString);
-  let myFileNames = JSON.parse(myFileNamesString);
-  const myFileCount = myFiles.length;
-  const myTabs = document.getElementById("mytabs"); // Make sure "mytabs" is the correct ID
-  for (let i = 0; i < myFileCount; i++) {
-    const fileCard = document.createElement("div");
-    fileCard.classList.add("tabcard");
-    fileCard.innerHTML = `<h1>Hello ${i}</h1>`;
-    myTabs.appendChild(fileCard); // Append fileCard to myTabs, not the other way around
+  
+  // Check if retrieved values are not null
+  if (myFileString && myFileNamesString) {
+    let myFiles = JSON.parse(myFileString);
+    let myFileNames = JSON.parse(myFileNamesString);
+    
+    const myFileCount = myFiles.length;
+    const myTabs = document.getElementById("mytabs"); // Make sure "mytabs" is the correct ID
+
+    // Clear previous file cards from myTabs
+    myTabs.innerHTML = '';
+
+    for (let i = 0; i < myFileCount; i++) {
+      const fileCard = document.createElement("div");
+      fileCard.classList.add("tabcard");
+      fileCard.innerHTML = `<h1>${myFileNames[i]}</h1>`; // Use file names from the array
+      myTabs.appendChild(fileCard); // Append fileCard to myTabs
+    }
+  } else {
+    // Handle the case when localStorage values are null or not set
+    console.error("Values not found in localStorage");
+    // You may want to implement a fallback or display a message to the user
   }
 }
