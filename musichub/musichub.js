@@ -49,7 +49,14 @@ function displayPDF() {
     for (let i = 0; i < myFileCount; i++) {
       const fileCard = document.createElement("div");
       fileCard.classList.add("tabcard");
-      fileCard.innerHTML = `<h1>${myFileNames[i]}</h1>`; // Use file names from the array
+      
+      // Extract song name and artist name from the file name
+      const [songName, artistName] = myFileNames[i].split(' - ');
+
+      fileCard.innerHTML = `
+        <h1>${songName}</h1>
+        <h2>by ${artistName.replace('.pdf', '')}</h2>
+      `;
       myTabs.appendChild(fileCard); // Append fileCard to myTabs
     }
   } else {
