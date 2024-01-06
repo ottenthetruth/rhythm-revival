@@ -1,8 +1,8 @@
+body::-webkit-scrollbar{ display: none; }
 .mytabs { display: flex; 
           flex-wrap: wrap;
           height: 400px;
           width: 100%; }
-
 .tabcard {
   height: 100px;
   width: 250px;
