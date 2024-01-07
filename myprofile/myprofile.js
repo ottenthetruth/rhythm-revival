@@ -43,14 +43,14 @@ async function getTopArtists() {
     }
   });
   const data = await response.json();
-  const topartists = document.querySelector('.topsongs');
+  const topartists = document.querySelector('.topartists');
   data.items.forEach((artist, index) => {
    const topArtistContainer = document.createElement('div');
     topArtistContainer.classList.add(`topitemcontainer`);
     
     const currentArtistElementImage = document.createElement('img');
     currentArtistElementImage.id = `topartistimage${index}`;
-    currentArtistElementImage.src = artist.images[0].url;
+    currentArtistElementImage.src = artist.images[1].url;
     currentArtistElementImage.alt = `Artist ${index + 1} Profile Picture`;
     topArtistContainer.appendChild(currentArtistElementImage);
 
