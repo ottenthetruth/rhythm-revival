@@ -5,10 +5,10 @@ let artistname;
   if(filtersearch == 1) {
   albumname = document.getElementById("mysearch").textContent;
   artistname = document.getElementById("mysearchartist").textContent;
-  console.log(albumname);
-  console.log(artistname);
   }
   
+  console.log(albumname);
+  console.log(artistname);
 const albumContainer = document.getElementById("albumContainer");
 albumContainer.innerHTML = '';
 let myCollectionString = localStorage.getItem("mycollection");
@@ -38,6 +38,8 @@ if(myCollectionString) {
       let myCollectionCardIndex = 1;
       console.log(`Rating Filter = ${ratingfilter}`);
       data.albums.forEach(album => {
+          console.log(album.name);
+          console.log(album.artists[0].name);
           let myRating = myCollection[myRatingIndex];
           myRatingIndex = myRatingIndex + 4;
         if((myRating == ratingfilter || ratingfilter === undefined || ratingfilter === "undefined") && (albumname == album.name || albumname === undefined) && (artistname == album.artists[0].name || artistname === undefined)) {
