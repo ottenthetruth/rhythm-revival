@@ -56,7 +56,7 @@ async function getTopArtists() {
 
     const currentArtistInfo = document.createElement('div');
     currentArtistInfo.classList.add(`artistinfo`);
-    topSongContainer.appendChild(currentTrackInfo);
+    topArtistContainer.appendChild(currentTrackInfo);
     
     const currentArtistElementText = document.createElement('h1');
     currentArtistElementText.id = `topartistname${index}`;
@@ -66,8 +66,8 @@ async function getTopArtists() {
     const currentArtistElementGenre = document.createElement('h2');
     currentArtistElementGenre.id = `topartistname${index}`;
     currentArtistElementGenre.textContent = artist.genres[0] + ", " + artist.genres[1];
-    currentArtistInfo.appendChild(currentTrackElementText);
-    topsongs.appendChild(topSongContainer);
+    currentArtistInfo.appendChild(currentTrackElementGenre);
     
+    topartists.appendChild(topArtistContainer);
   });
 }
