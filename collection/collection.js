@@ -3,8 +3,8 @@ let albumname;
 let artistname;
   
   if(filtersearch == 1) {
-  albumname = document.getElementById("mysearch").textContent;
-  artistname = document.getElementById("mysearchartist").textContent;
+  albumname = document.getElementById("mysearch").value;
+  artistname = document.getElementById("mysearchartist").value;
   }
   
   console.log(albumname);
