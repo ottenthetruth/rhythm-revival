@@ -59,7 +59,7 @@ label:hover ~ input:checked ~ label { color: #A6E72D; }
                 border-radius: 5px;
                 border: none; 
                 background-color: #fefefe; }
-#filters button { width: 8%; 
+.searchfilterbuttons { width: 8%; 
                   border-radius: 5px; }
 .ratingmix { display: flex;
              width: 100vw;
