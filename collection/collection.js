@@ -42,7 +42,7 @@ if(myCollectionString) {
           console.log(album.artists[0].name);
           let myRating = myCollection[myRatingIndex];
           myRatingIndex = myRatingIndex + 4;
-        if((myRating == ratingfilter || ratingfilter === undefined || ratingfilter === "undefined") && (albumname == album.name || albumname === undefined) && (artistname == album.artists[0].name || artistname === undefined)) {
+        if((myRating == ratingfilter || ratingfilter == undefined || ratingfilter == "undefined") && (albumname == album.name || albumname == undefined) && (artistname == album.artists[0].name || artistname == undefined)) {
           const collectionCard = document.createElement("div");
           collectionCard.classList.add("collectionCard");
           const releaseDate = extractYear(album.release_date);
