@@ -47,6 +47,7 @@ embedElement.width = '100%';
 embedElement.height = '600px'; // You can adjust the height as needed
 myParent.appendChild(embedElement);
 }
+
 function displayPDF() {
   let myFileString = localStorage.getItem("myfiles");
   let myFileNamesString = localStorage.getItem("myfilenames");
@@ -68,7 +69,7 @@ function displayPDF() {
         fileCard.innerHTML = `
           <h1>${songName}</h1>
           <h2>by ${artistName}</h2>
-          <button onclick=`showPDF(${i})`>Show PDF</button>
+          <button>Show PDF</button>
         `;
         myTabs.appendChild(fileCard);
       } else {
