@@ -29,7 +29,24 @@ function uploadPDF() {
         reader.readAsDataURL(file);
     }
 }
+function showPDF(myfile) {
+const pdfString = localStorage.getItem('myfiles'); // Replace 'yourPDFKey' with your key
+const myPDFFile = JSON.parse(pdfString);
+myPDFFileIndex = myPDFFile[0];
+// Creating a blob from the string data
+const pdfBlob = new Blob([myPDFFileIndex], { type: 'application/pdf' });
 
+// Creating a URL for the blob
+const pdfUrl = URL.createObjectURL(pdfBlob);
+const myParent = document.getElementById("tabviewer");
+// Displaying the PDF using an <embed> or <iframe> tag
+const embedElement = document.createElement('embed');
+embedElement.src = pdfUrl;
+embedElement.type = 'application/pdf';
+embedElement.width = '100%';
+embedElement.height = '600px'; // You can adjust the height as needed
+myParent.appendChild(embedElement);
+}
 function displayPDF() {
   let myFileString = localStorage.getItem("myfiles");
   let myFileNamesString = localStorage.getItem("myfilenames");
@@ -63,21 +80,4 @@ function displayPDF() {
   }
 }
 
-async function showPDF(myfile) {
-const pdfString = localStorage.getItem('myfiles'); // Replace 'yourPDFKey' with your key
-const myPDFFile = JSON.parse(pdfString);
-myPDFFileIndex = myPDFFile[0];
-// Creating a blob from the string data
-const pdfBlob = new Blob([myPDFFileIndex], { type: 'application/pdf' });
 
-// Creating a URL for the blob
-const pdfUrl = URL.createObjectURL(pdfBlob);
-const myParent = document.getElementById("tabviewer");
-// Displaying the PDF using an <embed> or <iframe> tag
-const embedElement = document.createElement('embed');
-embedElement.src = pdfUrl;
-embedElement.type = 'application/pdf';
-embedElement.width = '100%';
-embedElement.height = '600px'; // You can adjust the height as needed
-myParent.appendChild(embedElement);
-}
