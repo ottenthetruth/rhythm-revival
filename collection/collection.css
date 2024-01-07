@@ -60,12 +60,14 @@ label:hover ~ input:checked ~ label { color: #A6E72D; }
                 border: none; 
                 background-color: #fefefe; }
 .searchfilterbuttons { width: 8%; 
-                  border-radius: 5px; }
+                  border-radius: 5px;
+                  overflow: hidden; }
 .ratingmix { display: flex;
              width: 100vw;
              height: 25px;
              margin-top: 20px; }
 .ratingmix button { margin: 0; }
+body.dark-mode .ratingmix button { color: #212121; }
 #ratingmix10 { background-color: #00ff00;}
 #ratingmix9 { background-color: #66ff33; }
 #ratingmix8 { background-color: #ccff66; }
