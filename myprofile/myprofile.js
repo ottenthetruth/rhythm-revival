@@ -9,23 +9,26 @@ async function getTopTracks() {
   const topartists = document.querySelector('.topartists');
   data.items.forEach((track, index) => {
    const topSongContainer = document.createElement('div');
-    topSongContainer.classList.add(`topsongcontainer${index}`);
-    
-    const currentTrackElementText = document.createElement('p');
-    currentTrackElementText.id = `topsongname${index}`;
-    currentTrackElementText.textContent = track.name;
-    topSongContainer.appendChild(currentTrackElementText);
+    topSongContainer.classList.add(`topitemcontainer`);
     
     const currentTrackElementImage = document.createElement('img');
     currentTrackElementImage.id = `topsongimage${index}`;
     currentTrackElementImage.src = track.album.images[0].url;
     currentTrackElementImage.alt = `Track ${index + 1} Cover`;
     topSongContainer.appendChild(currentTrackElementImage);
+
+    const currentTrackInfo = document.createElement('div');
+    topSongContainer.appendChild(currentTrackInfo);
     
-    const currentTrackElementArtist = document.createElement('p');
+    const currentTrackElementText = document.createElement('h1');
+    currentTrackElementText.id = `topsongname${index}`;
+    currentTrackElementText.textContent = track.name;
+    currentTrackInfo.appendChild(currentTrackElementText);
+
+    const currentTrackElementArtist = document.createElement('h2');
     currentTrackElementArtist.id = `topsonginfo${index}`;
     currentTrackElementArtist.textContent = `by ${track.artists[0].name}`;
-    topSongContainer.appendChild(currentTrackElementArtist);
+    currentTrackInfo.appendChild(currentTrackElementArtist);
     
     topartists.appendChild(topSongContainer);
   });
