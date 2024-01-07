@@ -145,6 +145,7 @@ let myCollectionString = localStorage.getItem("mycollection");
     var currentButton = document.getElementById(`ratingmix${myRatingElement}`);
     currentButton.style.width = `${ratingPercentage}%`;
     myRatingElement = myRatingElement - 1;
+    if(itemCount === 0) { currentButton.style.width = "10%"; }
     } /* end for */
   } /* end myCollectionString */
 }
