@@ -1,4 +1,12 @@
-async function displayCollection(ratingfilter) {
+async function displayCollection(ratingfilter, filtersearch) {
+let albumname;
+let artistname;
+  
+  if(filtersearch === 1) {
+  albumname = document.getElementById("mysearch").textContent;
+  artistname = document.getElementById("mysearchartist").textContent;
+  }
+  
 const albumContainer = document.getElementById("albumContainer");
 albumContainer.innerHTML = '';
 let myCollectionString = localStorage.getItem("mycollection");
@@ -30,7 +38,7 @@ if(myCollectionString) {
       data.albums.forEach(album => {
           let myRating = myCollection[myRatingIndex];
           myRatingIndex = myRatingIndex + 4;
-        if(myRating == ratingfilter || ratingfilter === undefined) {
+        if((myRating == ratingfilter || ratingfilter === undefined) && (albumname === album.name || albumname === undefined) && (artistname === album.artists[0].name || artistname === undefined)) {
           const collectionCard = document.createElement("div");
           collectionCard.classList.add("collectionCard");
           const releaseDate = extractYear(album.release_date);
