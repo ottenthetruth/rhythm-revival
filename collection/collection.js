@@ -2,9 +2,11 @@ async function displayCollection(ratingfilter, filtersearch) {
 let albumname;
 let artistname;
   
-  if(filtersearch === 1) {
+  if(filtersearch == 1) {
   albumname = document.getElementById("mysearch").textContent;
   artistname = document.getElementById("mysearchartist").textContent;
+  console.log(albumname);
+  console.log(artistname);
   }
   
 const albumContainer = document.getElementById("albumContainer");
