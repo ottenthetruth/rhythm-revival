@@ -51,7 +51,7 @@ function displayPDF() {
         fileCard.innerHTML = `
           <h1>${songName}</h1>
           <h2>by ${artistName}</h2>
-          <button onclick=`showPDF({i})`>Show PDF</button>
+          <button onclick=`showPDF(${i})`>Show PDF</button>
         `;
         myTabs.appendChild(fileCard);
       } else {
@@ -63,7 +63,7 @@ function displayPDF() {
   }
 }
 
-showPDF(myfile) {
+async function showPDF(myfile) {
 const pdfString = localStorage.getItem('myfiles'); // Replace 'yourPDFKey' with your key
 const myPDFFile = JSON.parse(pdfString);
 myPDFFileIndex = myPDFFile[0];
