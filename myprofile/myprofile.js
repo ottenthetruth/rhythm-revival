@@ -60,9 +60,14 @@ async function getTopArtists() {
     
     const currentArtistElementText = document.createElement('h1');
     currentArtistElementText.id = `topartistname${index}`;
-    currentArtistElementText.textContent = artist.genres[0] + ", " + artist.genres[1];
+    currentArtistElementText.textContent = artist.name;
     currentArtistInfo.appendChild(currentTrackElementText);
     
+    const currentArtistElementGenre = document.createElement('h2');
+    currentArtistElementGenre.id = `topartistname${index}`;
+    currentArtistElementGenre.textContent = artist.genres[0] + ", " + artist.genres[1];
+    currentArtistInfo.appendChild(currentTrackElementText);
     topsongs.appendChild(topSongContainer);
+    
   });
 }
