@@ -6,18 +6,28 @@ async function getTopTracks() {
     }
   });
   const data = await response.json();
+  const topartists = document.querySelector('.topartists');
   data.items.forEach((track, index) => {
-    const currentTrackElementText = document.getElementById(`topsongname${index}`);
-    const currentTrackElementImage = document.getElementById(`topsongimage${index}`);
-    const currentTrackElementArtist = document.getElementById(`topsonginfo${index}`);
-    if(currentTrackElementText) {
-      currentTrackElementText.textContent = track.name;
-    }
-    if(currentTrackElementArtist) {
-      currentTrackElementArtist.textContent = "by " + track.artists[0].name;
-    }
-      currentTrackElementImage.src = track.album.images[0].url;
-      currentTrackElementImage.alt = `Track ${index + 1} Cover`;
+   const topSongContainer = document.createElement('div');
+    topSongContainer.classList.add(`topsongcontainer${index}`);
+    
+    const currentTrackElementText = document.createElement('p');
+    currentTrackElementText.id = `topsongname${index}`;
+    currentTrackElementText.textContent = track.name;
+    topSongContainer.appendChild(currentTrackElementText);
+    
+    const currentTrackElementImage = document.createElement('img');
+    currentTrackElementImage.id = `topsongimage${index}`;
+    currentTrackElementImage.src = track.album.images[0].url;
+    currentTrackElementImage.alt = `Track ${index + 1} Cover`;
+    topSongContainer.appendChild(currentTrackElementImage);
+    
+    const currentTrackElementArtist = document.createElement('p');
+    currentTrackElementArtist.id = `topsonginfo${index}`;
+    currentTrackElementArtist.textContent = `by ${track.artists[0].name}`;
+    topSongContainer.appendChild(currentTrackElementArtist);
+    
+    topartists.appendChild(topSongContainer);
   });
 }
 
