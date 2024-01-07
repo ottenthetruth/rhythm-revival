@@ -1,4 +1,5 @@
 async function getTopTracks() {
+  let firstrun = 0;
   const accessToken = localStorage.getItem('access_token');
   const response = await fetch(`https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=20`, {
     headers: {
@@ -8,6 +9,17 @@ async function getTopTracks() {
   const data = await response.json();
   const topsongs = document.querySelector('.topsongs');
   data.items.forEach((track, index) => {
+    if(firstrun === 0) {
+      const firstSongElementImage = track.album.images[0].url;
+      const firstSongElement = document.getElementById("topsongimage0");
+      firstSongElement.src = firstSongElementImage;
+      const firstSongName = document.getElementById("topsongname0");
+      const firstSongInfo = document.getElementById("topsonginfo0");
+      firstSongName.textContent = track.name;
+      firstSongInfo.textContent = `by ${track.artists[0].name}`;
+      firstrun = 1;
+    }
+    
    const topSongContainer = document.createElement('div');
     topSongContainer.classList.add(`topitemcontainer`);
     
