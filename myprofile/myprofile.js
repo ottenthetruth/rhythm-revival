@@ -50,7 +50,10 @@ async function getTopArtists() {
     
     const currentArtistElementImage = document.createElement('img');
     currentArtistElementImage.id = `topartistimage${index}`;
-    currentArtistElementImage.src = artist.images[1].url;
+    const testImage = artist.images[2].url;
+    if(testImage) {
+    currentArtistElementImage.src = artist.images[2].url;
+    }
     currentArtistElementImage.alt = `Artist ${index + 1} Profile Picture`;
     topArtistContainer.appendChild(currentArtistElementImage);
 
