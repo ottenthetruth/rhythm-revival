@@ -11,6 +11,8 @@ body::-webkit-scrollbar{ display: none; }
   border-radius: 5px;
   font-weight: lighter;
   margin: 10px;
+  padding-left: 10px;
 }
+body.dark-mode .tabcard { background-color: #212121; }
 .tabcard h1 { font-size: 20px; }
 .tabcard h2 { font-size: 10px; }
