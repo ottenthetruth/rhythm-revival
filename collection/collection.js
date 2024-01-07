@@ -79,6 +79,7 @@ if(myCollectionString) {
                getAvailableDevices();
                const contextUri = button.getAttribute('data-context-uri');
                removeAlbumFromCollection(contextUri);
+               createRatingMix();
             });
         });
     getRatings();
@@ -147,5 +148,10 @@ let myCollectionString = localStorage.getItem("mycollection");
     myRatingElement = myRatingElement - 1;
     if(itemCount === 0) { currentButton.style.width = "10%"; }
     } /* end for */
-  } /* end myCollectionString */
+  } else {
+    for(let i = 10; i>0; i--) {
+      var currentButton = document.getElementById(`ratingmix${i}`);
+      currentButton.style.width = `10%`;
+    }
+  }
 }
