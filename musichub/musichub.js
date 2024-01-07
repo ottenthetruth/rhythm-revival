@@ -29,10 +29,10 @@ function uploadPDF() {
         reader.readAsDataURL(file);
     }
 }
-function showPDF(myfile) {
+function showPDF() {
 const pdfString = localStorage.getItem('myfiles'); // Replace 'yourPDFKey' with your key
 const myPDFFile = JSON.parse(pdfString);
-myPDFFileIndex = myPDFFile[0];
+const myPDFFileIndex = myPDFFile[0];
 // Creating a blob from the string data
 const pdfBlob = new Blob([myPDFFileIndex], { type: 'application/pdf' });
 
@@ -69,7 +69,7 @@ function displayPDF() {
         fileCard.innerHTML = `
           <h1>${songName}</h1>
           <h2>by ${artistName}</h2>
-          <button>Show PDF</button>
+          <button onclick="showPDF()">Show PDF</button>
         `;
         myTabs.appendChild(fileCard);
       } else {
