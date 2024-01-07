@@ -44,7 +44,18 @@ async function getTopArtists() {
   });
   const data = await response.json();
   const topartists = document.querySelector('.topartists');
+  let firstrun = 0;
   data.items.forEach((artist, index) => {
+    if(firstrun === 0) {
+      const firstArtistElementImage = artist.images[1].url;
+      const firstArtistElement = document.getElementById("topartistimage0");
+      firstArtistElement.src = firstArtistElementImage;
+      const firstArtistName = document.getElementById("topartistname0");
+      const firstArtistInfo = document.getElementById("topartistinfo0");
+      firstArtistName.textContent = artist.name;
+      firstArtistInfo.textContent = artist.genres[0] + ", " + artist.genres[1];
+      firstrun = 1;
+    }
    const topArtistContainer = document.createElement('div');
     topArtistContainer.classList.add(`topitemcontainer`);
     
