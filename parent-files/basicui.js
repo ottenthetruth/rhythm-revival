@@ -27,4 +27,5 @@ async function getUserProfile() {
 	    console.log("Obtained User Profile!");
         }  else { console.log("Failed to obtain User Profile!"); }
   }
+localStorage.setItem("loggedin", "true");
 }
