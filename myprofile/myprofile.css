@@ -45,6 +45,7 @@ body{background-image: url(../images/Background2.jpg);
                     height: 120px;
                     border: 1px solid;
                     border-radius: 5px; }
+body.dark-mode .topitemcontainer { background-color: #212121; }
 .topitemcontainer img { height: 100px;
                         width: 100px;
                         padding: 10px;
