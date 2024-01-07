@@ -1,6 +1,6 @@
 async function getTopTracks() {
   const accessToken = localStorage.getItem('access_token');
-  const response = await fetch(`https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=5`, {
+  const response = await fetch(`https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=20`, {
     headers: {
       'Authorization': `Bearer ${accessToken}`
     }
@@ -23,7 +23,7 @@ async function getTopTracks() {
 
 async function getTopArtists() {
   const accessToken = localStorage.getItem('access_token');
-  const response = await fetch(`https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=5`, {
+  const response = await fetch(`https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=20`, {
     headers: {
       'Authorization': `Bearer ${accessToken}`
     }
