@@ -6,7 +6,7 @@ async function getTopTracks() {
     }
   });
   const data = await response.json();
-  const topartists = document.querySelector('.topartists');
+  const topartists = document.querySelector('.topsongs');
   data.items.forEach((track, index) => {
    const topSongContainer = document.createElement('div');
     topSongContainer.classList.add(`topitemcontainer`);
@@ -18,6 +18,7 @@ async function getTopTracks() {
     topSongContainer.appendChild(currentTrackElementImage);
 
     const currentTrackInfo = document.createElement('div');
+    currentTrackInfo.classList.add(`songinfo`);
     topSongContainer.appendChild(currentTrackInfo);
     
     const currentTrackElementText = document.createElement('h1');
