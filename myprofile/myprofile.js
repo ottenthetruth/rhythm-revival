@@ -64,7 +64,7 @@ async function getTopArtists() {
       firstArtistElement.src = firstArtistElementImage;
       const firstArtistName = document.getElementById("topartistname0");
       const firstArtistInfo = document.getElementById("topartistinfo0");
-      const firstArtistButton = document.getElementById("playtopartist0");
+      const firstArtistButton = document.getElementById("playtopartistxx");
       firstArtistName.textContent = artist.name;
       firstArtistInfo.textContent = artist.genres[0] + ", " + artist.genres[1];
       firstArtistButton.addEventListener('click', () => {
