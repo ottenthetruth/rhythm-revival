@@ -69,7 +69,7 @@ async function getTopArtists() {
       firstArtistInfo.textContent = artist.genres[0] + ", " + artist.genres[1];
       firstArtistButton.addEventListener('click', () => {
         getAvailableDevices();
-        const artistContextUri = fristArtistButton.getAttribute('data-context-uri');
+        const artistContextUri = firstArtistButton.getAttribute('data-context-uri');
         playAlbum(artistContextUri);
       });
       firstrun = 1;
