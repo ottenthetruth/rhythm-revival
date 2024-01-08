@@ -92,6 +92,7 @@ async function getTopArtists() {
     currentArtistInfo.appendChild(currentArtistElementGenre);
 
     const currentArtistPlayButton = document.createElement('button');
+    currentArtistPlayButton.textContent = "Play on Spotify!";
     currentArtistPlayButton.setAttribute('data-context-uri', artist.uri);
     currentArtistPlayButton.addEventListener('click', () => {
         getAvailableDevices();
