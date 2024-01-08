@@ -46,8 +46,10 @@ body.dark-mode::-webkit-scrollbar-thumb {
   	     display: block;
   	     user-select: none;
   	     color: #edf2f7;
-  	     background-color: #2d3748; }
+  	     background-color: #2d3748;
+	     padding-top: 25px; }
 .container h1 { font-weight: lighter;
+	        font-size: 20px;
 	        margin-left: 10px; }
 body.dark-mode .container { background-color: #212121;
 			    color: #03DAC6; }
