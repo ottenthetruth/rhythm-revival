@@ -90,6 +90,15 @@ async function getTopArtists() {
     currentArtistElementGenre.id = `topartistname${index}`;
     currentArtistElementGenre.textContent = artist.genres[0] + ", " + artist.genres[1];
     currentArtistInfo.appendChild(currentArtistElementGenre);
+
+    const currentArtistPlayButton = document.createElement('button');
+    currentArtistPlayButton.setAttribute('data-context-uri', artist.uri);
+    currentArtistPlayButton.addEventListener('click', () => {
+        getAvailableDevices();
+        const artistContextUri = currentArtistElementPlayButton.getAttribute('data-context-uri');
+        playAlbum(artistContextUri);
+      });
+    currentArtistInfo.appendChild(currentArtistPlayButton);
     
     topartists.appendChild(topArtistContainer);
   });
