@@ -67,6 +67,7 @@ async function getTopArtists() {
       const firstArtistButton = document.getElementById("playtopartistxx");
       firstArtistName.textContent = artist.name;
       firstArtistInfo.textContent = artist.genres[0] + ", " + artist.genres[1];
+      firstArtistButton.setAttribute('data-context-uri', artist.uri);
       firstArtistButton.addEventListener('click', () => {
         getAvailableDevices();
         const artistContextUri = firstArtistButton.getAttribute('data-context-uri');
