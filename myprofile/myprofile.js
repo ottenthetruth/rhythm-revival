@@ -64,10 +64,17 @@ async function getTopArtists() {
       firstArtistElement.src = firstArtistElementImage;
       const firstArtistName = document.getElementById("topartistname0");
       const firstArtistInfo = document.getElementById("topartistinfo0");
+      const firstArtistButton = document.getElementById("playtopartist0");
       firstArtistName.textContent = artist.name;
       firstArtistInfo.textContent = artist.genres[0] + ", " + artist.genres[1];
+      firstArtistButton.addEventListener('click', () => {
+        getAvailableDevices();
+        const artistContextUri = fristArtistButton.getAttribute('data-context-uri');
+        playAlbum(artistContextUri);
+      });
       firstrun = 1;
     }
+  
    const topArtistContainer = document.createElement('div');
     topArtistContainer.classList.add(`topitemcontainer`);
     
