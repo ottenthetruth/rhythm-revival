@@ -15,6 +15,13 @@ async function getTopTracks() {
       firstSongElement.src = firstSongElementImage;
       const firstSongName = document.getElementById("topsongname0");
       const firstSongInfo = document.getElementById("topsonginfo0");
+      const playFirstSong = document.getElementById("playtopsong0");
+      playFirstSong.setAttribute('data-context-uri', track.uri);
+      playFirstSong.addEventListener('click', () => {
+        getAvailableDevices();
+        const songContextUri = playFirstSong.getAttribute('data-context-uri');
+        playAlbum(songContextUri);
+      });
       firstSongName.textContent = track.name;
       firstSongInfo.textContent = `by ${track.artists[0].name}`;
       firstrun = 1;
