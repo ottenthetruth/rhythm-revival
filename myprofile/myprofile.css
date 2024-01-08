@@ -85,6 +85,7 @@ body { background-size: contain; }
                    margin-bottom: 0px; }
 .numberoneitems { height: 53vh;
                   min-height: 400px; }
+.numberoneinfo h2, .numberoneinfo h4 { left: 0px; }
 .numberoneartist, .numberonesong { flex-direction: column;
                                    align-items: center;
                                    text-align: center; }
@@ -95,7 +96,8 @@ body { background-size: contain; }
 .numberoneartist h2, .numberonesong h2 { font-size: 15px; }
 .myprofileplaybutton { font-size: 15px;
                        height: 20px;
-                       width: 120px; }
+                       width: 120px;
+                       left: 0px; }
 .userstats { flex-direction: column; }
 .topartists, .topsongs { width: 100vw; }
 .topitemcontainer { width: 90vw;
