@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     checkScroll(); });
     document.getElementById('explore-button').addEventListener('click', () => {
         window.scrollTo({
-        top: 1.2 * window.innerHeight,
+        top: 1.1 * window.innerHeight,
         behavior: 'smooth', });
     });
 
