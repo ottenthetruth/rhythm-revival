@@ -17,6 +17,7 @@ async function getTopTracks() {
       const firstSongInfo = document.getElementById("topsonginfo0");
       const playFirstSong = document.getElementById("playtopsong0");
       playFirstSong.setAttribute('data-context-uri', track.uri);
+      console.log(track.uri);
       playFirstSong.addEventListener('click', () => {
         getAvailableDevices();
         const songContextUri = playFirstSong.getAttribute('data-context-uri');
