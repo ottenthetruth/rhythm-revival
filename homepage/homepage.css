@@ -47,8 +47,11 @@ body.dark-mode::-webkit-scrollbar-thumb {
   	     user-select: none;
   	     color: #edf2f7;
   	     background-color: #2d3748; }
+.container h1 { font-weight: lighter;
+	        margin-left: 10px; }
 body.dark-mode .container { background-color: #212121;
-  			    border-top: 1px solid inherit; }
+			    color: #03DAC6; }
+
 .explorebutton { grid-area: 10 / 12 / 10 / 14;
   		 display: flex;
   		 flex-direction: column;
