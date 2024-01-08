@@ -26,12 +26,16 @@ body{background-image: url(../images/Background2.jpg);
                                            border-radius: 50%;
                                            margin-left: 20px;
                                            margin-right: 30px; }
-.numberoneinfo h2, .numberoneinfo h4 { font-weight: lighter; }
+.numberoneinfo h2, .numberoneinfo h4 { font-weight: lighter;
+                                       position: relative; 
+                                       left: -10px; }
 .myprofileplaybutton { border-radius: 5px;
                        margin: 0;
                        font-size: 15px;
                        width: 125px;
-                       height: 18px; }
+                       height: 18px;
+                       position: relative;
+                       left: -23px; }
 .userstats { display: flex; }
 .topartists, .topsongs { display: flex;
                          flex-direction: column;
