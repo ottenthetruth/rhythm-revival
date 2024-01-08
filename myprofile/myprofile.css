@@ -90,8 +90,7 @@ body { background-size: contain; }
                        height: 20px;
                        width: 120px; }
 .userstats { flex-direction: column; }
-.topartists, .topsongs { width: 100vw;
-                         height: 500px; }
+.topartists, .topsongs { width: 100vw; }
 .topitemcontainer { width: 90vw;
                     height: 120px; }
 .topitemcontainer img { width: 100px;
