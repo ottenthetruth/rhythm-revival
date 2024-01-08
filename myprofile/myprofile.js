@@ -95,7 +95,7 @@ async function getTopArtists() {
     currentArtistPlayButton.setAttribute('data-context-uri', artist.uri);
     currentArtistPlayButton.addEventListener('click', () => {
         getAvailableDevices();
-        const artistContextUri = currentArtistElementPlayButton.getAttribute('data-context-uri');
+        const artistContextUri = currentArtistPlayButton.getAttribute('data-context-uri');
         playAlbum(artistContextUri);
       });
     currentArtistInfo.appendChild(currentArtistPlayButton);
