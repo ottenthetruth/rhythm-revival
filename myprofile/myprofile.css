@@ -37,6 +37,10 @@ body{background-image: url(../images/Background2.jpg);
                        position: relative;
                        left: -23px; }
 .userstats { display: flex; }
+.userstats button { width: 125px;
+    height: 18px;
+    font-size: 12px;
+    border-radius: 5px; }
 .topartists, .topsongs { display: flex;
                          flex-direction: column;
                          height: 2470px;
