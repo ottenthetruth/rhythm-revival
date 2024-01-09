@@ -6,29 +6,33 @@ function uploadPDF() {
         const file = files[0];
         const reader = new FileReader();
         reader.onload = function(event) {
-            const pdfData = JSON.stringify(event.target.result);
-            const pdfName = JSON.stringify(file.name);
+            const pdfData = event.target.result; // The data URL
+            const pdfName = file.name; // The file name
             let prevFiles = [];
-            let prevFileNames = [];
             const prevFilesString = localStorage.getItem("myfiles");
-            const prevFileNamesString = localStorage.getItem("myfilenames");
-            if (prevFilesString && prevFileNamesString) {
+
+            if (prevFilesString) {
                 prevFiles = JSON.parse(prevFilesString);
-                prevFileNames = JSON.parse(prevFileNamesString);
             }
-            const existingFileIndex = prevFileNames.indexOf(pdfName);
+
+            // Check if the file name already exists in the stored filenames
+            const existingFileIndex = prevFiles.findIndex(entry => entry.name === pdfName);
+
             if (existingFileIndex !== -1) {
-                prevFiles[existingFileIndex] = pdfData;
+                // If the file already exists, update its data
+                prevFiles[existingFileIndex].data = pdfData;
             } else {
-                prevFiles.push(pdfData);
-                prevFileNames.push(pdfName);
+                // If it's a new file, add it to the array
+                prevFiles.push({ name: pdfName, data: pdfData });
             }
+
+            // Store the updated files array in localStorage
             localStorage.setItem("myfiles", JSON.stringify(prevFiles));
-            localStorage.setItem("myfilenames", JSON.stringify(prevFileNames));
         };
         reader.readAsDataURL(file);
     }
 }
+
 function showPDF() {
   // Get the stringified array from localStorage
   const storedFiles = localStorage.getItem('myfiles');
