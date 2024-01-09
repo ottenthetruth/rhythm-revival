@@ -41,7 +41,7 @@ function showPDF(fileData) {
 
         // Set attributes for width and height if needed
         embedPDF.width = '100%';
-        embedPDF.height = '500px'; // Set the height of the embedded PDF
+        embedPDF.height = '800px'; // Set the height of the embedded PDF
 
         const myParent = document.getElementById("tabviewer");
         myParent.innerHTML = ''; // Clear previous content
