@@ -78,6 +78,7 @@ async function getTopArtists() {
       firstArtistButton.setAttribute('data-context-uri', artist.uri);
       firstArtistButton.addEventListener('click', () => {
         getAvailableDevices();
+              console.log(artist.uri);
         const artistContextUri = firstArtistButton.getAttribute('data-context-uri');
         playAlbum(artistContextUri);
       });
