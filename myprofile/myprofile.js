@@ -21,7 +21,7 @@ async function getTopTracks() {
       playFirstSong.addEventListener('click', () => {
         getAvailableDevices();
         const songContextUri = playFirstSong.getAttribute('data-context-uri');
-        playAlbum(songContextUri);
+        playSong(songContextUri);
       });
       firstSongName.textContent = track.name;
       firstSongInfo.textContent = `by ${track.artists[0].name}`;
