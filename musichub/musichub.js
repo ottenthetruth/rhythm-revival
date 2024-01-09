@@ -33,31 +33,24 @@ function uploadPDF() {
     }
 }
 
-function showPDF() {
-  // Get the stringified array from localStorage
-  const storedFiles = localStorage.getItem('myfiles');
+function showPDF(fileData) {
+    if (fileData) {
+        const embedPDF = document.createElement('embed');
+        embedPDF.src = fileData; // Set the Data URL of the PDF
+        embedPDF.type = 'application/pdf'; // Set the type of content
 
-  if (storedFiles) {
-    // Parse the stringified array back to a JavaScript array
-    const filesArray = JSON.parse(storedFiles);
+        // Set attributes for width and height if needed
+        embedPDF.width = '100%';
+        embedPDF.height = '500px'; // Set the height of the embedded PDF
 
-    // Assuming the first file in the array is a PDF
-    const firstPDF = filesArray[0];
+        const myParent = document.getElementById("tabviewer");
+        myParent.innerHTML = ''; // Clear previous content
 
-    // Create an embed element to display the PDF
-    const embedPDF = document.createElement('embed');
-    embedPDF.src = firstPDF; // Set the URL of the PDF
-    embedPDF.type = 'application/pdf'; // Set the type of content
-
-    // Set attributes for width and height if needed
-    embedPDF.width = '100%';
-    embedPDF.height = '500px'; // Set the height of the embedded PDF
-    const myParent = document.getElementById("tabviewer");
-    // Append the embed element to the body or any other HTML element
-    myParent.appendChild(embedPDF);
-  } else {
-    console.log('No files found in localStorage');
-  }
+        // Append the embed element to the designated HTML element
+        myParent.appendChild(embedPDF);
+    } else {
+        console.log('No file data provided');
+    }
 }
 
 function displayPDF() {
