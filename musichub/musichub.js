@@ -60,39 +60,38 @@ function showPDF() {
   }
 }
 
-
-
 function displayPDF() {
-  let myFileString = localStorage.getItem("myfiles");
-  let myFileNamesString = localStorage.getItem("myfilenames");
+    let myFilesString = localStorage.getItem("myfiles");
 
-  if (myFileString && myFileNamesString) {
-    let myFiles = JSON.parse(myFileString);
-    let myFileNames = JSON.parse(myFileNamesString);
-    const myFileCount = myFiles.length;
-    const myTabs = document.getElementById("mytabs");
-    myTabs.innerHTML = '';
+    if (myFilesString) {
+        let myFiles = JSON.parse(myFilesString);
+        const myFileCount = myFiles.length;
+        const myTabs = document.getElementById("mytabs");
+        myTabs.innerHTML = '';
 
-    for (let i = 0; i < myFileCount; i++) {
-      const fileCard = document.createElement("div");
-      fileCard.classList.add("tabcard");
-      const nameParts = myFileNames[i].replace(/^"(.+(?="$))"$/, '$1').split(' - ');
-      if (nameParts.length >= 2) {
-        const songName = nameParts[0];
-        const artistName = nameParts.slice(1).join(' - ').replace('.pdf', '');
-        fileCard.innerHTML = `
-          <h1>${songName}</h1>
-          <h2>by ${artistName}</h2>
-          <button onclick="showPDF()">Show PDF</button>
-        `;
-        myTabs.appendChild(fileCard);
-      } else {
-        console.error(`File name "${myFileNames[i]}" doesn't match expected pattern`);
-      }
+        for (let i = 0; i < myFileCount; i++) {
+            const fileCard = document.createElement("div");
+            fileCard.classList.add("tabcard");
+
+            const fileName = myFiles[i].name;
+            const fileData = myFiles[i].data;
+
+            const nameParts = fileName.replace(/^"(.+(?="$))"$/, '$1').split(' - ');
+
+            if (nameParts.length >= 2) {
+                const songName = nameParts[0];
+                const artistName = nameParts.slice(1).join(' - ').replace('.pdf', '');
+                fileCard.innerHTML = `
+                    <h1>${songName}</h1>
+                    <h2>by ${artistName}</h2>
+                    <button onclick="showPDF('${fileData}')">Show PDF</button>
+                `;
+                myTabs.appendChild(fileCard);
+            } else {
+                console.error(`File name "${fileName}" doesn't match the expected pattern`);
+            }
+        }
+    } else {
+        console.error("Value not found in localStorage");
     }
-  } else {
-    console.error("Values not found in localStorage");
-  }
 }
-
-
