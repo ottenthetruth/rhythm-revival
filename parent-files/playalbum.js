@@ -24,7 +24,32 @@ function playAlbum(contextUri) {
   });
   } // end if accessToken & device ID
 }
-
+function playSong(contextUri) {
+  const accessToken = localStorage.getItem("access_token");
+  const deviceID = localStorage.getItem("device_id");
+  if(accessToken && deviceID) {
+  fetch(`https://api.spotify.com/v1/me/player/play?device_id=${deviceID}`, {
+    method: 'PUT',
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      uris: [contextUri],
+    }),
+  })
+  .then(response => {
+    if (response.status === 204) {
+      console.log('Album is playing!');
+    } else {
+      console.error('Failed to play album:', response.statusText);
+    }
+  })
+  .catch(error => {
+    console.error('Error occurred:', error);
+  });
+  } // end if accessToken & device ID
+}
 function getAvailableDevices() {
   const accessToken = localStorage.getItem("access_token");
 
