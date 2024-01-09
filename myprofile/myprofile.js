@@ -50,7 +50,17 @@ async function getTopTracks() {
     currentTrackElementArtist.id = `topsonginfo${index}`;
     currentTrackElementArtist.textContent = `by ${track.artists[0].name}`;
     currentTrackInfo.appendChild(currentTrackElementArtist);
-    
+
+    const currentTrackElementButton = document.createElement('button');
+    currentTrackElementButton.textContent = "Play on Spotify!";
+    currentTrackElementButton.setAttribute('data-context-uri', track.uri);
+    currentTrackElementButton.addEventListener('click', () => {
+        getAvailableDevices();
+        const songContextUri = currentTrackElementButton.getAttribute('data-context-uri');
+        playSong(songContextUri);
+      });
+    currentTrackInfo.appendChild(currentTrackElementButton);
+
     topsongs.appendChild(topSongContainer);
   });
 }
