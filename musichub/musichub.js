@@ -30,23 +30,33 @@ function uploadPDF() {
     }
 }
 function showPDF() {
-const pdfString = localStorage.getItem('myfiles'); // Replace 'yourPDFKey' with your key
-const myPDFFile = JSON.parse(pdfString);
-const myPDFFileIndex = myPDFFile[0];
-// Creating a blob from the string data
-const pdfBlob = new Blob([myPDFFileIndex], { type: 'application/pdf' });
+  // Get the stringified array from localStorage
+  const storedFiles = localStorage.getItem('myfiles');
 
-// Creating a URL for the blob
-const pdfUrl = URL.createObjectURL(pdfBlob);
-const myParent = document.getElementById("tabviewer");
-// Displaying the PDF using an <embed> or <iframe> tag
-const embedElement = document.createElement('embed');
-embedElement.src = pdfUrl;
-embedElement.type = 'application/pdf';
-embedElement.width = '100%';
-embedElement.height = '600px'; // You can adjust the height as needed
-myParent.appendChild(embedElement);
+  if (storedFiles) {
+    // Parse the stringified array back to a JavaScript array
+    const filesArray = JSON.parse(storedFiles);
+
+    // Assuming the first file in the array is a PDF
+    const firstPDF = filesArray[0];
+
+    // Create an embed element to display the PDF
+    const embedPDF = document.createElement('embed');
+    embedPDF.src = firstPDF; // Set the URL of the PDF
+    embedPDF.type = 'application/pdf'; // Set the type of content
+
+    // Set attributes for width and height if needed
+    embedPDF.width = '100%';
+    embedPDF.height = '500px'; // Set the height of the embedded PDF
+    const myParent = document.getElementById("tabviewer");
+    // Append the embed element to the body or any other HTML element
+    myParent.appendChild(embedPDF);
+  } else {
+    console.log('No files found in localStorage');
+  }
 }
+
+
 
 function displayPDF() {
   let myFileString = localStorage.getItem("myfiles");
